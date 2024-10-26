@@ -14,7 +14,9 @@ from prepare_data import create_dataset
 from prepare_data import extract_warning_types
 from utils import boolean_string
 from utils import get_current_time
+from peft import LoraConfig, get_peft_model
 
+torch.cuda.empty_cache()
 hf_token = os.environ.get('HF_TOKEN')
 
 # transformers.logging.set_verbosity_info()
@@ -71,20 +73,27 @@ print(all_warning_types)
 ) = create_data(data, all_warning_types, include_warning=True, model_name=model_name)
 
 # Load the Llama model and tokenizer using AutoClasses
-tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="auto")
-model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token, device_map="auto")
+tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="cpu")
+model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token, device_map="cpu")
+
+# Apply LoRA for optimization
+lora_config = LoraConfig(
+    r=8,
+    lora_alpha=32,
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+model = get_peft_model(model, lora_config)
 
 # Add special tokens to the tokenizer
 # tokenizer.add_tokens(["{", "}", ">", "\\", "^"])
 # tokenizer.save_pretrained(model_directory)
 
-model.resize_token_embeddings(len(tokenizer))
-print("Models parameters: ", model.num_parameters())
+tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 
-# Add pad token
-if tokenizer.pad_token is None:
-    tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-    model.resize_token_embeddings(len(tokenizer))
+# model.resize_token_embeddings(len(tokenizer))
+print("Models parameters: ", model.num_parameters())
 
 # Create dataset required by pytorch
 train_dataset = create_dataset(
@@ -103,7 +112,7 @@ training_args = TrainingArguments(
     logging_dir=model_directory,
     logging_steps=100,
     do_eval=True,
-    evaluation_strategy="epoch",
+    eval_strategy="epoch",
     save_strategy="epoch",
     load_best_model_at_end=True,
     learning_rate=args.learning_rate,

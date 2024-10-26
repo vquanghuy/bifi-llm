@@ -3,5 +3,5 @@
 ## Install dependencies
 
 ```bash
-pip install flax transformers accelerate gdown scikit-learn
+pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes
 ```

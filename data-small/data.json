@@ -1,0 +1,10 @@
+[
+  {
+    "input_code": "def add(a, b):",
+    "output_code": "return a + b"
+  },
+  {
+    "input_code": "def subtract(a, b):",
+    "output_code": "return a - b"
+  }
+]
