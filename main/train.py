@@ -71,55 +71,59 @@ print(all_warning_types)
 ) = create_data(data, all_warning_types, include_warning=True, model_name=model_name)
 
 # Load the Llama model and tokenizer using AutoClasses
-tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token)
-model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token)
+tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="auto")
+model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token, device_map="auto")
 
-# # Add special tokens to the tokenizer
+# Add special tokens to the tokenizer
 # tokenizer.add_tokens(["{", "}", ">", "\\", "^"])
 # tokenizer.save_pretrained(model_directory)
-#
-# model.parallelize()
-# model.resize_token_embeddings(len(tokenizer))
-# print("Models parameters: ", model.num_parameters())
-#
-# # Create dataset required by pytorch
-# train_dataset = create_dataset(
-#     train_inputs, train_labels, tokenizer, pad_truncate=True, max_length=128
-# )
-# val_dataset = create_dataset(val_inputs, val_labels, tokenizer, pad_truncate=True)
-#
-# # Training arguments (adjust as needed)
-# training_args = TrainingArguments(
-#     output_dir=model_directory,
-#     num_train_epochs=args.epochs,
-#     per_device_train_batch_size=args.batch_size,
-#     per_device_eval_batch_size=args.batch_size,
-#     warmup_steps=500,
-#     weight_decay=args.weight_decay,
-#     logging_dir=model_directory,
-#     logging_steps=100,
-#     do_eval=True,
-#     evaluation_strategy="epoch",
-#     learning_rate=args.learning_rate,
-#     load_best_model_at_end=True,
-#     metric_for_best_model="eval_loss",
-#     greater_is_better=False,
-#     save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
-#     eval_accumulation_steps=args.eval_acc_steps,
-#     disable_tqdm=False,
-#     predict_with_generate=False,  # Set to False for Causal Language Models
-#     seed=42,
-# )
-#
-# # Create trainer
-# trainer = Trainer(
-#     model=model,
-#     args=training_args,
-#     train_dataset=train_dataset,
-#     eval_dataset=val_dataset,
-#     optimizers=[torch.optim.Adam(params=model.parameters(), lr=args.learning_rate), None],
-#     tokenizer=tokenizer,
-# )
-#
-# trainer.train()
-# print("end time: ", get_current_time())
+
+model.resize_token_embeddings(len(tokenizer))
+print("Models parameters: ", model.num_parameters())
+
+# Add pad token
+if tokenizer.pad_token is None:
+    tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+    model.resize_token_embeddings(len(tokenizer))
+
+# Create dataset required by pytorch
+train_dataset = create_dataset(
+    train_inputs, train_labels, tokenizer, pad_truncate=True, max_length=128
+)
+val_dataset = create_dataset(val_inputs, val_labels, tokenizer, pad_truncate=True)
+
+# Training arguments (adjust as needed)
+training_args = TrainingArguments(
+    output_dir=model_directory,
+    num_train_epochs=args.epochs,
+    per_device_train_batch_size=args.batch_size,
+    per_device_eval_batch_size=args.batch_size,
+    warmup_steps=500,
+    weight_decay=args.weight_decay,
+    logging_dir=model_directory,
+    logging_steps=100,
+    do_eval=True,
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    load_best_model_at_end=True,
+    learning_rate=args.learning_rate,
+    metric_for_best_model="eval_loss",
+    greater_is_better=False,
+    save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
+    eval_accumulation_steps=args.eval_acc_steps,
+    disable_tqdm=False,
+    seed=42,
+)
+
+# Create trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=val_dataset,
+    optimizers=[torch.optim.Adam(params=model.parameters(), lr=args.learning_rate), None],
+    tokenizer=tokenizer,
+)
+
+trainer.train()
+print("end time: ", get_current_time())
