@@ -44,7 +44,7 @@ if args.model_dir != "":
 else:
     now = datetime.now()
     dt_string = now.strftime("%d-%m-%Y_%H-%M-%S")
-    model_directory = model_name + "_global_" + dt_string
+    model_directory = model_name + "_global_" + dt_string + "_fixer"
 
 os.makedirs(model_directory)
 with open(os.path.join(model_directory, "commandline_args.txt"), "w") as f:
@@ -87,7 +87,7 @@ bnb_config = BitsAndBytesConfig(
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     token=hf_token,
-    quantization_config=bnb_config,
+    # quantization_config=bnb_config,
     device_map="auto"
 )
 

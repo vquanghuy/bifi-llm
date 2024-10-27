@@ -83,6 +83,7 @@ def create_data(
 
     for warning in linter_warnings:
         filtered_data = filter_rule(data, warning)
+
         (
             train_w,
             train_w_labels,
