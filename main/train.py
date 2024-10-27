@@ -16,10 +16,10 @@ from utils import boolean_string
 from utils import get_current_time
 from peft import LoraConfig, get_peft_model
 
+# Clean cache and prepare environment
 torch.cuda.empty_cache()
 hf_token = os.environ.get('HF_TOKEN')
 
-# transformers.logging.set_verbosity_info()
 set_seed(42)
 print("start time: ", get_current_time())
 
@@ -73,7 +73,7 @@ print(all_warning_types)
 ) = create_data(data, all_warning_types, include_warning=True, model_name=model_name)
 
 # Load the  tokenizer using AutoClasses
-tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="cpu")
+tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="auto")
 tokenizer.pad_token = tokenizer.eos_token
 
 # Prepare BnB config for system optimization
@@ -101,14 +101,6 @@ lora_config = LoraConfig(
 )
 
 model = get_peft_model(model, lora_config)
-
-# Add special tokens to the tokenizer
-# tokenizer.add_tokens(["{", "}", ">", "\\", "^"])
-# tokenizer.save_pretrained(model_directory)
-
-# tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-
-# model.resize_token_embeddings(len(tokenizer))
 print("Models parameters: ", model.num_parameters())
 
 # Create dataset required by pytorch
@@ -143,14 +135,15 @@ val_dataset = create_dataset(
 # )
 
 training_args = TrainingArguments(
-    output_dir="./model-output",
+    output_dir=model_directory,
     per_device_train_batch_size=2,
     gradient_accumulation_steps=8,
-    num_train_epochs=3,
-    logging_steps=10,
+    num_train_epochs=args.epochs,
+    logging_dir=model_directory,
+    logging_steps=100,
     save_steps=100,
-    save_total_limit=2,
-    learning_rate=1e-4,
+    save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
+    learning_rate=args.learning_rate,
     fp16=True,  # use mixed precision if supported
 )
 
