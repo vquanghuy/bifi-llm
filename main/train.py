@@ -5,7 +5,7 @@ import sys
 
 sys.path.append("..")
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, set_seed
+from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, set_seed, BitsAndBytesConfig
 import torch
 
 from data_reader import GetDataAsPython
@@ -72,25 +72,41 @@ print(all_warning_types)
     test_info,
 ) = create_data(data, all_warning_types, include_warning=True, model_name=model_name)
 
-# Load the Llama model and tokenizer using AutoClasses
+# Load the  tokenizer using AutoClasses
 tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, device_map="cpu")
-model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token, device_map="cpu")
+tokenizer.pad_token = tokenizer.eos_token
 
-# Apply LoRA for optimization
-lora_config = LoraConfig(
-    r=8,
-    lora_alpha=32,
-    lora_dropout=0.05,
-    bias="none",
-    task_type="CAUSAL_LM"
+# Prepare BnB config for system optimization
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16
 )
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    token=hf_token,
+    quantization_config=bnb_config,
+    device_map="auto"
+)
+
+# Prepare LoRA and apply to the model
+lora_config = LoraConfig(
+    r=8, # Rank of the LoRA update matrices
+    lora_alpha=32, # Scaling factor for the LoRA update matrices
+    lora_dropout=0.05, # Dropout probability for the LoRA update matrices
+    bias="none", # Whether to apply a bias to the LoRA update matrices
+    task_type="CAUSAL_LM" # Type of task for which to apply LoRA
+)
+
 model = get_peft_model(model, lora_config)
 
 # Add special tokens to the tokenizer
 # tokenizer.add_tokens(["{", "}", ">", "\\", "^"])
 # tokenizer.save_pretrained(model_directory)
 
-tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+# tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 
 # model.resize_token_embeddings(len(tokenizer))
 print("Models parameters: ", model.num_parameters())
@@ -99,29 +115,43 @@ print("Models parameters: ", model.num_parameters())
 train_dataset = create_dataset(
     train_inputs, train_labels, tokenizer, pad_truncate=True, max_length=128
 )
-val_dataset = create_dataset(val_inputs, val_labels, tokenizer, pad_truncate=True)
+val_dataset = create_dataset(
+    val_inputs, val_labels, tokenizer, pad_truncate=True, max_length=128
+)
 
-# Training arguments (adjust as needed)
+# Training arguments (adjust as needed) -> Error train
+# training_args = TrainingArguments(
+#     output_dir=model_directory,
+#     num_train_epochs=args.epochs,
+#     per_device_train_batch_size=args.batch_size,
+#     per_device_eval_batch_size=args.batch_size,
+#     warmup_steps=500,
+#     weight_decay=args.weight_decay,
+#     logging_dir=model_directory,
+#     logging_steps=100,
+#     do_eval=True,
+#     eval_strategy="epoch",
+#     save_strategy="epoch",
+#     load_best_model_at_end=True,
+#     learning_rate=args.learning_rate,
+#     metric_for_best_model="eval_loss",
+#     greater_is_better=False,
+#     save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
+#     eval_accumulation_steps=args.eval_acc_steps,
+#     disable_tqdm=False,
+#     seed=42,
+# )
+
 training_args = TrainingArguments(
-    output_dir=model_directory,
-    num_train_epochs=args.epochs,
-    per_device_train_batch_size=args.batch_size,
-    per_device_eval_batch_size=args.batch_size,
-    warmup_steps=500,
-    weight_decay=args.weight_decay,
-    logging_dir=model_directory,
-    logging_steps=100,
-    do_eval=True,
-    eval_strategy="epoch",
-    save_strategy="epoch",
-    load_best_model_at_end=True,
-    learning_rate=args.learning_rate,
-    metric_for_best_model="eval_loss",
-    greater_is_better=False,
-    save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
-    eval_accumulation_steps=args.eval_acc_steps,
-    disable_tqdm=False,
-    seed=42,
+    output_dir="./model-output",
+    per_device_train_batch_size=2,
+    gradient_accumulation_steps=8,
+    num_train_epochs=3,
+    logging_steps=10,
+    save_steps=100,
+    save_total_limit=2,
+    learning_rate=1e-4,
+    fp16=True,  # use mixed precision if supported
 )
 
 # Create trainer
