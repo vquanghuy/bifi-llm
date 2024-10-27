@@ -111,29 +111,7 @@ val_dataset = create_dataset(
     val_inputs, val_labels, tokenizer, pad_truncate=True, max_length=128
 )
 
-# Training arguments (adjust as needed) -> Error train
-# training_args = TrainingArguments(
-#     output_dir=model_directory,
-#     num_train_epochs=args.epochs,
-#     per_device_train_batch_size=args.batch_size,
-#     per_device_eval_batch_size=args.batch_size,
-#     warmup_steps=500,
-#     weight_decay=args.weight_decay,
-#     logging_dir=model_directory,
-#     logging_steps=100,
-#     do_eval=True,
-#     eval_strategy="epoch",
-#     save_strategy="epoch",
-#     load_best_model_at_end=True,
-#     learning_rate=args.learning_rate,
-#     metric_for_best_model="eval_loss",
-#     greater_is_better=False,
-#     save_total_limit=args.epochs if args.save_total_limit == -1 else args.save_total_limit,
-#     eval_accumulation_steps=args.eval_acc_steps,
-#     disable_tqdm=False,
-#     seed=42,
-# )
-
+# Create training arguments
 training_args = TrainingArguments(
     output_dir=model_directory,
     per_device_train_batch_size=2,
