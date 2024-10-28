@@ -3,3 +3,5 @@ data
 main/meta-llama
 model-output
 .idea
+__pycache__
+__MACOSX
