@@ -4,6 +4,7 @@
 
 ```bash
 pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes peft
+apt install unzip
 ```
 
 ## Download dataset
