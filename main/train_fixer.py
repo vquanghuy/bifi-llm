@@ -137,4 +137,5 @@ trainer = Trainer(
 
 trainer.train()
 trainer.save_model(model_directory + "_trained")
+tokenizer.save_pretrained(model_directory + "_trained")
 print("end time: ", get_current_time())
