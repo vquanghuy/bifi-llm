@@ -1,7 +1,10 @@
 .ipynb_checkpoints
-data
 main/meta-llama
 model-output
 .idea
 __pycache__
 __MACOSX
+
+# Dataset - can be downloaded
+data
+github-python-test
