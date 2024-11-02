@@ -1,6 +1,7 @@
 import os
 import torch
 import sys
+import time
 from transformers import pipeline
 from tqdm import tqdm
 
@@ -89,12 +90,24 @@ pipe = pipeline(
   device_map="auto",
 )
 
+# Record the start time
+start_time = time.time()
+print(f"Start time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")  # Print start time
+
 # Perform fix
-fixed_set_1 = perform_fixing_code(pipe, python_syntax_fixer_instruction, test_dataset[0])
+fixed_set_1 = perform_fixing_code(pipe, python_syntax_fixer_instruction, test_dataset[1])
 
 # Write the result
 write_json_to_file(
   fixed_set_1,
-  os.path.join(github_python_dataset, 'model-fixer.pred.evaluated-llm.3.json'),
+  os.path.join(github_python_dataset, 'model-fixer.pred.evaluated-llm.4.json'),
   2
 )
+
+# Record the end time
+end_time = time.time()
+print(f"End time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")  # Print end time
+
+# Calculate and print the elapsed time
+elapsed_time = end_time - start_time
+print(f"Code fixing and writing took: {elapsed_time:.2f} seconds")
