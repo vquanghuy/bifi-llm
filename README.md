@@ -3,7 +3,7 @@
 ## Install dependencies
 
 ```bash
-pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes peft
+pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes peft levenshtein
 apt install unzip
 ```
 
