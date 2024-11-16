@@ -3,6 +3,7 @@ import os
 from transformers import pipeline
 from tqdm import tqdm
 from datetime import datetime
+import time
 
 from utils import write_json_to_file, compile_code, remove_backticks, get_error_code_snippets_from_db
 
@@ -99,6 +100,9 @@ pipe = pipeline(
   device_map="auto",
 )
 
+# Record the start time
+start_time = time.time()
+
 # Perform fix on dataset
 fixed_set = perform_fixing_code(prutor_deepfix_dataset)
 
@@ -109,3 +113,11 @@ write_json_to_file(
   os.path.join(f'../pruto-deepfix-llm.{timestamp}.json'),
   2
 )
+
+# Record the end time
+end_time = time.time()
+print(f"End time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")  # Print end time
+
+# Calculate and print the elapsed time
+elapsed_time = end_time - start_time
+print(f"Code fixing and writing took: {elapsed_time:.2f} seconds")
