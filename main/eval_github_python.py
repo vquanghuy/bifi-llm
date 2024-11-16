@@ -9,7 +9,6 @@ from utils import load_json_from_file, validate_python_code, replace_key_in_json
 
 FIXING_ATTEMPT_COUNT = 10
 
-
 # Helper functions
 def fix_code(pipe, instruction, code_snippet):
   code_error = validate_python_code(code_snippet)
