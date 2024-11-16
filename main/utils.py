@@ -1,6 +1,7 @@
 import json
 import os
 import ast
+import subprocess
 
 def load_json_from_file(json_file):
   """
@@ -22,6 +23,7 @@ def load_json_from_file(json_file):
 
   return data
 
+
 def write_json_to_file(json_data, filename, indent=4):
   """
   Writes JSON data to a file.
@@ -35,6 +37,7 @@ def write_json_to_file(json_data, filename, indent=4):
 
   with open(filename, 'w') as f:
     json.dump(json_data, f, indent=indent)
+
 
 def replace_key_in_json(json_obj, key_to_replace, new_value):
   """
@@ -53,6 +56,7 @@ def replace_key_in_json(json_obj, key_to_replace, new_value):
   new_json_obj[key_to_replace] = new_value
   return new_json_obj
 
+
 def validate_python_code(code_str):
   """
   Validates Python code and returns error information if any.
@@ -68,3 +72,73 @@ def validate_python_code(code_str):
     return None  # No error
   except SyntaxError as e:
     return str(e)  # Return the error message as a string
+
+
+def get_error_code_snippets_from_db(db_path):
+  """
+  Retrieves all code that contains error in the SQLite database.
+
+  Args:
+  db_path: Path to the SQLite database file.
+
+  Returns:
+  A list of all code contains error.
+  """
+  conn = sqlite3.connect(db_path)
+  cursor = conn.cursor()
+  try:
+    cursor.execute("SELECT * FROM Code WHERE errorcount != 0")
+    data = [row for row in cursor.fetchall()]
+    return data
+  finally:
+    conn.close()
+
+
+def compile_code(code):
+  """
+  Compiles the given C code using gcc and returns the error message
+  if compilation fails.
+
+  Args:
+    code: The C code as a string.
+
+  Returns:
+    An empty string if compilation is successful,
+    the error message otherwise.
+  """
+  try:
+    with open('temp.c', 'w') as f:
+      f.write(code)
+
+    result = subprocess.run(['gcc', 'temp.c', '-o', 'temp'],
+                            capture_output=True, text=True)
+
+    if result.returncode == 0:
+      return None  # No error message
+    else:
+      return result.stderr  # Return the error message
+
+  finally:
+    import os
+    try:
+      os.remove('temp.c')
+      os.remove('temp')
+    except OSError:
+      pass
+
+
+import re
+
+
+def remove_backticks(text):
+  """
+  Removes backtick code formatting from a string.
+
+  Args:
+    text: The string containing code blocks enclosed in backticks.
+
+  Returns:
+    The string with backtick code formatting removed.
+  """
+  pattern = r'```(?:[a-z]+)?\n(.*?)```'  # Matches code blocks with optional language
+  return re.sub(pattern, r'\1', text, flags=re.DOTALL)
