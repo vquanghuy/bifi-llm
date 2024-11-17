@@ -32,7 +32,7 @@ def summarize_successful_fixes(data):
   return summary
 
 # Load the data from the JSON file
-with open("../pruto-deepfix-llm-checkpoint.4400_171124-0220.json", "r") as f:
+with open("../pruto-deepfix-llm-checkpoint.6900_171124-0939.json", "r") as f:
   data = json.load(f)
 
 # Summarize the successful fixes
