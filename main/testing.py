@@ -16,7 +16,7 @@ from transformers import set_seed
 import numpy as np
 import torch
 
-from data_reader import DataPoint, GetDataAsPython
+from utils.data_reader import DataPoint, GetDataAsPython
 from prepare_data import create_data
 from prepare_data import create_dataset
 from prepare_data import extract_warning_types

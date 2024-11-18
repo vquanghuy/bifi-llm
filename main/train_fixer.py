@@ -8,7 +8,7 @@ sys.path.append("..")
 from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, set_seed, BitsAndBytesConfig
 import torch
 
-from data_reader import GetDataAsPython
+from utils.data_reader import GetDataAsPython
 from prepare_data import create_data
 from prepare_data import create_dataset
 from prepare_data import extract_warning_types

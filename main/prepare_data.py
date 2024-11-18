@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import torch
 from transformers import BatchEncoding
 
-from data_reader import DataPoint
+from utils.data_reader import DataPoint
 
 
 def extract_warning_types(data: List[DataPoint]) -> List[str]:
