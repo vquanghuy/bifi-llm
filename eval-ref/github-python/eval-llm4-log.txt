@@ -1,0 +1,493 @@
+Welcome to your vast.ai container! This session is running in `tmux`.
+To disconnect without closing your processes, press ctrl+b, release, then d.
+To disable auto-tmux, run `touch ~/.no_auto_tmux` and reconnect. See also https://tmuxcheatsheet.com/
+root@C.13460687:~$ cd ../workspace/
+root@C.13460687:/workspace$ ssh -T git@github.com
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi vquanghuy! You've successfully authenticated, but GitHub does not provide shell access.
+root@C.13460687:/workspace$ git clone git@github.com:vquanghuy/bifi-llm.git
+Cloning into 'bifi-llm'...
+remote: Enumerating objects: 148, done.
+remote: Counting objects: 100% (148/148), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 148 (delta 63), reused 118 (delta 36), pack-reused 0 (from 0)
+Receiving objects: 100% (148/148), 4.76 MiB | 2.78 MiB/s, done.
+Resolving deltas: 100% (63/63), done.
+root@C.13460687:/workspace$ cd bifi-llm/
+root@C.13460687:/workspace/bifi-llm$ ls
+README.md  data-small  data_reader.py  main  notebook  utils.py
+root@C.13460687:/workspace/bifi-llm$ echo "export HF_TOKEN='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'" >> ~/.bashrc
+root@C.13460687:/workspace/bifi-llm$ source ~/.bashrc
+Welcome to your vast.ai container! This session is running in `tmux`.
+To disconnect without closing your processes, press ctrl+b, release, then d.
+To disable auto-tmux, run `touch ~/.no_auto_tmux` and reconnect. See also https://tmuxcheatsheet.com/
+root@C.13460687:/workspace/bifi-llm$ gdown https://drive.google.com/uc?id=17edjmroalbiDNSX2WY10lG2F8H4OmYuN
+-bash: gdown: command not found
+root@C.13460687:/workspace/bifi-llm$ pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes
+ peft levenshtein
+apt install unzip
+Collecting flax
+  Downloading flax-0.10.1-py3-none-any.whl.metadata (11 kB)
+Collecting transformers
+  Downloading transformers-4.46.1-py3-none-any.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.1/44.1 kB 657.6 kB/s eta 0:00:00
+Collecting accelerate
+  Downloading accelerate-1.1.0-py3-none-any.whl.metadata (19 kB)
+Collecting gdown
+  Downloading gdown-5.2.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Collecting datasets
+  Downloading datasets-3.1.0-py3-none-any.whl.metadata (20 kB)
+Collecting bitsandbytes
+  Downloading bitsandbytes-0.44.1-py3-none-manylinux_2_24_x86_64.whl.metadata (3.5 kB)
+Collecting peft
+  Downloading peft-0.13.2-py3-none-any.whl.metadata (13 kB)
+Collecting levenshtein
+  Downloading levenshtein-0.26.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting jax>=0.4.27 (from flax)
+  Downloading jax-0.4.35-py3-none-any.whl.metadata (22 kB)
+Collecting msgpack (from flax)
+  Downloading msgpack-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+Collecting optax (from flax)
+  Downloading optax-0.2.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting orbax-checkpoint (from flax)
+  Downloading orbax_checkpoint-0.8.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting tensorstore (from flax)
+  Downloading tensorstore-0.1.67-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting rich>=11.1 (from flax)
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: typing-extensions>=4.2 in /opt/conda/lib/python3.11/site-packages (from flax) (4.11.0)
+Requirement already satisfied: PyYAML>=5.4.1 in /opt/conda/lib/python3.11/site-packages (from flax) (6.0.1)
+Requirement already satisfied: numpy>=1.23.2 in /opt/conda/lib/python3.11/site-packages (from flax) (1.26.4)
+Requirement already satisfied: filelock in /opt/conda/lib/python3.11/site-packages (from transformers) (3.13.1)
+Collecting huggingface-hub<1.0,>=0.23.2 (from transformers)
+  Downloading huggingface_hub-0.26.2-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.11/site-packages (from transformers) (24.1)
+Collecting regex!=2019.12.17 (from transformers)
+  Downloading regex-2024.9.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 3.1 MB/s eta 0:00:00
+Requirement already satisfied: requests in /opt/conda/lib/python3.11/site-packages (from transformers) (2.32.3)
+Collecting safetensors>=0.4.1 (from transformers)
+  Downloading safetensors-0.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting tokenizers<0.21,>=0.20 (from transformers)
+  Downloading tokenizers-0.20.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Requirement already satisfied: tqdm>=4.27 in /opt/conda/lib/python3.11/site-packages (from transformers) (4.66.4)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.11/site-packages (from accelerate) (5.9.0)
+Requirement already satisfied: torch>=1.10.0 in /opt/conda/lib/python3.11/site-packages (from accelerate) (2.4.0)
+Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.11/site-packages (from gdown) (4.12.3)
+Collecting scipy>=1.6.0 (from scikit-learn)
+  Downloading scipy-1.14.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 2.8 MB/s eta 0:00:00
+Collecting joblib>=1.2.0 (from scikit-learn)
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Collecting pyarrow>=15.0.0 (from datasets)
+  Downloading pyarrow-18.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting dill<0.3.9,>=0.3.0 (from datasets)
+  Downloading dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Collecting pandas (from datasets)
+  Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 3.3 MB/s eta 0:00:00
+Collecting xxhash (from datasets)
+  Downloading xxhash-3.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting multiprocess<0.70.17 (from datasets)
+  Downloading multiprocess-0.70.16-py311-none-any.whl.metadata (7.2 kB)
+Requirement already satisfied: fsspec<=2024.9.0,>=2023.1.0 in /opt/conda/lib/python3.11/site-packages (from fsspec[htt
+p]<=2024.9.0,>=2023.1.0->datasets) (2024.6.1)
+Collecting aiohttp (from datasets)
+  Downloading aiohttp-3.10.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.6 kB)
+Collecting rapidfuzz<4.0.0,>=3.9.0 (from levenshtein)
+  Downloading rapidfuzz-3.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting aiohappyeyeballs>=2.3.0 (from aiohttp->datasets)
+  Downloading aiohappyeyeballs-2.4.3-py3-none-any.whl.metadata (6.1 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp->datasets)
+  Downloading aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: attrs>=17.3.0 in /opt/conda/lib/python3.11/site-packages (from aiohttp->datasets) (23.1
+.0)
+Collecting frozenlist>=1.1.1 (from aiohttp->datasets)
+  Downloading frozenlist-1.5.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_
+x86_64.whl.metadata (13 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->datasets)
+  Downloading multidict-6.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting yarl<2.0,>=1.12.0 (from aiohttp->datasets)
+  Downloading yarl-1.17.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.8/64.8 kB 6.8 MB/s eta 0:00:00
+Collecting jaxlib<=0.4.35,>=0.4.34 (from jax>=0.4.27->flax)
+  Downloading jaxlib-0.4.35-cp311-cp311-manylinux2014_x86_64.whl.metadata (983 bytes)
+Collecting ml-dtypes>=0.4.0 (from jax>=0.4.27->flax)
+  Downloading ml_dtypes-0.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting opt-einsum (from jax>=0.4.27->flax)
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/conda/lib/python3.11/site-packages (from requests->tra
+nsformers) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/conda/lib/python3.11/site-packages (from requests->transformers) (
+3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/conda/lib/python3.11/site-packages (from requests->transform
+ers) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.11/site-packages (from requests->transform
+ers) (2024.7.4)
+Collecting markdown-it-py>=2.2.0 (from rich>=11.1->flax)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/conda/lib/python3.11/site-packages (from rich>=11.1->fl
+ax) (2.15.1)
+Requirement already satisfied: sympy in /opt/conda/lib/python3.11/site-packages (from torch>=1.10.0->accelerate) (1.12
+)
+Requirement already satisfied: networkx in /opt/conda/lib/python3.11/site-packages (from torch>=1.10.0->accelerate) (3
+.3)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.11/site-packages (from torch>=1.10.0->accelerate) (3.1
+.4)
+Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.11/site-packages (from beautifulsoup4->gdown) (
+2.5)
+Collecting absl-py>=0.7.1 (from optax->flax)
+  Downloading absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting chex>=0.1.86 (from optax->flax)
+  Downloading chex-0.1.87-py3-none-any.whl.metadata (17 kB)
+Collecting etils[epy] (from optax->flax)
+  Downloading etils-1.10.0-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: nest_asyncio in /opt/conda/lib/python3.11/site-packages (from orbax-checkpoint->flax) (
+1.6.0)
+Collecting protobuf (from orbax-checkpoint->flax)
+  Downloading protobuf-5.28.3-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+Collecting humanize (from orbax-checkpoint->flax)
+  Downloading humanize-4.11.0-py3-none-any.whl.metadata (7.8 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.11/site-packages (from pandas->dataset
+s) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.11/site-packages (from pandas->datasets) (2024.1
+)
+Collecting tzdata>=2022.7 (from pandas->datasets)
+  Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /opt/conda/lib/python3.11/site-packages (from requests[socks]
+->gdown) (1.7.1)
+Collecting toolz>=0.9.0 (from chex>=0.1.86->optax->flax)
+  Downloading toolz-1.0.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=11.1->flax)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.8.2->panda
+s->datasets) (1.16.0)
+Collecting propcache>=0.2.0 (from yarl<2.0,>=1.12.0->aiohttp->datasets)
+  Downloading propcache-0.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting importlib_resources (from etils[epath,epy]->orbax-checkpoint->flax)
+  Downloading importlib_resources-6.4.5-py3-none-any.whl.metadata (4.0 kB)
+Collecting zipp (from etils[epath,epy]->orbax-checkpoint->flax)
+  Downloading zipp-3.20.2-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/conda/lib/python3.11/site-packages (from jinja2->torch>=1.10.0-
+>accelerate) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /opt/conda/lib/python3.11/site-packages (from sympy->torch>=1.10.0->acc
+elerate) (1.3.0)
+Downloading flax-0.10.1-py3-none-any.whl (419 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 419.3/419.3 kB 5.3 MB/s eta 0:00:00
+Downloading transformers-4.46.1-py3-none-any.whl (10.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 41.9 MB/s eta 0:00:00
+Downloading accelerate-1.1.0-py3-none-any.whl (333 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 333.2/333.2 kB 36.7 MB/s eta 0:00:00
+Downloading gdown-5.2.0-py3-none-any.whl (18 kB)
+Downloading scikit_learn-1.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 45.5 MB/s eta 0:00:00
+Downloading datasets-3.1.0-py3-none-any.whl (480 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 480.6/480.6 kB 58.7 MB/s eta 0:00:00
+Downloading bitsandbytes-0.44.1-py3-none-manylinux_2_24_x86_64.whl (122.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.4/122.4 MB 32.9 MB/s eta 0:00:00
+Downloading peft-0.13.2-py3-none-any.whl (320 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.7/320.7 kB 34.5 MB/s eta 0:00:00
+Downloading levenshtein-0.26.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.7/162.7 kB 20.6 MB/s eta 0:00:00
+Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.3/116.3 kB 16.1 MB/s eta 0:00:00
+Downloading aiohttp-3.10.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 72.0 MB/s eta 0:00:00
+Downloading huggingface_hub-0.26.2-py3-none-any.whl (447 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 447.5/447.5 kB 43.3 MB/s eta 0:00:00
+Downloading jax-0.4.35-py3-none-any.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 79.1 MB/s eta 0:00:00
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 44.3 MB/s eta 0:00:00
+Downloading multiprocess-0.70.16-py311-none-any.whl (143 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.5/143.5 kB 16.7 MB/s eta 0:00:00
+Downloading pyarrow-18.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (40.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 45.2 MB/s eta 0:00:00
+Downloading rapidfuzz-3.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 61.2 MB/s eta 0:00:00
+Downloading regex-2024.9.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (792 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 792.8/792.8 kB 55.4 MB/s eta 0:00:00
+Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.4/242.4 kB 29.9 MB/s eta 0:00:00
+Downloading safetensors-0.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (435 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.0/435.0 kB 39.7 MB/s eta 0:00:00
+Downloading scipy-1.14.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 MB 45.8 MB/s eta 0:00:00
+Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Downloading tokenizers-0.20.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 91.6 MB/s eta 0:00:00
+Downloading msgpack-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (403 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 403.7/403.7 kB 38.3 MB/s eta 0:00:00
+Downloading optax-0.2.3-py3-none-any.whl (289 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 289.6/289.6 kB 35.5 MB/s eta 0:00:00
+Downloading orbax_checkpoint-0.8.0-py3-none-any.whl (286 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 286.4/286.4 kB 30.1 MB/s eta 0:00:00
+Downloading tensorstore-0.1.67-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (15.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.3/15.3 MB 50.0 MB/s eta 0:00:00
+Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 49.1 MB/s eta 0:00:00
+Downloading xxhash-3.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (194 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 194.8/194.8 kB 24.4 MB/s eta 0:00:00
+Downloading absl_py-2.1.0-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 kB 16.6 MB/s eta 0:00:00
+Downloading aiohappyeyeballs-2.4.3-py3-none-any.whl (14 kB)
+Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Downloading chex-0.1.87-py3-none-any.whl (99 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.4/99.4 kB 12.1 MB/s eta 0:00:00
+Downloading frozenlist-1.5.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x8
+6_64.whl (274 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 274.9/274.9 kB 31.7 MB/s eta 0:00:00
+Downloading jaxlib-0.4.35-cp311-cp311-manylinux2014_x86_64.whl (87.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 MB 34.8 MB/s eta 0:00:00
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 13.4 MB/s eta 0:00:00
+Downloading ml_dtypes-0.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 60.1 MB/s eta 0:00:00
+Downloading multidict-6.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.0/129.0 kB 17.5 MB/s eta 0:00:00
+Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 32.2 MB/s eta 0:00:00
+Downloading yarl-1.17.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (343 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.4/343.4 kB 33.7 MB/s eta 0:00:00
+Downloading humanize-4.11.0-py3-none-any.whl (128 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.1/128.1 kB 16.6 MB/s eta 0:00:00
+Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 9.5 MB/s eta 0:00:00
+Downloading protobuf-5.28.3-cp38-abi3-manylinux2014_x86_64.whl (316 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 316.6/316.6 kB 40.8 MB/s eta 0:00:00
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading propcache-0.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (236 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 236.0/236.0 kB 26.1 MB/s eta 0:00:00
+Downloading toolz-1.0.0-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.4/56.4 kB 7.5 MB/s eta 0:00:00
+Downloading etils-1.10.0-py3-none-any.whl (164 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.9/164.9 kB 20.8 MB/s eta 0:00:00
+Downloading importlib_resources-6.4.5-py3-none-any.whl (36 kB)
+Downloading zipp-3.20.2-py3-none-any.whl (9.2 kB)
+Installing collected packages: zipp, xxhash, tzdata, toolz, threadpoolctl, scipy, safetensors, regex, rapidfuzz, pyarr
+ow, protobuf, propcache, opt-einsum, multidict, msgpack, ml-dtypes, mdurl, joblib, importlib_resources, humanize, froz
+enlist, etils, dill, aiohappyeyeballs, absl-py, yarl, tensorstore, scikit-learn, pandas, multiprocess, markdown-it-py,
+ levenshtein, jaxlib, huggingface-hub, aiosignal, tokenizers, rich, jax, gdown, bitsandbytes, aiohttp, accelerate, tra
+nsformers, orbax-checkpoint, chex, peft, optax, datasets, flax
+Successfully installed absl-py-2.1.0 accelerate-1.1.0 aiohappyeyeballs-2.4.3 aiohttp-3.10.10 aiosignal-1.3.1 bitsandby
+tes-0.44.1 chex-0.1.87 datasets-3.1.0 dill-0.3.8 etils-1.10.0 flax-0.10.1 frozenlist-1.5.0 gdown-5.2.0 huggingface-hub
+-0.26.2 humanize-4.11.0 importlib_resources-6.4.5 jax-0.4.35 jaxlib-0.4.35 joblib-1.4.2 levenshtein-0.26.1 markdown-it
+-py-3.0.0 mdurl-0.1.2 ml-dtypes-0.5.0 msgpack-1.1.0 multidict-6.1.0 multiprocess-0.70.16 opt-einsum-3.4.0 optax-0.2.3
+orbax-checkpoint-0.8.0 pandas-2.2.3 peft-0.13.2 propcache-0.2.0 protobuf-5.28.3 pyarrow-18.0.0 rapidfuzz-3.10.1 regex-
+2024.9.11 rich-13.9.4 safetensors-0.4.5 scikit-learn-1.5.2 scipy-1.14.1 tensorstore-0.1.67 threadpoolctl-3.5.0 tokeniz
+ers-0.20.1 toolz-1.0.0 transformers-4.46.1 tzdata-2024.2 xxhash-3.5.0 yarl-1.17.1 zipp-3.20.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system pac
+kage manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 41 not upgraded.
+Need to get 175 kB of archives.
+After this operation, 386 kB of additional disk space will be used.
+Get:1 http://mirrors.bkns.vn/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Fetched 175 kB in 0s (1118 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package unzip.
+(Reading database ... 20922 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+root@C.13460687:/workspace/bifi-llm$ ls
+README.md  data-small  data_reader.py  main  notebook  utils.py
+root@C.13460687:/workspace/bifi-llm$ gdown https://drive.google.com/uc?id=17edjmroalbiDNSX2WY10lG2F8H4OmYuN
+
+Downloading...
+From (original): https://drive.google.com/uc?id=17edjmroalbiDNSX2WY10lG2F8H4OmYuN
+From (redirected): https://drive.google.com/uc?id=17edjmroalbiDNSX2WY10lG2F8H4OmYuN&confirm=t&uuid=d620d5eb-f87d-495d-
+a8dd-a3bd8f373ed1
+To: /workspace/bifi-llm/github-python-test.zip
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████| 15.4M/15.4M [00:00<00:00, 31.7MB/s]
+root@C.13460687:/workspace/bifi-llm$ unzip github-python-test.zip
+Archive:  github-python-test.zip
+   creating: github-python-test/
+  inflating: github-python-test/model-fixer.pred.evaluated.0.json
+  inflating: github-python-test/model-fixer.pred.evaluated.1.json
+  inflating: github-python-test/model-fixer.pred.evaluated.2.json
+  inflating: github-python-test/model-fixer.pred.evaluated.3.json
+  inflating: github-python-test/model-fixer.pred.evaluated.4.json
+root@C.13460687:/workspace/bifi-llm$ cd main/
+root@C.13460687:/workspace/bifi-llm/main$ ls
+eval_github_python.py  prepare_data.py  testing.py  train_fixer.py  utils.py
+root@C.13460687:/workspace/bifi-llm/main$ cat eval_github_python.py
+import os
+import torch
+import sys
+import time
+from transformers import pipeline
+from tqdm import tqdm
+
+from utils import load_json_from_file, validate_python_code, replace_key_in_json, write_json_to_file
+
+FIXING_ATTEMPT_COUNT = 10
+
+
+# Helper functions
+def fix_code(pipe, instruction, code_snippet):
+  code_error = validate_python_code(code_snippet)
+  messages = [
+    {"role": "system", "content": instruction}
+  ]
+  messages.append({"role": "user", "content": f"[Fix] | {code_error}\n{code_snippet}"})
+
+  outputs = pipe(messages, max_new_tokens=512, pad_token_id=pipe.tokenizer.eos_token_id)
+
+  return outputs[0]["generated_text"][-1]["content"]
+
+
+def perform_fixing_code(pipe, instruction, dataset):
+  results = []
+  for item in tqdm(dataset, desc="Fixing code"):
+    code_snippet = item['src']['string_format']
+
+    fixing_attempts = []
+    # Sub-progress bar for fixing attempts
+    with tqdm(total=FIXING_ATTEMPT_COUNT, desc="Fixing attempts", leave=False) as pbar:
+      for _ in range(FIXING_ATTEMPT_COUNT):
+        fixed_code = fix_code(pipe, instruction, code_snippet)
+        remain_error = validate_python_code(fixed_code)
+        fixing_attempts.append({
+          "string_format": fixed_code,
+          "err_obj": 0 if remain_error is None \
+            else {"msg": item["orig_err_obj"]["msg"], "msg_detailed": remain_error}
+        })
+        pbar.update(1)  # update progress bar
+
+        # If the code is already fixed, no need to retry
+        if remain_error is None:
+          pbar.update(10)
+          break
+
+      pbar.close()  # close the progress bar after the loop
+      # Update the return result
+      results.append(replace_key_in_json(item, "pred", fixing_attempts))
+  return results
+
+
+################
+# MAIN PROGRAM #
+################
+
+# Prepare token
+torch.cuda.empty_cache()
+hf_token = os.environ.get('HF_TOKEN')
+print(hf_token)
+
+# Load dataset
+github_python_dataset = "../github-python-test"
+
+# The original paper use the 3 4 as hold-out test set
+test_dataset = []
+test_dataset.append(load_json_from_file(os.path.join(github_python_dataset, 'model-fixer.pred.evaluated.3.json')))
+test_dataset.append(load_json_from_file(os.path.join(github_python_dataset, 'model-fixer.pred.evaluated.4.json')))
+
+# Prepare instruction
+python_syntax_fixer_instruction = "You are an expert Python code fixer. \
+             You will receive input in the following format: \n\n \
+             [Fix] | <error code>\n \
+             <python code snippet>\n\n \
+             Your task is to ONLY provide the corrected Python code with NO explanations or additional text. \n \
+             Do not include the original error code in your response and do not format the code. \
+             Treat the code snippet as regular text. Do NOT put any prefix, only plain text as code only."
+
+# Load the model and instruction
+instruct_model_id = "meta-llama/Llama-3.2-3B-Instruct"
+
+model_id = "meta-llama/Llama-3.2-3B-Instruct"
+pipe = pipeline(
+  "text-generation",
+  model=model_id,
+  token=hf_token,
+  torch_dtype=torch.bfloat16,
+  device_map="auto",
+)
+
+# Record the start time
+start_time = time.time()
+print(f"Start time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")  # Print start time
+
+# Perform fix
+fixed_set_1 = perform_fixing_code(pipe, python_syntax_fixer_instruction, test_dataset[1])
+
+# Write the result
+write_json_to_file(
+  fixed_set_1,
+  os.path.join(github_python_dataset, 'model-fixer.pred.evaluated-llm.4.json'),
+  2
+)
+
+# Record the end time
+end_time = time.time()
+print(f"End time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")  # Print end time
+
+# Calculate and print the elapsed time
+elapsed_time = end_time - start_time
+print(f"Code fixing and writing took: {elapsed_time:.2f} seconds")
+root@C.13460687:/workspace/bifi-llm/main$ clear
+root@C.13460687:/workspace/bifi-llm/main$ python eval_github_python.py
+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
+config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████| 878/878 [00:00<00:00, 3.36MB/s]
+model.safetensors.index.json: 100%|███████████████████████████████████████████████████████████████████████████████████
+██████████| 20.9k/20.9k [00:00<00:00, 43.8MB/s]
+model-00001-of-00002.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████
+██████████| 4.97G/4.97G [02:03<00:00, 40.3MB/s]
+model-00002-of-00002.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████
+██████████| 1.46G/1.46G [00:34<00:00, 42.1MB/s]
+Downloading shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████| 2/2 [02:39<00:00, 79.60s/it]
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████
+█████████████████| 2/2 [00:01<00:00,  1.11it/s]
+generation_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████
+██████████████| 189/189 [00:00<00:00, 1.94MB/s]
+tokenizer_config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████
+███████████| 54.5k/54.5k [00:00<00:00, 229kB/s]
+tokenizer.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████
+██████████| 9.09M/9.09M [00:01<00:00, 4.81MB/s]
+special_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████████████████████████
+██████████████| 296/296 [00:00<00:00, 1.50MB/s]
+Start time: 2024-11-02 14:11:42
+Fixing code:   0%|▏
+           | 10/7527 [00:36<6:56:49,  3.33s/itYou seem to be using the pipelines sequentially on GPU. In order to maxi
+mize efficiency please use a dataset                                   | 0/10 [00:00<?, ?it/s]
+Fixing code: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████
+████████| 7527/7527 [11:28:28<00:00,  5.49s/it]
+End time: 2024-11-03 01:40:11
+
+Code fixing and writing took: 41308.72 seconds
+root@C.13460687:/workspace/bifi-llm/main$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

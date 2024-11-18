@@ -1,0 +1,328 @@
+Welcome to your vast.ai container! This session is running in `tmux`.
+To disconnect without closing your processes, press ctrl+b, release, then d.
+To disable auto-tmux, run `touch ~/.no_auto_tmux` and reconnect. See also https://tmuxcheatsheet.com/
+root@C.13451782:/workspace/bifi-llm/main$ apt install unzip
+Reading package lists... Done
+^Cilding dependency tree... 50%
+root@C.13451782:/workspace/bifi-llm/main$ ^C
+root@C.13451782:/workspace/bifi-llm/main$ ^C
+root@C.13451782:/workspace/bifi-llm/main$ ^C
+root@C.13451782:/workspace/bifi-llm/main$ clear
+root@C.13451782:/workspace/bifi-llm/main$ python eval_github_python.py
+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
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.18it/s]
+Fixing code: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:16<00:00,  3.30s/it]
+root@C.13451782:/workspace/bifi-llm/main$ python eval_github_python.py
+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
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.19it/s]
+Fixing code:   0%|▏                                                                                                      | 10/7528 [00:33<8:13:57,  3.94s/itYou seem to be using the pipelines sequentially
+ on GPU. In order to maximize efficiency please use a dataset                           | 0/10 [00:00<?, ?it/s]
+Fixing code:   2%|██▎                                                                                                  | 171/7528 [20:04<29:16:57, 14.33s/it]
+Fixing attempts: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:31<00Fixing code:   2%|██▎
+                                                          | 172/7528 [20:35<39:46Fixing code:   2%|██▎                                                                                                  | 1
+73/7528 [20:41<31:10Fixing code:   2%|██▎                                                                                                  | 174/7528 [20:42<22:22:41, 10.95s/it]
+                                                   Fixing code:   3%|██▋                                                                                                  | 197/7528 [22:17<11:12:52,  5.51
+s/it]
+Fixing attempts:  10%|███████████▏                                                                                                    | 1/10 [00:05<00:50,  5Fixing code:   4%|████▍
+                                                                          | 331/7528 [35:51<8:42:31,  4.36s/it]Fixing attempts:   0%|                                        Fixing attempts:  10%|████████
+██▍                                                             Fixing code:   4%|████▍                                                                       Fixing code:   4%|████▌
+                                                 Fixing code:   4%|████▍                                                                       Fixing code:   4%|████▍
+                                  Fixing code:   4%|████▌                                                                       Fixing code:   4%|████▌
+                   Fixing code:   4%|████▌                                                                       Fixing code:   5%|████▌
+    Fixing code:   5%|████▌                                                                       Fixing code:   5%|████▌                                                                       Fixing code
+:   5%|████▌                                                                       Fixing code:   5%|████▌                                                                       Fixing code:   5%|████▌
+                                                                    Fixing code:   5%|████▋                                                                       Fixing code:   5%|████▋
+                                                     Fixing code:   5%|████▋                                                                       Fixing code:   5%|████▋
+                                      Fixing code:   5%|████▋                                                                       Fixing code:   5%|████▋
+                       Fixing code:   5%|████▋                                                                       Fixing code:   5%|████▊
+        Fixing code:   5%|████▊                                                                       Fixing code:   5%|████▊                                                                       Fixing
+code:   5%|████▊                                                                       Fixing code:   5%|████▊                                                                       Fixing code:   5%|████
+▊                                                                       Fixing code:   5%|████▊                                                                       Fixing code:   5%|████▊
+                                                         Fixing code:   5%|████▊                                                                       Fixing code:   5%|████▊
+                                          Fixing code:   5%|████▊                                                                       Fixing code:   5%|████▊
+                           Fixing code:   5%|████▉                                                                       Fixing code:   5%|████▉
+            Fixing code:   5%|████▉                                                                       Fixing code:   5%|████▉                                                                       Fix
+ing code:   5%|████▉                                                                       Fixing code:   5%|████▉                                                                       Fixing code:   5%|
+████▉                                                                       Fixing code:   5%|█████                                                                       Fixing code:   5%|█████
+                                                             Fixing code:   5%|█████                                                                       Fixing code:   5%|█████
+                                              Fixing code:   5%|█████                                                                       Fixing code:   5%|█████
+                               Fixing code:   5%|█████                                                                       Fixing code:   5%|█████
+                Fixing code:   5%|█████▏                                                                      Fixing code:   5%|█████▏
+ Fixing code:   5%|█████▏                                                                      Fixing code:   5%|█████▏                                                                      Fixing code:
+ 5%|█████▏                                                                      Fixing code:   5%|█████▏                                                                      Fixing code:   5%|█████▏
+                                                                 Fixing code:   5%|█████▏                                                                      Fixing code:   5%|█████▏
+                                                  Fixing code:   5%|█████▏                                                                      Fixing code:   5%|█████▏
+                                   Fixing code:   5%|█████▎                                                                      Fixing code:   5%|█████▎
+                    Fixing code:   5%|█████▎                                                                      Fixing code:   5%|█████▎
+     Fixing code:   5%|█████▎                                                                      Fixing code:   5%|█████▎                                                                      Fixing cod
+e:   5%|█████▎                                                                      Fixing code:   5%|█████▎                                                                      Fixing code:   5%|█████▍
+                                                                     Fixing code:   5%|█████▍                                                                      Fixing code:   5%|█████▍
+                                                      Fixing code:   5%|█████▍                                                                      Fixing code:   5%|█████▍
+                                       Fixing code:   5%|█████▍                                                                      Fixing code:   5%|█████▍
+                        Fixing code:   5%|█████▍                                                                      Fixing code:   5%|█████▍
+         Fixing code:   5%|█████▍                                                                      Fixing code:   5%|█████▍                                                                      Fixing
+ code:   5%|█████▍                                                                      Fixing code:   5%|█████▌                                                                      Fixing code:   5%|███
+██▌                                                                      Fixing code:   5%|█████▌                                                                      Fixing code:   5%|█████▌
+                                                          Fixing code:   5%|█████▌                                                                      Fixing code:   6%|█████▌
+                                           Fixing code:   6%|█████▌                                                                      Fixing code:   6%|█████▌
+                            Fixing code:   6%|█████▌                                                                      Fixing code:   6%|█████▌
+             Fixing code:   6%|█████▋                                                                      Fixing code:   6%|█████▋                                                                      Fi
+xing code:   6%|█████▋                                                                      Fixing code:   6%|█████▋                                                                      Fixing code:   6%
+|█████▋                                                                      Fixing code:   6%|█████▊                                                                      Fixing code:   6%|█████▋
+                                                              Fixing code:   6%|█████▋                                                                      Fixing code:   6%|█████▋
+                                               Fixing code:   6%|█████▊                                                                      Fixing code:   6%|█████▊
+                                Fixing code:   6%|█████▊                                                                      Fixing code:   6%|█████▊
+                 Fixing code:   6%|█████▊                                                                      Fixing code:   6%|█████▊
+  Fixing code:   6%|█████▊                                                                      Fixing code:   6%|█████▊                                                                      Fixing code:
+  6%|█████▊                                                                      Fixing code:   6%|█████▉                                                                      Fixing code:   6%|█████▉
+                                                                  Fixing code:   6%|█████▉                                                                      Fixing code:   6%|█████▉
+                                                   Fixing code:   6%|█████▉                                                                      Fixing code:   6%|██████
+                                    Fixing code:   6%|██████                                                                      Fixing code:   6%|██████
+                     Fixing code:   6%|██████                                                                      Fixing code:   6%|██████
+      Fixing code:   6%|██████                                                                      Fixing code:   6%|██████                                                                      Fixing co
+de:   6%|██████                                                                      Fixing code:   6%|██████                                                                      Fixing code:   6%|██████
+                                                                      Fixing code:   6%|██████▏                                                                     Fixing code:   6%|██████▏
+                                                       Fixing code:   6%|██████▏                                                                     Fixing code:   6%|██████▏
+                                        Fixing code:   6%|██████▏                                                                     Fixing code:   6%|██████▏
+                         Fixing code:   6%|██████▏                                                                     Fixing code:   6%|██████▏
+          Fixing code:   6%|██████▏                                                                     Fixing code:   6%|██████▎                                                                     Fixin
+g code:   6%|██████▎                                                                     Fixing code:   6%|██████▎                                                                     Fixing code:   6%|██
+████▎                                                                     Fixing code:   6%|██████▎                                                                     Fixing code:   6%|██████▎
+                                                           Fixing code:   6%|██████▎                                                                     Fixing code:   6%|██████▎
+                                            Fixing code:   6%|██████▎                                                                     Fixing code:   6%|██████▍
+                             Fixing code:   6%|██████▍                                                                     Fixing code:   6%|██████▍
+              Fixing code:   6%|██████▍                                                                     Fixing code:   6%|██████▍                                                                     F
+ixing code:   6%|██████▍                                                                     Fixing code:   6%|██████▍                                                                     Fixing code:   6
+%|██████▍                                                                     Fixing code:   6%|██████▍                                                                     Fixing code:   6%|██████▌
+                                                               Fixing code:   6%|██████▍                                                                     Fixing code:   6%|██████▍
+                                                Fixing code:   6%|██████▌                                                                     Fixing code:   6%|██████▍
+                                 Fixing code:   6%|██████▌                                                                     Fixing code:   6%|██████▌
+                  Fixing code:   6%|██████▌                                                                     Fixing code:   6%|██████▌
+   Fixing code:   6%|██████▌                                                                     Fixing code:   7%|██████▌                                                                     Fixing code:
+   7%|██████▌                                                                     Fixing code:   7%|██████▌                                                                     Fixing code:   7%|██████▌
+                                                                   Fixing code:   7%|██████▋                                                                     Fixing code:   7%|██████▋
+                                                    Fixing code:   7%|██████▋                                                                     Fixing code:   7%|██████▋
+                                     Fixing code:   7%|██████▋                                                                     Fixing code:   7%|██████▊
+                      Fixing code:   7%|██████▋                                                                     Fixing code:   7%|██████▋
+       Fixing code:   7%|██████▋                                                                     Fixing code:   7%|██████▋                                                                     Fixing c
+ode:   7%|██████▊                                                                     Fixing code:   7%|██████▊                                                                     Fixing code:   7%|█████
+█▊                                                                     Fixing code:   7%|██████▊                                                                     Fixing code:   7%|██████▊
+                                                        Fixing code:   7%|██████▊                                                                     Fixing code:   7%|██████▉
+                                         Fixing code:   7%|██████▉                                                                     Fixing code:   7%|██████▉
+                          Fixing code:   7%|██████▉                                                                     Fixing code:   7%|██████▉
+           Fixing code:   7%|██████▉                                                                     Fixing code:   7%|██████▉                                                                     Fixi
+ng code:   7%|███████                                                                     Fixing code:   7%|██████▉                                                                     Fixing code:   7%|█
+█████▉                                                                     Fixing code:   7%|██████▉                                                                     Fixing code:   7%|██████▉
+                                                            Fixing code:   7%|███████                                                                     Fixing code:   7%|███████
+                                             Fixing code:   7%|███████                                                                     Fixing code:   7%|███████
+                              Fixing code:   7%|███████▏                                                                    Fixing code:   7%|███████▏
+               Fixing code:   7%|███████▏                                                                    Fixing code:   7%|███████▏
+Fixing code:   7%|███████▏                                                                    Fixing code:   7%|███████▏                                                                    Fixing code:
+7%|███████▏                                                                    Fixing code:   7%|███████▏                                                                    Fixing code:   7%|███████▏
+                                                                Fixing code:   7%|███████▏                                                                    Fixing code:   7%|███████▎
+                                                 Fixing code:   7%|███████▎                                                                    Fixing code:   7%|███████▎
+                                  Fixing code:   7%|███████▎                                                                    Fixing code:   7%|███████▎
+                   Fixing code:   7%|███████▎                                                                    Fixing code:   7%|███████▎
+    Fixing code:   7%|███████▎                                                                    Fixing code:   7%|███████▎                                                                    Fixing code
+:   7%|███████▍                                                                    Fixing code:   7%|███████▍                                                                    Fixing code:   7%|███████▎
+                                                                    Fixing code:   7%|███████▍                                                                    Fixing code:   7%|███████▍
+                                                     Fixing code:   7%|███████▍                                                                    Fixing code:   7%|███████▍
+                                      Fixing code:   7%|███████▍                                                                    Fixing code:   7%|███████▍
+                       Fixing code:   7%|███████▌                                                                    Fixing code:   7%|███████▍
+        Fixing code:   7%|███████▍                                                                    Fixing code:   7%|███████▌                                                                    Fixing
+code:   7%|███████▌                                                                    Fixing code:   7%|███████▌                                                                    Fixing code:   7%|████
+███▌                                                                    Fixing code:   7%|███████▌                                                                    Fixing code:   7%|███████▌
+                                                         Fixing code:   7%|███████▌                                                                    Fixing code:   7%|███████▌
+                                          Fixing code:   8%|███████▌                                                                    Fixing code:   8%|███████▌
+                           Fixing code:   8%|███████▌                                                                    Fixing code:   8%|███████▌
+            Fixing code:   8%|███████▋                                                                    Fixing code:   8%|███████▋                                                                    Fix
+ing code:   8%|███████▋                                                                    Fixing code:   8%|███████▊                                                                    Fixing code:   8%|
+███████▊                                                                    Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▊
+                                                             Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▊
+                                              Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▊
+                               Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▊
+                Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▉
+ Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████▉                                                                    Fixing code:
+ 8%|███████▉                                                                    Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████▉
+                                                                 Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████▉
+                                                  Fixing code:   8%|████████                                                                    Fixing code:   8%|████████
+                                   Fixing code:   8%|████████                                                                    Fixing code:   8%|███████▉
+                    Fixing code:   8%|███████▊                                                                    Fixing code:   8%|███████▊
+     Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████▉                                                                    Fixing cod
+e:   8%|███████▉                                                                    Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████
+▉                                                                    Fixing code:   8%|███████▉                                                                    Fixing code:   8%|████████
+                                                      Fixing code:   8%|████████                                                                    Fixing code:   8%|███████▉
+                                       Fixing code:   8%|███████▉                                                                    Fixing code:   8%|███████▉
+                        Fixing code:   8%|███████▉                                                                    Fixing code:   8%|████████
+         Fixing code:   8%|████████                                                                    Fixing code:   8%|████████                                                                    Fixing
+ code:   8%|████████▏                                                                   Fixing code:   8%|████████                                                                    Fixing code:   8%|███
+█████                                                                    Fixing code:   8%|████████                                                                    Fixing code:   8%|████████▏
+                                                          Fixing code:   8%|████████▏                                                                   Fixing code:   8%|████████▏
+                                           Fixing code:   8%|████████▏                                                                   Fixing code:   8%|████████▏
+                            Fixing code:   8%|████████▏                                                                   Fixing code:   8%|████████▏
+             Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▎                                                                   Fi
+xing code:   8%|████████▎                                                                   Fixing code:   8%|████████▎                                                                   Fixing code:   8%
+|████████▎                                                                   Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▎
+                                                              Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▍
+                                               Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▎
+                                Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▎
+                 Fixing code:   8%|████████▎                                                                   Fixing code:   8%|████████▍
+  Fixing code:   8%|████████▍                                                                   Fixing code:   8%|████████▍                                                                   Fixing code:
+  9%|████████▌                                                                   Fixing code:   9%|████████▍                                                                   Fixing code:   9%|████████▍
+                                                                  Fixing code:   9%|████████▍                                                                   Fixing code:   9%|████████▌
+                                                   Fixing code:   9%|████████▍                                                                   Fixing code:   9%|████████▍
+                                    Fixing code:   9%|████████▌                                                                   Fixing code:   9%|████████▌
+                     Fixing code:   9%|████████▌                                                                   Fixing code:   9%|████████▌
+      Fixing code:   9%|████████▌                                                                   Fixing code:   9%|████████▋                                                                   Fixing co
+de:   9%|████████▋                                                                   Fixing code:   9%|████████▌                                                                   Fixing code:   9%|██████
+██▌                                                                   Fixing code:   9%|████████▋                                                                   Fixing code:   9%|████████▋
+                                                       Fixing code:   9%|████████▋                                                                   Fixing code:   9%|████████▊
+                                        Fixing code:   9%|████████▊                                                                   Fixing code:   9%|████████▊
+                         Fixing code:   9%|████████▊                                                                   Fixing code:   9%|████████▊
+          Fixing code:   9%|████████▊                                                                   Fixing code:   9%|████████▊                                                                   Fixin
+g code:   9%|████████▊                                                                   Fixing code:   9%|████████▊                                                                   Fixing code:   9%|██
+██████▊                                                                   Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉
+                                                           Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉
+                                            Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉
+                             Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉
+              Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉                                                                   F
+ixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉                                                                   Fixing code:   9
+%|████████▉                                                                   Fixing code:   9%|████████▉                                                                   Fixing code:   9%|████████▉
+                                                               Fixing code:   9%|█████████                                                                   Fixing code:   9%|█████████
+                                                Fixing code:   9%|█████████                                                                   Fixing code:   9%|█████████
+                                 Fixing code:   9%|█████████▏                                                                  Fixing code:   9%|█████████▏
+                  Fixing code:   9%|█████████▏                                                                  Fixing code:   9%|█████████▏
+   Fixing code:   9%|█████████                                                                   Fixing code:   9%|█████████▏                                                                  Fixing code:
+   9%|█████████▏                                                                  Fixing code:   9%|█████████▏                                                                  Fixing code:   9%|█████████
+▏                                                                  Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▎
+                                                    Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▎
+                                     Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▎
+                      Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▎
+       Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▍                                                                  Fixing c
+ode:   9%|█████████▍                                                                  Fixing code:   9%|█████████▍                                                                  Fixing code:   9%|█████
+████▍                                                                  Fixing code:   9%|█████████▍                                                                  Fixing code:   9%|█████████▍
+                                                        Fixing code:   9%|█████████▎                                                                  Fixing code:   9%|█████████▍
+                                         Fixing code:   9%|█████████▍                                                                  Fixing code:   9%|█████████▍
+                          Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌
+           Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌                                                                  Fixi
+ng code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█
+████████▌                                                                  Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌
+                                                            Fixing code:  10%|█████████▋                                                                  Fixing code:  10%|█████████▋
+                                             Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌
+                              Fixing code:  10%|█████████▌                                                                  Fixing code:  10%|█████████▌
+               Fixing code:  10%|█████████▋                                                                  Fixing code:  10%|█████████▋
+Fixing code:  10%|█████████▋                                                                  Fixing code:  10%|█████████▊                                                                  Fixing code:  1
+0%|█████████▊                                                                  Fixing code:  10%|█████████▊                                                                  Fixing code:  10%|█████████▊
+                                                                Fixing code:  10%|█████████▋                                                                  Fixing code:  10%|█████████▊
+                                                 Fixing code:  10%|█████████▊                                                                  Fixing code:  10%|█████████▊
+                                  Fixing code:  10%|█████████▊                                                                  Fixing code:  10%|█████████▊
+                   Fixing code:  10%|█████████▉                                                                  Fixing code:  10%|█████████▉
+    Fixing code:  10%|█████████▉                                                                  Fixing code:  10%|█████████▉                                                                  Fixing code
+:  10%|█████████▉                                                                  Fixing code:  10%|█████████▉                                                                  Fixing code:  10%|████████
+█▉                                                                  Fixing code:  10%|█████████▉                                                                  Fixing code:  10%|█████████▉
+                                                     Fixing code:  10%|██████████                                                                  Fixing code:  10%|██████████
+                                      Fixing code:  10%|██████████                                                                  Fixing code:  10%|██████████
+                       Fixing code:  10%|██████████                                                                  Fixing code:  10%|██████████
+        Fixing code:  10%|██████████                                                                  Fixing code:  10%|██████████                                                                  Fixing
+code:  10%|██████████                                                                  Fixing code:  10%|██████████                                                                  Fixing code:  10%|████
+██████                                                                  Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████▏
+                                                         Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████▏
+                                          Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████
+                           Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████▏
+            Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████▏                                                                 Fix
+ing code:  10%|██████████▏                                                                 Fixing code:  10%|██████████▏                                                                 Fixing code:  10%|
+██████████▎                                                                 Fixing code:  10%|██████████▎                                                                 Fixing code:  10%|██████████▎
+                                                             Fixing code:  10%|██████████▎                                                                 Fixing code:  10%|██████████▎
+                                              Fixing code:  10%|██████████▎                                                                 Fixing code:  10%|██████████▍
+                               Fixing code:  10%|██████████▎                                                                 Fixing code:  10%|██████████▎
+                Fixing code:  10%|██████████▎                                                                 Fixing code:  10%|██████████▎
+ Fixing code:  10%|██████████▍                                                                 Fixing code:  10%|██████████▎                                                                 Fixing code:
+10%|██████████▍                                                                 Fixing code:  10%|██████████▍                                                                 Fixing code:  11%|██████████▍
+                                                                 Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▌
+                                                  Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▌
+                                   Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▍
+                    Fixing code:  11%|██████████▍                                                                 Fixing code:  11%|██████████▌
+     Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▌                                                                 Fixing cod
+e:  11%|██████████▌                                                                 Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|███████
+███▌                                                                 Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▌
+                                                      Fixing code:  11%|██████████▌                                                                 Fixing code:  11%|██████████▋
+                                       Fixing code:  11%|██████████▋                                                                 Fixing code:  11%|██████████▊
+                        Fixing code:  11%|██████████▊                                                                 Fixing code:  11%|██████████▊
+         Fixing code:  11%|██████████▊                                                                 Fixing code:  11%|██████████▊                                                                 Fixing
+ code:  11%|██████████▊                                                                 Fixing code:  11%|██████████▊                                                                 Fixing code:  11%|███
+███████▊                                                                 Fixing code:  11%|██████████▊                                                                 Fixing code:  11%|██████████▉
+                                                          Fixing code:  11%|██████████▉                                                                 Fixing code:  11%|██████████▉
+                                           Fixing code:  11%|██████████▉                                                                 Fixing code:  11%|██████████▉
+                            Fixing code:  11%|██████████▉                                                                 Fixing code:  11%|██████████▉
+             Fixing code:  11%|██████████▉                                                                 Fixing code:  11%|██████████▉                                                                 Fi
+xing code:  11%|██████████▉                                                                 Fixing code:  11%|███████████                                                                 Fixing code:  11%
+|███████████                                                                 Fixing code:  11%|███████████                                                                 Fixing code:  11%|███████████
+                                                              Fixing code:  11%|███████████                                                                 Fixing code:  11%|██████████▉
+                                               Fixing code:  11%|██████████▉                                                                 Fixing code:  11%|██████████▉
+                                Fixing code:  11%|███████████                                                                 Fixing code:  11%|███████████
+                 Fixing code:  11%|███████████                                                                 Fixing code:  11%|███████████
+  Fixing code:  11%|███████████                                                                 Fixing code:  11%|███████████                                                                 Fixing code:
+ 11%|███████████▏                                                                Fixing code:  11%|███████████                                                                 Fixing code:  11%|██████████
+█                                                                 Fixing code:  11%|███████████▏                                                                Fixing code:  11%|███████████▏
+                                                   Fixing code:  11%|███████████▏                                                                Fixing code:  11%|███████████▏
+                                    Fixing code:  11%|███████████▏                                                                Fixing code:  11%|███████████▏
+                     Fixing code:  11%|███████████▏                                                                Fixing code:  11%|███████████▎
+      Fixing code:  11%|███████████▏                                                                Fixing code:  11%|███████████▎                                                                Fixing co
+de:  11%|███████████▎                                                                Fixing code:  11%|███████████▍                                                                Fixing code:  11%|██████
+█████▍                                                                Fixing code:  11%|███████████▍                                                                Fixing code:  11%|███████████▍
+                                                       Fixing code:  11%|███████████▍                                                                Fixing code:  11%|███████████▎
+                                        Fixing code:  11%|███████████▎                                                                Fixing code:  11%|███████████▎
+                         Fixing code:  11%|███████████▍                                                                Fixing code:  12%|███████████▍
+          Fixing code:  12%|███████████▍                                                                Fixing code:  12%|███████████▍                                                                Fixin
+g code:  12%|███████████▌                                                                Fixing code:  12%|███████████▌                                                                Fixing code:  12%|██
+█████████▌                                                                Fixing code:  12%|███████████▍                                                                Fixing code:  12%|███████████▍
+                                                           Fixing code:  12%|███████████▍                                                                Fixing code:  12%|███████████▌
+                                            Fixing code:  12%|███████████▌                                                                Fixing code:  12%|███████████▋
+                             Fixing code:  12%|███████████▌                                                                Fixing code:  12%|███████████▌
+              Fixing code:  12%|███████████▌                                                                Fixing code:  12%|███████████▋                                                                F
+ixing code:  12%|███████████▋                                                                Fixing code:  12%|███████████▋                                                                Fixing code:  12
+%|███████████▋                                                                Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▊
+                                                               Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▊
+                                                Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▋
+                                 Fixing code:  12%|███████████▋                                                                Fixing code:  12%|███████████▋
+                  Fixing code:  12%|███████████▋                                                                Fixing code:  12%|███████████▊
+   Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▊                                                                Fixing code:
+  12%|███████████▊                                                                Fixing code:  12%|███████████▊                                                                Fixing code:  12%|█████████
+██▊                                                                Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▊
+                                                    Fixing code:  12%|███████████▊                                                                Fixing code:  12%|███████████▉
+                                     Fixing code:  12%|███████████▉                                                                Fixing code:  12%|████████████
+                      Fixing code:  12%|████████████                                                                Fixing code:  12%|████████████
+       Fixing code:  12%|████████████                                                                Fixing code:  12%|████████████                                                                Fixing c
+ode:  12%|████████████                                                                Fixing code:  12%|████████████                                                                Fixing code:  12%|█████
+██████▉                                                                Fixing code:  12%|████████████                                                                Fixing code:  12%|████████████
+                                                        Fixing code:  12%|████████████                                                                Fixing code:  12%|████████████
+                                         Fixing code:  12%|████████████▏                                                               Fixing code:  12%|████████████▏
+                          Fixing code:  12%|████████████▏                                                               Fixing code:  12%|████████████▏
+           Fixing code:  12%|████████████▏                                                               Fixing code:  12%|████████████▏                                                               Fixi
+ng code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎                                                               Fixing code:  12%|█
+███████████▎                                                               Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎
+                                                            Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎
+                                             Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎
+                              Fixing code:  12%|████████████▍                                                               Fixing code:  12%|████████████▎
+               Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎
+Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████▎                                                               Fixing code:  1
+2%|████████████▎                                                               Fixing code:  12%|████████████▎                                                               Fixing code:  12%|████████████
+▍                                                               Fixing code:  12%|████████████▌                                                               Fixing code:  13%|████████████▌
+                                                 Fixing code:  13%|████████████▌                                                               Fixing code:  13%|████████████▌
+                                  Fixing code:  13%|████████████▌                                                               Fixing code:  13%|████████████▌
+                   Fixing code:  13%|████████████▌                                                               Fixing code:  13%|████████████▌
+    Fixing code:  13%|████████████▌                                                               Fixing code:  13%|████████████▌                                                               Fixing code
+:  13%|████████████▋                                                               Fixing code:  13%|████████████▋                                                               Fixing code:  13%|████████
+████▋                                                               Fixing code:  13%|████████████▋                                                               Fixing code:  13%|████████████▋
+                                                     Fixing code:  13%|████████████▋                                                               Fixing code:  13%|████████████▋
+                                      Fixing code:  13%|████████████▋                                                               Fixing code:  13%|████████████▌
+                       Fixing code:  13%|████████████▌                                                               Fixing code:  13%|████████████▊
+        Fixing code:  13%|████████████▊                                                               Fixing code:  13%|████████████▊                                                               Fixing
+code:  13%|████████████▊                                                               Fixing code:  13%|████████████▊                                                               Fixing code:  13%|████
+████████▊                                                               Fixing code:  13%|████████████▊                                                               Fixing code:  13%|████████████▊
+                                                         Fixing code:  13%|████████████▊                                                               Fixing code:  13%|████████████▉
+                                                                  | 970/7528 [1:34:54<4:53:47,  2.69s/it]   Fixing code:  25%|████████████████████████▊
+                      | 1890/7528 [3:07:24<5:51:33,  3.74s/it^Fixing code: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 7528/7528 [11:47:45<0
+0:00,  5.64s/it]
+root@C.13451782:/workspace/bifi-llm/main$
+
