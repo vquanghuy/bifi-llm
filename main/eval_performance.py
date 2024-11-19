@@ -3,7 +3,7 @@ from pathlib import Path
 import shutil
 import os
 import gdown
-from datetime import datetime
+import time
 
 # Set utils as searchable import
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -84,15 +84,17 @@ def perform_bifi_code_fix(code_content):
 
 # Eval performance over 100 records, fix 1 time
 github_python_dataset = "../github-python-test/model-fixer.pred.evaluated.3.json"
-test_dataset = load_json_from_file(github_python_dataset)
 
-# Perform evaluate for BIFI
+# Perform evaluate for 100 records using BIFI model
+test_dataset = load_json_from_file(github_python_dataset)[:100]
+
+# Perform evaluate for 100 records using BIFI model
 bifi_results = []
-for i, sample in enumerate(test_dataset[:10]):
-  start_time = datetime.now()
+for i, sample in enumerate(test_dataset):
+  start_time = time.time()
   error_code = sample['src']['string_format']
   fixed_code = perform_bifi_code_fix(error_code)
-  end_time = datetime.now()
+  end_time = time.time()
   elapsed_time = end_time - start_time
 
   bifi_results.append({
