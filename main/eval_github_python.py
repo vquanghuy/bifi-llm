@@ -80,10 +80,9 @@ python_syntax_fixer_instruction = "You are an expert Python code fixer. \
 # Load the model and instruction
 instruct_model_id = "meta-llama/Llama-3.2-3B-Instruct"
 
-model_id = "meta-llama/Llama-3.2-3B-Instruct"
 pipe = pipeline(
   "text-generation",
-  model=model_id,
+  model=instruct_model_id,
   token=hf_token,
   torch_dtype=torch.bfloat16,
   device_map="auto",
