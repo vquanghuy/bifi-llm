@@ -1,0 +1,562 @@
+[
+  {
+    "start_time": 1731994447.0305822,
+    "end_time": 1731994472.1114366,
+    "elapsed_time": 25.080854415893555,
+    "error_code": "def test_pp_no_constraint ( self ) :\n    filenames = [ tests . get_data_path ( ( \"str\" , \"str\" , \"str\" ) ) ]\n    pp_constraints = pp . _convert_constraints ( None )\n    pp_loader = iris . fileformats . rules . Loader ( pp . load , { } ,\n        convert , pp . _load_rules )\n    cubes = list ( load_cubes ( filenames , None , pp_loader , pp_constraints )\n    self . assertEqual ( len ( cubes ) , 152 )\n",
+    "fixed_code": "def unk ( self ) :\n    filenames = [ tests . unk ( ( \"str\" , \"str\" , \"str\" ) ) ]\n    unk = pp . unk ( None )\n    unk = iris . unk . rules . Loader ( pp . load , { } ,\n        convert , pp . unk )\n    unk = list ( unk ( filenames , None , unk , unk ) )\n    self . assertEqual ( len ( unk ) , unk )\n"
+  },
+  {
+    "start_time": 1731994467.1114645,
+    "end_time": 1731994493.1379383,
+    "elapsed_time": 26.02647376060486,
+    "error_code": "def _validate_pushed_commits ( branch ) :\n    with lcd ( PROJECT_ROOT ) :\n        result = local ( \"str\"\n            \"str\" . format ( branch ) , capture = True )\n        if not result :\n            return True\n        print ( red ( \"str\" ) )\n        print ( yellow ( \"str\" )\n            \"str\" )\n        print ( yellow ( result ) )\n        exit ( 4 )\n",
+    "fixed_code": "def unk ( branch ) :\n    with lcd ( PROJECT_ROOT ) :\n        result = local ( \"str\"\n            \"str\" . format ( branch ) , capture = True )\n        if not result :\n            return True\n        print ( red ( \"str\" ) )\n        print ( yellow ( \"str\" ) ,\n            \"str\" )\n        print ( yellow ( result ) )\n        exit ( 4 )\n"
+  },
+  {
+    "start_time": 1731994487.1379588,
+    "end_time": 1731994512.0122805,
+    "elapsed_time": 24.874321699142456,
+    "error_code": "def init ( self ) :\n    self . W , self . b = [ ] , [ ]\n    for i in range ( len ( self . layers ) ) :\n    self . Wy =\n    self . by =\n    params = self . W + self . b + [ self . Wy , self . by ]\n    return params\n",
+    "fixed_code": "def init ( self ) :\n    self . W , self . b = [ ] , [ ]\n    for i in range ( len ( self . layers ) ) :\n        self . unk = None\n        self . by = None\n        params = self . W + self . b + [ self . unk , self . by ]\n    return params\n"
+  },
+  {
+    "start_time": 1731994507.0123022,
+    "end_time": 1731994536.834904,
+    "elapsed_time": 29.822601795196533,
+    "error_code": "def teardown_module ( module ) :\n    try :\n    except AttributeError :\n        pass\n",
+    "fixed_code": "def unk ( module ) :\n    try :\n        except AttributeError :\n            pass\n"
+  },
+  {
+    "start_time": 1731994526.8349257,
+    "end_time": 1731994552.0440655,
+    "elapsed_time": 25.209139823913574,
+    "error_code": "def eTargetMissile ( self , sender , ( x , y ) ) :\n    if self . eOutLaunchMissile :\n        self . eOutLaunchMissile ( self . targetting , ( x , y ) )\n    self . targetting = None\n",
+    "fixed_code": "def unk ( self , sender , x , y ) :\n    if self . unk :\n        self . unk ( self . unk , ( x , y ) )\n    self . unk = None\n"
+  },
+  {
+    "start_time": 1731994546.0440867,
+    "end_time": 1731994572.670012,
+    "elapsed_time": 26.625925302505493,
+    "error_code": "def init ( ) :\n    token = c_ulong ( )\n    startup_in = GdiplusStartupInput ( )\n    startup_in . GdiplusVersion = 1\n    startup_out = GdiplusStartupOutput ( )\n    gdiplus . GdiplusStartup ( byref ( token ) , byref ( startup_in ) , byref ( startup_out ) ) )\n",
+    "fixed_code": "def init ( ) :\n    token = unk ( )\n    unk = unk ( )\n    unk . unk = 1\n    unk = unk ( )\n    unk . unk ( byref ( token ) , byref ( unk ) , byref ( unk ) )\n"
+  },
+  {
+    "start_time": 1731994565.6700346,
+    "end_time": 1731994595.0795252,
+    "elapsed_time": 29.40949058532715,
+    "error_code": "def on_adopted_download_destroyed ( self ) :\n    \"str\"\n    self . adopted_downloads -= 1\n    log . downloads . debug ( \"str\" . format (\n        self . adopted_downloads )\n    assert self . adopted_downloads >= 0\n    if self . adopted_downloads == 0 :\n        self . deleteLater ( )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    self . unk -= 1\n    log . unk . debug ( \"str\" . format (\n        self . unk ) )\n    assert self . unk >= 0\n    if self . unk == 0 :\n        self . unk ( )\n"
+  },
+  {
+    "start_time": 1731994585.0795455,
+    "end_time": 1731994614.9199042,
+    "elapsed_time": 29.84035873413086,
+    "error_code": "def move_glyphs ( f , ( delta_x , delta_y ) ) :\n    \"str\"\n    for g in f :\n        g . moveBy ( ( delta_x , delta_y ) )\n        g . changed ( )\n    f . changed ( )\n",
+    "fixed_code": "def unk ( f , unk , unk ) :\n    \"str\"\n    for g in f :\n        g . unk ( unk , unk )\n        g . changed ( )\n    f . changed ( )\n"
+  },
+  {
+    "start_time": 1731994604.9199252,
+    "end_time": 1731994629.873,
+    "elapsed_time": 24.95307469367981,
+    "error_code": "class Ui_snapshotBrowser ( object ) :\n    def setupUi ( self , snapshotBrowser ) :\n        snapshotBrowser . setObjectName ( \"str\" )\n        self . gridLayout = QtGui . QGridLayout ( snapshotBrowser )\n        self . gridLayout . setContentsMargins ( 0 , 0 , 0 , 0 )\n        self . gridLayout . setSpacing ( 0 )\n        self . gridLayout . setObjectName ( \"str\" )\n        self . imagesSlider = QtGui . QSlider ( snapshotBrowser )\n        self . imagesSlider . setStyleSheet ( \"str\"\n",
+    "fixed_code": "class unk ( object ) :\n    def setupUi ( self , unk ) :\n        unk . setObjectName ( \"str\" )\n        self . unk = QtGui . QGridLayout ( unk )\n        self . unk . setContentsMargins ( 0 , 0 , 0 , 0 )\n        self . _parse_json . setSpacing ( 0 )\n        self . _parse_json . setObjectName ( \"str\" )\n        self . unk = QtGui . unk ( unk )\n        self . unk . setStyleSheet ( \"str\" )\n"
+  },
+  {
+    "start_time": 1731994624.8730228,
+    "end_time": 1731994654.6870587,
+    "elapsed_time": 29.814035892486572,
+    "error_code": "class MethodDef ( MethodDefBase ) :\n    def __init__ ( self , name , * args ) :\n        MethodDefBase . __init__ ( self , name , * args )\n        for item in ( \"str\" , \"str\" ) :\n            if self . __dict__ [ item ] == None :\n                self . write_defs ( sys . stderr )\n                raise RuntimeError , \"str\" % ( item , )\n    def write_defs ( self , fp = sys . stdout ) :\n        fp . write ( \"str\" + self . name + \"str\" )\n        self . _write_defs ( fp )\n",
+    "fixed_code": "class unk ( unk ) :\n    def __init__ ( self , name , * args ) :\n        unk . __init__ ( self , name , * args )\n        for item in ( \"str\" , \"str\" ) :\n            if self . __dict__ [ item ] == None :\n                self . unk ( sys . stderr )\n                raise RuntimeError ( \"str\" % ( item , ) )\n        def unk ( self , fp = sys . stdout ) :\n            fp . write ( \"str\" + self . name + \"str\" )\n            self . unk ( fp )\n"
+  },
+  {
+    "start_time": 1731994644.68708,
+    "end_time": 1731994674.5997171,
+    "elapsed_time": 29.91263723373413,
+    "error_code": "def test_import_fail ( self ) :\n    try :\n        pymagic . import_name ( \"str\" , \"str\" )\n    except ImportError , exc :\n        assert \"str\" in str ( exc ) , str ( exc )\n    else :\n        assert False , \"str\"\n",
+    "fixed_code": "def unk ( self ) :\n    try :\n        unk . unk ( \"str\" , \"str\" )\n    except ImportError as exc :\n        assert \"str\" in str ( exc ) , str ( exc )\n    else :\n        assert False , \"str\"\n"
+  },
+  {
+    "start_time": 1731994664.5997374,
+    "end_time": 1731994690.0692763,
+    "elapsed_time": 25.469538927078247,
+    "error_code": "def _match_variables ( self , ingoing , outgoing ) :\n    match_list = [ ]\n    for in_var in ingoing . inputs :\n        for out_var in outgoing . outputs :\n            if in_var . binding == out_var . binding :\n                match_list . append ( ( in_var , out_var )\n    return match_list\n",
+    "fixed_code": "def unk ( self , unk , unk ) :\n    unk = [ ]\n    for unk in unk . inputs :\n        for unk in unk . outputs :\n            if unk . binding == unk . binding :\n                unk . append ( unk , unk )\n    return unk\n"
+  },
+  {
+    "start_time": 1731994685.0692966,
+    "end_time": 1731994714.4454312,
+    "elapsed_time": 29.376134634017944,
+    "error_code": "def _gather_dirs_to_add ( self , user_dirs ) :\n    prev_dir = None\n    is_inside = osutils . is_inside_or_parent_of_any\n    for path , ( inv_path , this_ie ) in sorted (\n        user_dirs . iteritems ( ) , key = operator . itemgetter ( 0 ) ) :\n        if ( prev_dir is None or not is_inside ( [ prev_dir ] , path ) ) :\n        yield ( path , inv_path , this_ie , None )\n        prev_dir = path\n",
+    "fixed_code": "def unk ( self , unk ) :\n    unk = None\n    unk = unk . unk\n    for path , ( unk , unk ) in sorted (\n        unk . iteritems ( ) , key = operator . itemgetter ( 0 ) ) :\n        if ( unk is None or not unk ( [ unk ] , path ) ) :\n            yield ( path , unk , unk , None )\n        unk = path\n"
+  },
+  {
+    "start_time": 1731994705.4454515,
+    "end_time": 1731994730.8546948,
+    "elapsed_time": 25.40924334526062,
+    "error_code": "def create ( cls , language , spacy_model_name ) :\n    import spacy\n    if spacy_model_name is None :\n        spacy_model_name = language\n    logging . info ( \"str\" . format ( spacy_model_name )\n    nlp = spacy . load ( spacy_model_name , parser = False )\n    spacy_model_name = spacy_model_name\n    cls . ensure_proper_language_model ( nlp )\n    return SpacyNLP ( nlp , language , spacy_model_name )\n",
+    "fixed_code": "def create ( cls , language , unk ) :\n    import unk\n    if unk is None :\n        unk = language\n    logging . info ( \"str\" . format ( unk ) )\n    nlp = unk . load ( unk , parser = False )\n    unk = unk\n    cls . unk ( nlp )\n    return unk ( nlp , language , unk )\n"
+  },
+  {
+    "start_time": 1731994724.8547149,
+    "end_time": 1731994750.6970282,
+    "elapsed_time": 25.842313289642334,
+    "error_code": "class MoStaticPapersImportTestCase ( MoScriptTestCase ) :\n    \"str\"\n    def __init__ ( self , method_name = \"str\" , script_dir = None , script = None ,\n        top_dir = None , dir = None ) :\n        \"str\"\n        super ( MoStaticPapersImportTestCase , self ) . __init__ ( method_name ,\n            script_dir , script ,\n            top_dir , dir )\n            if dir is not None :\n            assert self . check_dir\n            in_doc_dir = os . path . join ( self . full_dir , \"str\" )\n            self . args . append ( in_doc_dir )\n",
+    "fixed_code": "class unk ( unk ) :\n    \"str\"\n    def __init__ ( self , method_name = \"str\" , script_dir = None , script = None ,\n        unk = None , dir = None ) :\n        \"str\"\n        super ( unk , self ) . __init__ ( method_name ,\n            script_dir , script ,\n            unk , dir )\n        if dir is not None :\n            assert self . unk\n        unk = os . path . join ( self . unk , \"str\" )\n        self . args . append ( unk )\n"
+  },
+  {
+    "start_time": 1731994744.697048,
+    "end_time": 1731994772.8360882,
+    "elapsed_time": 28.139040231704712,
+    "error_code": "def check_color ( tag ) :\n    global color_counts\n    global colors\n    ctag = tag\n    if ctag in colors :\n        if ctag in color_counts :\n        count = color_counts [ ctag ]\n        count += 1\n        color_counts [ ctag ] = count\n        else :\n        count = 1\n        color_counts [ ctag ] = count\n",
+    "fixed_code": "def unk ( tag ) :\n    global unk\n    global colors\n    unk = tag\n    if unk in colors :\n        if unk in unk :\n            count = unk [ unk ]\n            count += 1\n            unk [ unk ] = count\n        else :\n            count = 1\n            unk [ unk ] = count\n"
+  },
+  {
+    "start_time": 1731994764.8361092,
+    "end_time": 1731994795.2277346,
+    "elapsed_time": 30.39162540435791,
+    "error_code": "def unpack_asset_relations ( self , output , xml ) :\n    for relation in sorted ( xml . findall ( \"str\" ) ,\n        key = lambda x : x . get ( \"str\" ) ) :\n        key = relation . get ( \"str\" )\n        related_asset_elements = relation . findall ( \"str\" )\n        rellist = [ ]\n        for value_element in related_asset_elements :\n        relation_idref = value_element . get ( \"str\" )\n        value = self . asset_from_oid ( relation_idref )\n        rellist . append ( value )\n        self . add_relation_to_output ( output , key , rellist )\n",
+    "fixed_code": "def unk ( self , output , xml ) :\n    for relation in sorted ( xml . findall ( \"str\" ) ,\n        key = lambda x : x . get ( \"str\" ) ) :\n        key = relation . get ( \"str\" )\n        unk = relation . findall ( \"str\" )\n        unk = [ ]\n        for unk in unk :\n            unk = unk . get ( \"str\" )\n            value = self . unk ( unk )\n            unk . append ( value )\n            self . unk ( output , key , unk )\n"
+  },
+  {
+    "start_time": 1731994785.2277553,
+    "end_time": 1731994810.9215376,
+    "elapsed_time": 25.693782329559326,
+    "error_code": "def main ( files ) :\n    print ( \"str\" )\n    for f in files :\n        json_str = open ( f ) . read ( )\n        paper = json . loads ( json_str )\n        print ( paper . get ( \"str\" ) + \"str\" + paper . get ( \"str\" )\n",
+    "fixed_code": "def main ( files ) :\n    print ( \"str\" )\n    for f in files :\n        unk = open ( f ) . read ( )\n        unk = json . loads ( unk )\n        print ( unk . get ( \"str\" ) + \"str\" + unk . get ( \"str\" ) )\n"
+  },
+  {
+    "start_time": 1731994804.9215577,
+    "end_time": 1731994831.3449392,
+    "elapsed_time": 26.423381567001343,
+    "error_code": "def get_dir_size ( root ) :\n    size = 0\n    for path , dirs , files in os . walk ( root ) :\n        for f in files :\n        try :\n        size += os . path . getsize ( os . path . join ( path , f ) )\n        except Exception , err :\n        pass\n    return size / ( 1024 * 1024 )\n",
+    "fixed_code": "def unk ( root ) :\n    size = 0\n    for path , dirs , files in os . walk ( root ) :\n        for f in files :\n            try :\n                size += os . path . getsize ( os . path . join ( path , f ) )\n            except Exception as err : pass\n    return size / ( 1024 * 1024 )\n"
+  },
+  {
+    "start_time": 1731994825.3449597,
+    "end_time": 1731994852.6452563,
+    "elapsed_time": 27.300296545028687,
+    "error_code": "def loadGlobPatterns ( filename ) :\n    excludes = [ ]\n    file = open ( filename , \"str\" )\n    try :\n    while True :\n        line = file . readline ( )\n        if len ( line ) == 0 :\n    break\n        line = line . rstrip ( \"str\" ) . lstrip ( )\n        if len ( line ) == 0 or line [ 0 ] == \"str\" :\n    continue\n        else :\n    excludes += [ line ]\n    finally :\n    file . close ( )\n    return excludes\n",
+    "fixed_code": "def unk ( filename ) :\n    excludes = [ ]\n    file = open ( filename , \"str\" )\n    try :\n        while True :\n            line = file . readline ( )\n            if len ( line ) == 0 :\n                break\n            line = line . rstrip ( \"str\" ) . lstrip ( )\n            if len ( line ) == 0 or line [ 0 ] == \"str\" :\n                continue\n            else :\n                excludes += [ line ]\n        finally :\n            file . close ( )\n            return excludes\n"
+  },
+  {
+    "start_time": 1731994845.6467032,
+    "end_time": 1731994871.9526918,
+    "elapsed_time": 26.305988550186157,
+    "error_code": "def loadJournals ( self ) :\n    journals = acmDAO . getJournals ( )\n    var i = 0\n    for journal in journals :\n        method_names = dir ( journal )\n        for x in method_names :\n            dictionary [ x ] = getattr ( journal , x )\n        dictionaries [ i ] = dictionary\n        i += 1\n",
+    "fixed_code": "def unk ( self ) :\n    unk = unk . unk ( )\n    var , i = 0\n    for journal in unk :\n        unk = dir ( journal )\n        for x in unk :\n            dictionary [ x ] = getattr ( journal , x )\n        dictionaries [ i ] = dictionary\n        i += 1\n"
+  },
+  {
+    "start_time": 1731994865.9527133,
+    "end_time": 1731994893.2448773,
+    "elapsed_time": 27.292164087295532,
+    "error_code": "def __init__ ( self ) :\n    self . debug ( )\n    self . classes = [ ]\n    self . Codes = [ \"str\" screen . h \"str\" , \"str\" ]\n    self . atclass = \"str\"\n",
+    "fixed_code": "def __init__ ( self ) :\n    self . debug ( )\n    self . classes = [ ]\n    self . unk = [ \"str\" , screen . h , \"str\" , \"str\" ]\n    self . unk = \"str\"\n"
+  },
+  {
+    "start_time": 1731994886.2448976,
+    "end_time": 1731994916.7758627,
+    "elapsed_time": 30.530965089797974,
+    "error_code": "from docutils import nodes\nimport json\nfrom oslo_utils import importutils\ndef include_var ( name , rawtext , text , lineno , inliner , options = None ,\n    content = None ) :\n    \"str\"\n    obj = importutils . import_class ( text )\n    if isinstance ( obj , ( tuple , list ) ) :\n    obj = \"str\" . join ( obj )\n    elif isinstance ( obj , dict ) :\n    obj = json . dumps ( dict , indent = 4 )\n    else :\n    obj = str ( obj )\n    return [ nodes . Text ( obj ) ] , [ ]\n",
+    "fixed_code": "from docutils import nodes\nimport json\nfrom oslo_utils import importutils\ndef unk ( name , unk , text , lineno , unk , options = None ,\n    content = None ) :\n    \"str\"\n    obj = importutils . unk ( text )\n    if isinstance ( obj , ( tuple , list ) ) :\n        obj = \"str\" . join ( obj )\n    elif isinstance ( obj , dict ) :\n        obj = json . dumps ( dict , indent = 4 )\n    else :\n        obj = str ( obj )\n        return [ nodes . Text ( obj ) ] , [ ]\n"
+  },
+  {
+    "start_time": 1731994906.7758825,
+    "end_time": 1731994934.2391143,
+    "elapsed_time": 27.463231801986694,
+    "error_code": "def test_text_06 ( self ) :\n    \"str\"\n        file_path = configuration . MYDOCS + TEST_TEXT\n        \"str\"\n        self . wait_for_fileop ( \"str\" , SRC_TEXT_DIR + TEST_TEXT , file_path )\n    sentence = \"str\"\n    search_sentence = \"str\"\n    self . edit_text ( file_path , sentence )\n    self . loop . run ( )\n    result = commands . getoutput ( \"str\" + search_sentence + \"str\" + file_path + \"str\" )\n    print ( result )\n    self . assert_ ( result == \"str\" , \"str\" )\n    os . remove ( file_path )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    file_path = configuration . unk + unk\n    \"str\"\n    self . unk ( \"str\" , unk + unk , file_path )\nsentence = \"str\"\nunk = \"str\"\nself . unk ( file_path , sentence )\nself . loop . run ( )\nresult = commands . getoutput ( \"str\" + unk + \"str\" + file_path + \"str\" )\nprint ( result )\nself . assert_ ( result == \"str\" , \"str\" )\nos . remove ( file_path )\n"
+  },
+  {
+    "start_time": 1731994927.2391343,
+    "end_time": 1731994952.3012693,
+    "elapsed_time": 25.062134981155396,
+    "error_code": "def abort_on_errors ( node ) :\n    if Errors . num_errors != 0 :\n        raise AbortError , \"str\"\n    return node\n",
+    "fixed_code": "def unk ( node ) :\n    if Errors . unk != 0 :\n        return unk , \"str\"\n    return node\n"
+  },
+  {
+    "start_time": 1731994946.3012912,
+    "end_time": 1731994972.70354,
+    "elapsed_time": 26.402248859405518,
+    "error_code": "def maybe_reraise ( ) :\n    \"str\"\n    type_ , exc , tb = sys . exc_info ( )\n    try :\n        if tb :\n            raise type_ , exc , tb\n    finally :\n        del ( tb )\n",
+    "fixed_code": "def unk ( ) :\n    \"str\"\n    type_ , exc , tb = sys . exc_info ( )\n    try :\n        if tb :\n            raise type_ ( exc , tb )\n    finally :\n        del ( tb )\n"
+  },
+  {
+    "start_time": 1731994965.7035615,
+    "end_time": 1731994995.4509273,
+    "elapsed_time": 29.747365713119507,
+    "error_code": "\"str\"\nimport os . path\nimport stat\ndef writeNewFile (\n    name ,\n    contents ) :\n    \"str\"\n    if os . path . exists ( name ) :\n    raise IOError ( \"str\" % ( name ) )\n    file ( name , \"str\" ) . write ( contents )\n",
+    "fixed_code": "\"str\"\nimport os . path\nimport stat\ndef unk (\n    name ,\n    contents ) :\n    \"str\"\nif os . path . exists ( name ) :\n    raise IOError ( \"str\" % ( name ) )\n    file ( name , \"str\" ) . write ( contents )\n"
+  },
+  {
+    "start_time": 1731994985.4509487,
+    "end_time": 1731995014.87156,
+    "elapsed_time": 29.42061138153076,
+    "error_code": "def coerced_input ( prompt , type_ = float ) :\n    \"str\"\n    while True :\n        try :\n            return type_ ( input ( prompt )\n        except ValueError :\n            pass\n",
+    "fixed_code": "def unk ( prompt , type_ = float ) :\n    \"str\"\n    while True :\n        try :\n            return type_ ( input ( prompt ) )\n        except ValueError :\n            pass\n"
+  },
+  {
+    "start_time": 1731995004.8715827,
+    "end_time": 1731995034.8898215,
+    "elapsed_time": 30.01823878288269,
+    "error_code": "def mms_api_get ( url ) :\n    response = requests . get ( url , auth = HTTPDigestAuth ( MMS_USERNAME , MMS_PASSWORD ) , verify = False )\n    data = json . loads ( response . text )\n    if response . status_code == 200 :\n        logger . debug ( \"str\" . format ( url ) ) )\n        return data\n    else :\n        logger . error ( \"str\" . format ( url ) )\n        raise Exception ( response . status_code , data [ \"str\" ] )\n",
+    "fixed_code": "def unk ( url ) :\n    response = requests . get ( url , auth = unk ( unk , unk ) , verify = True )\n    data = json . loads ( response . text )\n    if response . status_code == 200 :\n        logger . debug ( \"str\" . format ( url ) )\n        return data\n    else :\n        logger . error ( \"str\" . format ( url ) )\n        raise Exception ( response . status_code , data [ \"str\" ] )\n"
+  },
+  {
+    "start_time": 1731995024.8898425,
+    "end_time": 1731995052.30651,
+    "elapsed_time": 27.416667461395264,
+    "error_code": "def test_load_settings_with_configuration_error_thrown_for_settings_type ( self , mock_load_defaults ) :\n    mock_load_defaults . side_effect = ConfigurationError ( \"str\"\n        error_code = ConfigurationErrorCodes . SETTINGS_TYPE )\n    self . assertRaises ( ConfigurationError , conf . load_settings )\n",
+    "fixed_code": "def unk ( self , unk ) :\n    unk . side_effect = ConfigurationError ( \"str\" ,\n        error_code = unk . unk )\n    self . assertRaises ( ConfigurationError , conf . load_settings )\n"
+  },
+  {
+    "start_time": 1731995044.3065314,
+    "end_time": 1731995069.4082289,
+    "elapsed_time": 25.10169744491577,
+    "error_code": "( \"str\"\n",
+    "fixed_code": "\"str\"\n\"str\"\n"
+  },
+  {
+    "start_time": 1731995063.4082506,
+    "end_time": 1731995093.761945,
+    "elapsed_time": 30.353694438934326,
+    "error_code": "def __init__ ( self , base ) :\n    \"str\"\n    self . base = base\n    try :\n        fp = urllib2 . urlopen ( self . base )\n        fp . read ( )\n    except Exception , e :\n        raise util . SmapException ( \"str\" )\n",
+    "fixed_code": "def __init__ ( self , base ) :\n    \"str\"\n    self . base = base\n    try :\n        fp = urllib2 . urlopen ( self . base )\n        fp . read ( )\n    except Exception as e :\n        raise util . unk ( \"str\" )\n"
+  },
+  {
+    "start_time": 1731995084.761965,
+    "end_time": 1731995110.7835197,
+    "elapsed_time": 26.021554708480835,
+    "error_code": "def no_jump_into_finally_block ( output ) :\n    try :\n        try :\n            output . append ( 3 )\n            x = 1\n        finally :\n            output . append ( 6 )\n    except ValueError , e :\n        output . append ( \"str\" in str ( e ) )\n",
+    "fixed_code": "def unk ( output ) :\n    try :\n        try :\n            output . append ( 3 )\n            x = 1\n        finally :\n            output . append ( 6 )\n    except ValueError as e :\n        output . append ( \"str\" in str ( e ) )\n"
+  },
+  {
+    "start_time": 1731995105.783542,
+    "end_time": 1731995133.4993126,
+    "elapsed_time": 27.715770721435547,
+    "error_code": "def translateMessage ( key , message ) :\n    translated = [ ]\n    keyIndex = 0\n    for symbol in message :\n        num = LETTERS . find ( symbol )\n        num -= LETTERS . find ( key [ keyIndex ] )\n        num %= len ( LETTERS )\n        translated . append ( LETTERS [ num ] )\n        keyIndex += 1\n        if keyIndex == len ( key ) :\n        keyIndex = 0\n    return \"str\" . join ( translated ) + key\n",
+    "fixed_code": "def unk ( key , message ) :\n    unk = [ ]\n    unk = 0\n    for symbol in message :\n        num = unk . find ( symbol )\n        num -= unk . find ( key [ unk ] )\n        num %= len ( unk )\n        unk . append ( unk [ num ] )\n        unk += 1\n        if unk == len ( key ) :\n            unk = 0\n    return \"str\" . join ( unk ) + key\n"
+  },
+  {
+    "start_time": 1731995125.4993336,
+    "end_time": 1731995155.134613,
+    "elapsed_time": 29.635279417037964,
+    "error_code": "def create_db ( db ) :\n    requests . put ( cl_url + \"str\" + db auth = auth )\n    return \"str\" % db\n",
+    "fixed_code": "def unk ( db ) :\n    requests . put ( unk + \"str\" + db , auth = auth )\n    return \"str\" % db\n"
+  },
+  {
+    "start_time": 1731995145.1346338,
+    "end_time": 1731995170.7356772,
+    "elapsed_time": 25.601043462753296,
+    "error_code": "def test_whoami ( self ) :\n    \"str\"\n    try :\n        self . run ( [ \"str\" ] )\n    except ApplicationError , e :\n        return False\n    else :\n        return True\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    try :\n        self . run ( [ \"str\" ] )\n    except unk as e :\n        return False\n    else :\n        return True\n"
+  },
+  {
+    "start_time": 1731995164.7356946,
+    "end_time": 1731995194.3352308,
+    "elapsed_time": 29.599536180496216,
+    "error_code": "def __show_doc ( self ) :\n    path = os . path . join ( HOME , \"str\" )\n        os . system ( \"str\" + path + \"str\" )\n",
+    "fixed_code": "def unk ( self ) :\n    path = os . path . join ( HOME , \"str\" ,\n        os . system ( \"str\" + path + \"str\" ) )\n"
+  },
+  {
+    "start_time": 1731995184.3352509,
+    "end_time": 1731995212.984547,
+    "elapsed_time": 28.649296045303345,
+    "error_code": "def timeit ( self , func ) :\n    def timed ( * args , ** kwargs ) :\n        def wrapper ( f , * arg , ** kw ) :\n        def wrapped ( ) :\n            return f ( * args , ** kwargs )\n            return wrapped\n        wrapped = wrapper ( func )\n        f = open ( settings . BASE_DIR + \"str\" , \"str\" )\n        f . write ( \"str\" )\n        f . write ( \"str\" % ( func . __name__ , timeit . timeit ( wrapped ) ) )\n        f . close ( )\n        return\n    return timed\n",
+    "fixed_code": "def timeit ( self , func ) :\n    def unk ( * args , ** kwargs ) :\n        def wrapper ( f , * arg , ** kw ) :\n            def wrapped ( ) :\n                return f ( * args , ** kwargs )\n                return wrapped\n            wrapped = wrapper ( func )\n            f = open ( settings . BASE_DIR + \"str\" , \"str\" )\n            f . write ( \"str\" )\n            f . write ( \"str\" % ( func . __name__ , timeit . timeit ( wrapped ) ) )\n            f . close ( )\n            return\n    return unk\n"
+  },
+  {
+    "start_time": 1731995203.9845684,
+    "end_time": 1731995231.9509313,
+    "elapsed_time": 27.966362953186035,
+    "error_code": "self . store_a_picture ( tag , decoded ) )\n",
+    "fixed_code": "self . unk ( tag , decoded )\n"
+  },
+  {
+    "start_time": 1731995222.950953,
+    "end_time": 1731995251.0422516,
+    "elapsed_time": 28.091298580169678,
+    "error_code": "def showTestCard ( self , selection = None ) :\n    if selection is None :\n        selection = self . selection\n    print ( \"str\" , { \"str\" : True ,\n        \"str\" : False } [ selection ]\n    if selection == \"str\" :\n        config . misc . showtestcard . value = True\n    else :\n        config . misc . showtestcard . value = False\n    return\n",
+    "fixed_code": "def unk ( self , selection = None ) :\n    if selection is None :\n        selection = self . selection\n    print ( \"str\" , { \"str\" : True ,\n        \"str\" : False } [ selection ] )\n    if selection == \"str\" :\n        config . misc . unk . value = True\n    else :\n        config . misc . unk . value = False\n    return False\n"
+  },
+  {
+    "start_time": 1731995243.044629,
+    "end_time": 1731995272.4648418,
+    "elapsed_time": 29.420212745666504,
+    "error_code": "def test_35_disableCluster_user_stop_startVM ( self ) :\n    \"str\"\n        self . vm_user . stop ( self . user_apiclient )\n    listResp = VirtualMachine . list ( self . user_apiclient , id = self . vm_user . id )\n    self . assertEqual ( listResp [ 0 ] . state ,\n        VirtualMachine . STOPPED ,\n        \"str\" )\n        self . vm_user . start ( self . user_apiclient )\n    listResp = VirtualMachine . list ( self . user_apiclient , id = self . vm_user . id )\n    self . assertEqual ( listResp [ 0 ] . state ,\n        VirtualMachine . RUNNING ,\n        \"str\" )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    self . unk . stop ( self . unk )\nunk = unk . list ( self . unk , id = self . unk . id )\nself . assertEqual ( unk [ 0 ] . state ,\n    unk . unk ,\n    \"str\" )\nself . unk . start ( self . unk )\nunk = unk . list ( self . unk , id = self . unk . id )\nself . assertEqual ( unk [ 0 ] . state ,\n    unk . RUNNING ,\n    \"str\" )\n"
+  },
+  {
+    "start_time": 1731995263.4648685,
+    "end_time": 1731995288.8967273,
+    "elapsed_time": 25.431858777999878,
+    "error_code": "def grantGroupAccess ( self , bucket , bucketName , bucketACL ) :\n    bucketInfo = self . getBucketInfo ( bucketName )\n    bucketInfo = json . loads ( bucketInfo )\n    owner = bucketInfo . get ( \"str\" )\n    for grant in bucketACL . acl . grants :\n        if grant . id != owner :\n        userInfo = self . getUser ( grant . id )\n        userInfo = json . loads ( userInfo )\n        email = userInfo . get ( \"str\" )\n        bucket . add_email_grant ( permission = grant . permission , email_address = email )\n",
+    "fixed_code": "def unk ( self , bucket , unk , unk ) :\n    unk = self . unk ( unk )\n    unk = json . loads ( unk )\n    owner = unk . get ( \"str\" )\n    for unk in unk . acl . unk :\n        if unk . id != owner :\n            unk = self . unk ( unk . id )\n            unk = json . loads ( unk )\n            email = unk . get ( \"str\" )\n            bucket . unk ( permission = unk . permission , email_address = email )\n"
+  },
+  {
+    "start_time": 1731995283.8967488,
+    "end_time": 1731995310.1049016,
+    "elapsed_time": 26.208152770996094,
+    "error_code": "def all_man_pages ( ) :\n    manuals = { }\n    for basedir in [ cmk . paths . check_manpages_dir ,\n        cmk . paths . local_check_manpages_dir ] :\n        for name in os . listdir ( basedir ) :\n        if name [ 0 ] == \"str\" or name [ - 1 ] == \"str\" :\n        continue\n        manuals [ name ] = basedir + \"str\" + name\n    return manuals\n",
+    "fixed_code": "def unk ( ) :\n    unk = { }\n    for basedir in [ unk . paths . unk ,\n        unk . paths . unk ] :\n        for name in os . listdir ( basedir ) :\n            if name [ 0 ] == \"str\" or name [ - 1 ] == \"str\" :\n                continue\n            unk [ name ] = basedir + \"str\" + name\n        return unk\n"
+  },
+  {
+    "start_time": 1731995304.1049216,
+    "end_time": 1731995328.504745,
+    "elapsed_time": 24.399823427200317,
+    "error_code": "def _GetAdditionalEmulatorFilterName ( self ) :\n    \"str\"\n    return os . path . join ( sys . path [ 0 ] , \"str\"\n        self . test_package . test_suite_basename +\n        \"str\" )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    return os . path . join ( sys . path [ 0 ] , \"str\" ,\n        self . unk . unk +\n        \"str\" )\n"
+  },
+  {
+    "start_time": 1731995323.5047576,
+    "end_time": 1731995350.2591472,
+    "elapsed_time": 26.75438952445984,
+    "error_code": "def _RunAdbAsRoot ( self ) :\n    if self . adb_running_as_root is not None :\n        return self . adb_running_as_root\n    if ( \"str\" not in subprocess . check_output (\n        self . _AdbCommand ( [ \"str\" ] ) ) ) :\n        subprocess . check_call (\n            self . _AdbCommand ( [ \"str\" ] ) ,\n            stdout = self . verbose_pipe )\n            self . adb_running_as_root = True\n    else :\n        self . adb_running_as_root = False\n    return self . adb_running_as_root\n",
+    "fixed_code": "def unk ( self ) :\n    if self . unk is not None :\n        return self . unk\n    if ( \"str\" not in subprocess . check_output (\n        self . unk ( [ \"str\" ] ) ) ) :\n        subprocess . check_call (\n            self . unk ( [ \"str\" ] ) ,\n            stdout = self . unk )\n        self . unk = True\n    else :\n        self . unk = False\n    return self . unk\n"
+  },
+  {
+    "start_time": 1731995343.2591696,
+    "end_time": 1731995372.9331126,
+    "elapsed_time": 29.673943042755127,
+    "error_code": "class Flotte :\n    def __init__ ( self , bateau1 , bateau2 , bateau3 , bateau4 , bateau5 ) :\n    def Coule ( self , numbateau , grille ) :\n    def BateauxRestants ( self ) :\n    \"str\"\n",
+    "fixed_code": "class unk :\n    def __init__ ( self , unk , unk , unk , unk , unk ) :\n        def unk ( self , unk , unk ) :\n            def unk ( self ) :\n                \"str\"\n"
+  },
+  {
+    "start_time": 1731995362.9331334,
+    "end_time": 1731995391.238363,
+    "elapsed_time": 28.305229663848877,
+    "error_code": "( \"str\"\n",
+    "fixed_code": "\"str\"\n\"str\"\n"
+  },
+  {
+    "start_time": 1731995382.2383845,
+    "end_time": 1731995412.1617916,
+    "elapsed_time": 29.923407077789307,
+    "error_code": "def parse_notation ( self ) :\n    \"str\"\n    self . skip_ws ( 1 )\n        name = self . _get_name ( )\n    self . skip_ws ( 1 )\n        ( pubid , sysid ) = self . parse_external_id ( 1 , 0 )\n    self . skip_ws ( )\n    if not self . now_at ( \"str\" ) :\n        self . report_error ( 3005 , \"str\" )\n    self . dtd_consumer . new_notation ( name , pubid , sysid )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    if self . unk ( 1 ) :\n        name = self . unk ( )\n    if self . unk ( 1 ) :\n        ( unk , unk ) = self . unk ( 1 , 0 )\n    self . unk ( )\n    if not self . unk ( \"str\" ) :\n        self . unk ( unk , \"str\" )\n    self . unk . unk ( name , unk , unk )\n"
+  },
+  {
+    "start_time": 1731995402.1618106,
+    "end_time": 1731995429.672069,
+    "elapsed_time": 27.510258436203003,
+    "error_code": "def start_watchdog ( self ) :\n    LOG . debug ( \"str\" , self . _watchdog_event_fn )\n    dirs_to_watch = [ utils . get_filename_and_path ( x ) [ 0 ] for x in\n        self . engine_cfg , self . repair_cfg , self . audit_cfg ]\n    return utils . watch_dir_for_change ( dirs_to_watch ,\n        self . _watchdog_event_fn )\n",
+    "fixed_code": "def unk ( self ) :\n    LOG . debug ( \"str\" , self . unk )\n    unk = [ utils . unk ( x ) [ 0 ] for x in\n        self . unk ( self . unk , self . unk ) ]\n    return utils . unk ( unk ,\n        self . unk )\n"
+  },
+  {
+    "start_time": 1731995421.67209,
+    "end_time": 1731995447.7953842,
+    "elapsed_time": 26.12329411506653,
+    "error_code": "class QuestionURLTests ( TestCase ) :\n    def test_url_index ( self ) :\n        \"str\"\n        resolver = resolve ( \"str\" )\n        self . assertEqual ( resolver . namespace , \"str\" )\n        self . assertEqual ( resolver . view_name , \"str\" )\n        def test_url_cadet ( self ) :\n        \"str\"\n        resolver = resolve ( \"str\" )\n        self . assertEqual ( resolver . namespace , \"str\" )\n        self . assertEqual ( resolver . view_name , \"str\" )\n",
+    "fixed_code": "class unk ( TestCase ) :\n    def unk ( self ) :\n        \"str\"\n        resolver = resolve ( \"str\" )\n        self . assertEqual ( resolver . namespace , \"str\" )\n        self . assertEqual ( resolver . view_name , \"str\" )\n    def unk ( self ) :\n        \"str\"\n        resolver = resolve ( \"str\" )\n        self . assertEqual ( resolver . namespace , \"str\" )\n        self . assertEqual ( resolver . view_name , \"str\" )\n"
+  },
+  {
+    "start_time": 1731995441.7954044,
+    "end_time": 1731995470.1017919,
+    "elapsed_time": 28.306387424468994,
+    "error_code": "( \"str\" + str ( numpy . min ( normalizedimage ) ) + \"str\" + str ( numpy . max (\n    normalizedimage ) ) + \"str\"\nreturn normalizedimage\n",
+    "fixed_code": "self + str ( numpy . min ( unk ) ) + \"str\" + str ( numpy . max (\n    unk ) ) + \"str\"\nreturn unk\n"
+  },
+  {
+    "start_time": 1731995461.101813,
+    "end_time": 1731995485.8150039,
+    "elapsed_time": 24.71319079399109,
+    "error_code": "def read_cache ( self , debug = False ) :\n    file_path = self . __read_cache_path ( )\n    if ( file_path ) :\n        fp = None\n        try :\n            if ( debug ) :\n                print \"str\" % ( self . doc_source . SOURCE_TYPE )\n            fp = open ( file_path , \"str\" )\n            self . content = fp . read ( )\n            self . ss_state = SnapshotState . READ_CACHE\n        except Exception as e :\n            print ( e )\n        finally :\n            if ( fp ) : fp . close ( )\n",
+    "fixed_code": "def unk ( self , debug = False ) :\n    file_path = self . unk ( )\n    if ( file_path ) :\n        fp = None\n        try :\n            if ( debug ) :\n                print ( \"str\" % ( self . unk . unk ) )\n            fp = open ( file_path , \"str\" )\n            self . content = fp . read ( )\n            self . unk = unk . unk\n        except Exception as e :\n            print ( e )\n        finally :\n            if ( fp ) : fp . close ( )\n"
+  },
+  {
+    "start_time": 1731995480.8150253,
+    "end_time": 1731995507.854925,
+    "elapsed_time": 27.039899587631226,
+    "error_code": "def test_import_relative_error ( ) :\n    def f ( ) : exec \"str\"\n    AssertError ( ValueError , f )\n",
+    "fixed_code": "def unk ( ) :\n    def f ( ) : exec ( \"str\" )\n    unk ( ValueError , f )\n"
+  },
+  {
+    "start_time": 1731995499.8549414,
+    "end_time": 1731995527.1318212,
+    "elapsed_time": 27.27687978744507,
+    "error_code": "def test_create_token_invalid_input ( self ) :\n    auth_server = server . AuthServer ( \"str\" , DummyKeyProvider ( ) ,\n        \"str\" )\n    for t in ( \"str\"\n        \"str\" , \"str\" ) :\n        try :\n        auth_server . create_token ( t )\n        self . fail ( \"str\" )\n        except exceptions . ProtocolError :\n        pass\n",
+    "fixed_code": "def unk ( self ) :\n    unk = server . unk ( \"str\" , unk ( ) ,\n        \"str\" )\n    for t in ( \"str\"\n        \"str\" , \"str\" ) :\n        try :\n            unk . unk ( t )\n            self . fail ( \"str\" )\n        except exceptions . ProtocolError :\n            pass\n"
+  },
+  {
+    "start_time": 1731995519.1318436,
+    "end_time": 1731995548.2539184,
+    "elapsed_time": 29.122074842453003,
+    "error_code": "def test_name ( ) :\n    for const in compile (\n        \"str\" , \"str\" , \"str\" ) . co_consts :\n        if isinstance ( const , CodeType ) :\n        pre_transform = Code . from_pycode ( const )\n        code = asconstants ( a = 1 ) . transform ( pre_transform )\n        break\n    else :\n        raise AssertionError ( \"str\" )\n    ns = { }\n    exec ( code . to_pycode ( ) , ns )\n    assert ns [ \"str\" ] == 1\n",
+    "fixed_code": "def test_name ( ) :\n    for const in compile (\n        \"str\" , \"str\" , \"str\" ) . unk :\n        if isinstance ( const , unk ) :\n            unk = Code . unk ( const )\n            code = unk ( a = 1 ) . transform ( unk )\n            continue\n        else :\n            raise AssertionError ( \"str\" )\n        ns = { }\n        exec ( code . unk ( ) , ns )\n        assert ns [ \"str\" ] == 1\n"
+  },
+  {
+    "start_time": 1731995539.2539384,
+    "end_time": 1731995564.088103,
+    "elapsed_time": 24.8341646194458,
+    "error_code": "def addMasquerade ( self , sender = None ) :\n    log . debug1 ( \"str\" , self . _log_prefix )\n    self . parent . accessCheck ( sender )\n    settings = list ( self . getSettings ( )\n    if settings [ 8 ] :\n        raise FirewallError ( errors . ALREADY_ENABLED , \"str\" )\n    settings [ 8 ] = True\n    self . update ( settings )\n",
+    "fixed_code": "def unk ( self , sender = None ) :\n    log . unk ( \"str\" , self . unk )\n    self . parent . unk ( sender )\n    settings = list ( self . unk )\n    if settings [ 8 ] :\n        raise unk ( errors . unk , \"str\" )\n    settings [ 8 ] = True\n    self . update ( settings )\n"
+  },
+  {
+    "start_time": 1731995559.0881202,
+    "end_time": 1731995586.9087274,
+    "elapsed_time": 27.82060718536377,
+    "error_code": "def getQueueSystem ( self , test ) :\n    queueModuleText = queueSystemName ( test )\n    if queueModuleText is None :\n        return None\n    queueModule = queueModuleText . lower ( )\n    if self . queueSystems . has_key ( queueModule ) :\n        return self . queueSystems [ queueModule ]\n    command = \"str\" + queueModule + \"str\"\n    exec command\n    system = _QueueSystem ( test )\n    self . queueSystems [ queueModule ] = system\n    return system\n",
+    "fixed_code": "def unk ( self , test ) :\n    unk = unk ( test )\n    if unk is not None :\n        return None\n    unk = unk . lower ( )\n    if self . unk . has_key ( unk ) :\n        return self . unk [ unk ]\n    command = \"str\" + unk + \"str\"\n    exec ( command )\n    system = unk ( test )\n    self . unk [ unk ] = system\n    return system\n"
+  },
+  {
+    "start_time": 1731995579.9087477,
+    "end_time": 1731995609.2165205,
+    "elapsed_time": 29.307772874832153,
+    "error_code": "def DetermineDomination ( particles ) :\n    nPop = len ( particles )\n    for p in particles :\n        p . IsDominated = False\n    for i in range ( nPop - 1 ) :\n        for j in range ( i , nPop ) :\n            if Dominates ( particles [ i ] , particles [ j ] ) :\n                particles [ j ] . IsDominated = True\n            if Dominates ( particles [ j ] , particles [ i ] ) :\n                particles [ i ] . IsDominated = True\n    return particles\n        \"str\"\n",
+    "fixed_code": "def unk ( particles ) :\n    unk = len ( particles )\n    for p in particles :\n        p . unk = False\n    for i in range ( unk - 1 ) :\n        for j in range ( i , unk ) :\n            if unk ( particles [ i ] , particles [ j ] ) :\n                particles [ j ] . unk = True\n            if unk ( particles [ j ] , particles [ i ] ) :\n                particles [ i ] . unk = True\n    return particles (\n        \"str\" )\n"
+  },
+  {
+    "start_time": 1731995600.2165403,
+    "end_time": 1731995626.3141093,
+    "elapsed_time": 26.09756898880005,
+    "error_code": "def transfer_files ( self ) :\n    with click . progressbar (\n        self . file_descriptors . keys ( ) ,\n        label = \"str\" ,\n        show_pos = True ) as parse_ids :\n        for parse_id in parse_ids :\n        files , syncano_class_name , parse_class_name = self . file_descriptors [ parse_id ]\n        object_to_update = Object (\n            class_name = syncano_class_name ,\n            id = self . data . reference_map [ parse_class_name ] [ parse_id ] ,\n        )\n        for file_name , object_file in six . iteritems ( files ) :\n            setattr ( object_to_update , file_name , object_file )\n        object_to_update . save ( )\n",
+    "fixed_code": "def unk ( self ) :\n    with click . progressbar (\n        self . unk . keys ( ) ,\n        label = \"str\" ,\n        unk = True ) as unk :\n        for unk in unk :\n            files , unk , unk = self . unk [ unk ]\n            unk = Object (\n                class_name = unk ,\n                id = self . data . unk [ unk ] [ unk ] ,\n            )\n        for file_name , unk in six . iteritems ( files ) :\n            setattr ( unk , file_name , unk )\n        unk . save ( )\n"
+  },
+  {
+    "start_time": 1731995620.3141298,
+    "end_time": 1731995649.3642502,
+    "elapsed_time": 29.05012035369873,
+    "error_code": "def findVersionFile ( pathFile = None ) :\n    if not pathFile :\n        pathFile = os . path . join ( \"str\" , \"str\" , \"str\" )\n    if not os . path . exists (\n        os . path . join ( BUILD_PARAMETERS . srcdir , pathFile , VERSION_FILE ) ) :\n        pathFile = pathFile [ : - 3 ]\n        if pathFile != \"str\" :\n        findVersionFile ( pathFile )\n    else :\n        pkg_version_file_path = os . path . join ( BUILD_PARAMETERS . srcdir , pathFile , VERSION_FILE )\n        return ( pkg_version_file_path )\n",
+    "fixed_code": "def unk ( unk = None ) :\n    if not unk :\n        unk = os . path . join ( \"str\" , \"str\" , \"str\" )\n    if not os . path . exists (\n        os . path . join ( unk . srcdir , unk , unk ) ) :\n        unk = unk [ : - 3 ]\n    if unk != \"str\" :\n        unk ( unk )\n    else :\n        unk = os . path . join ( unk . srcdir , unk , unk )\n        return ( unk )\n"
+  },
+  {
+    "start_time": 1731995640.367719,
+    "end_time": 1731995666.114842,
+    "elapsed_time": 25.74712300300598,
+    "error_code": "def loop ( self ) :\n    if ( self . id == 2 ) :\n        self . passos += 1\n            if ( self . passos > self . MAXpassos ) :\n        self . _grava ( self . episodios , self . objetivo )\n        self . episodios += 1\n        self . passos = 0\n    if ( self . episodios > self . MAXepisodios ) :\n        print ( \"str\" )\n        exit ( - 42 )\n            return\n",
+    "fixed_code": "def loop ( self ) :\n    if ( self . id == 2 ) :\n        self . unk += 1\n        if ( self . unk > self . unk ) :\n            return\n        self . unk ( self . unk , self . unk )\n        self . unk += 1\n        self . unk = 0\n    if ( self . unk > self . unk ) :\n        print ( \"str\" )\n        if exit ( - 42 ) :\n            return\n"
+  },
+  {
+    "start_time": 1731995660.1148634,
+    "end_time": 1731995685.1633024,
+    "elapsed_time": 25.048439025878906,
+    "error_code": "def doSelect ( self ) :\n    \"str\"\n    self . updateType ( )\n    allTypes = self . typeList . get ( 0 , self . typeList . size ( ) - 1 )\n    counter = 0\n    for typ in allTypes :\n    if typ == self . seltype :\n    self . typeList . select_set ( counter )\n    self . selected = ( counter , )\n        self . typeList . select_set ( self . selected [ 0 ] )\n        break\n        counter = counter + 1\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    self . unk ( )\n    unk = self . unk . get ( 0 , self . unk . size ( ) - 1 )\n    counter = 0\n    for typ in unk :\n        if typ == self . unk :\n            self . unk . unk ( counter )\n            self . selected = ( counter , )\n            self . unk . unk ( self . selected [ 0 ] )\n            break\n            counter = counter + 1\n"
+  },
+  {
+    "start_time": 1731995680.1633234,
+    "end_time": 1731995708.994151,
+    "elapsed_time": 28.830827713012695,
+    "error_code": "def OnHubCommand ( nick , clean_cmd , uclass , in_pm , cmd_prefix ) :\n    if log ( ) : print \"str\" % \"str\" , ( nick , clean_cmd , uclass , in_pm , cmd_prefix )\n    if uclass >= 5 :\n        parts = clean_cmd . split ( \"str\" , 1 )\n        if parts [ 0 ] == my_command :\n            arg = parts [ 1 ] . strip ( ) if len ( parts ) == 2 else \"str\"\n            vh . usermc ( messages [ process_command ( arg ) ] , nick )\n            return 0\n",
+    "fixed_code": "def unk ( nick , unk , unk , unk , unk ) :\n    if log ( ) : return \"str\" % \"str\" , ( nick , unk , unk , unk , unk )\n    if unk >= 5 :\n        parts = unk . split ( \"str\" , 1 )\n        if parts [ 0 ] == unk :\n            arg = parts [ 1 ] . strip ( ) if len ( parts ) == 2 else \"str\"\n            unk . unk ( messages [ unk ( arg ) ] , nick )\n            return 0\n"
+  },
+  {
+    "start_time": 1731995699.9941783,
+    "end_time": 1731995728.058462,
+    "elapsed_time": 28.06428360939026,
+    "error_code": "def control_plane_handler ( self , pkt_meta ) :\n    \"str\"\n    ofmsgs = [ ]\n    if ( pkt_meta . eth_dst == pkt_meta . vlan . faucet_mac or\n        not valve_packet . mac_addr_is_unicast ( pkt_meta . eth_dst ) ) :\n        for route_manager in list ( self . route_manager_by_ipv . values ( ) ) :\n        if pkt_meta . eth_type in route_manager . CONTROL_ETH_TYPES :\n            pkt_meta . reparse_ip ( route_manager . ETH_TYPE )\n            ofmsgs = route_manager . control_plane_handler ( pkt_meta )\n            break\n    return ofmsgs\n",
+    "fixed_code": "def unk ( self , unk ) :\n    \"str\"\n    unk = [ ]\n    if ( unk . unk == unk . vlan . unk or\n        not unk . unk ( unk . unk ) ) :\n        for unk in list ( self . unk . values ( ) ) :\n            if unk . unk in unk . unk :\n                unk . unk ( unk . unk )\n                unk = unk . unk ( unk )\n                break\n        return unk\n"
+  },
+  {
+    "start_time": 1731995720.058483,
+    "end_time": 1731995747.250093,
+    "elapsed_time": 27.191610097885132,
+    "error_code": "def getreply ( self ) :\n    \"str\"\n    try :\n        response = self . _conn . getresponse ( )\n    except BadStatusLine , e :\n        self . file = self . _conn . sock . makefile ( \"str\" , 0 )\n        self . close ( )\n        self . headers = None\n        return - 1 , e . line , None\n    self . headers = response . msg\n    self . file = response . fp\n    return response . status , response . reason , response . msg\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    try :\n        response = self . _conn . getresponse ( )\n    except unk is e :\n        self . file = self . _conn . sock . makefile ( \"str\" , 0 )\n        self . close ( )\n        self . headers = None\n        return - 1 , e . line , None\n    self . headers = response . msg\n    self . file = response . fp\n    return response . status , response . reason , response . msg\n"
+  },
+  {
+    "start_time": 1731995740.2501154,
+    "end_time": 1731995765.3540478,
+    "elapsed_time": 25.10393238067627,
+    "error_code": "( calendarId = calendarID , pageToken = page_token ,\nfor event in events [ \"str\" ] :\n    try :\n        print ( event [ \"str\" ] )\n        print ( json . dumps ( event [ \"str\" ] , indent = 4 , separators = ( \"str\" , \"str\" ) ) )\n    except KeyError :\n        print ( \"str\" )\n        print ( event )\npage_token = events . get ( \"str\" )\nif not page_token :\n    break\n",
+    "fixed_code": "( unk = unk , unk = unk )\nfor event in events [ \"str\" ] :\n    try :\n        print ( event [ \"str\" ] )\n        print ( json . dumps ( event [ \"str\" ] , indent = 4 , separators = ( \"str\" , \"str\" ) ) )\n    except KeyError :\n        print ( \"str\" )\n        print ( event )\nunk = events . get ( \"str\" )\nif not unk :\n    break\n"
+  },
+  {
+    "start_time": 1731995760.3540683,
+    "end_time": 1731995785.598754,
+    "elapsed_time": 25.244685649871826,
+    "error_code": "def power ( self , speed , direction ) :\n    \"str\"\n    assert speed . shape == direction . shape\n    result = np . array ( [ self . _spline ( s , v ) for ( s , v ) in zip ( speed . flatten ( ) , direction . flatten ( ) ] )\n    return result . reshape ( speed . shape )\n",
+    "fixed_code": "def power ( self , speed , direction ) :\n    \"str\"\n    assert speed . shape == direction . shape\n    result = np . array ( [ self . unk ( s ) , v ) for ( s , v ) in zip ( speed . flatten ( ) , direction . flatten ( ) ] )\n    return result . reshape ( speed . shape )\n"
+  },
+  {
+    "start_time": 1731995780.5987759,
+    "end_time": 1731995808.605647,
+    "elapsed_time": 28.006871223449707,
+    "error_code": "\"str\"\ntimes = input ( \"str\" )\ntimes = int ( times )\nnumList = { }\nfor i in range ( times ) :\nprint ( \"str\" )\nprint ( numList )\nminVal = 101\nmaxVal = - 1\nfor j in numList :\n    if ( ) :\n        minVal = numList [ j ]\n    elif ( ) :\n        maxVal = numList [ j ]\nprint ( \"str\" , maxVal )\nprint ( \"str\" , minVal )\n",
+    "fixed_code": "\"str\"\ntimes = input ( \"str\" )\ntimes = int ( times )\nunk = { }\nfor i in range ( times ) :\n    print ( \"str\" )\n    print ( unk )\n    unk = 101\n    unk = - 1\n    for j in unk :\n        if ( ) :\n            unk = unk [ j ]\n        elif ( ) :\n            unk = unk [ j ]\n    print ( \"str\" , unk )\n    print ( \"str\" , unk )\n"
+  },
+  {
+    "start_time": 1731995800.605668,
+    "end_time": 1731995827.901866,
+    "elapsed_time": 27.29619789123535,
+    "error_code": "def image_test ( ) :\n    data_dict = { \"str\" url_for ( \"str\" , filename = \"str\" ) }\n    return render_template ( \"str\" , ** data_dict )\n",
+    "fixed_code": "def unk ( ) :\n    data_dict = { \"str\" : url_for ( \"str\" , filename = \"str\" ) }\n    return render_template ( \"str\" , ** data_dict )\n"
+  },
+  {
+    "start_time": 1731995819.901881,
+    "end_time": 1731995849.4893348,
+    "elapsed_time": 29.587453842163086,
+    "error_code": "def get_manufacturer ( manufacturer_id ) :\n    manufacturer = Manufacturer . query . get_or_404 ( manufacturer_id )\n    manufacturer = manufacturer . to_dict ( )\n    return ( json_util . dumps ( manufacturer )\n",
+    "fixed_code": "def unk ( unk ) :\n    manufacturer = unk . query . unk ( unk )\n    manufacturer = manufacturer . to_dict ( )\n    return ( json_util . dumps ( manufacturer ) )\n"
+  },
+  {
+    "start_time": 1731995839.489356,
+    "end_time": 1731995868.669506,
+    "elapsed_time": 29.180150032043457,
+    "error_code": "import math\nimport re\nimport sys\nreload ( sys )\nsys . setdefaultencoding ( \"str\" )\nfilenameAFINN = \"str\"\nafinn = dict ( map ( lambda ( w , s ) : ( w , int ( s ) ) , [\n    ws . strip ( ) . split ( \"str\" ) for ws in open ( filenameAFINN ) ] ) )\npattern_split = re . compile ( \"str\" )\n",
+    "fixed_code": "import math\nimport re\nimport sys\nreload ( sys )\nsys . setdefaultencoding ( \"str\" )\nunk = \"str\"\nunk = dict ( map ( lambda : w , s ) , ( w , int ( s ) ) , [\n    ws . strip ( ) . split ( \"str\" ) for ws in open ( unk ) ] )\nunk = re . compile ( \"str\" )\n"
+  },
+  {
+    "start_time": 1731995859.6695275,
+    "end_time": 1731995885.2777262,
+    "elapsed_time": 25.608198642730713,
+    "error_code": "def enumerate_online_roster ( xmpp ) :\n    \"str\"\n    def is_online ( ( number , roster_item ) ) :\n        return bool ( roster_item . resources )\n    return filter ( is_online , enumerate_roster ( xmpp ) )\n",
+    "fixed_code": "def unk ( xmpp ) :\n    \"str\"\n    def unk ( number , unk ) :\n        return bool ( unk . resources )\n    return filter ( unk , unk ( xmpp ) )\n"
+  },
+  {
+    "start_time": 1731995879.2777739,
+    "end_time": 1731995905.3691638,
+    "elapsed_time": 26.091389894485474,
+    "error_code": "def cpu_stats_period ( self ) :\n    \"str\"\n        resp = self . resp\n        url = self . url\n        resp_status_code = resp . status_code\n        u . check_resp ( resp_status_code , url )\n        respj = self . resp . json ( )\n        return ( \"str\" . format ( respj [ \"str\" ] [ \"str\" ] [ \"str\" ] ) )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    resp = self . resp\n    url = self . url\n    unk = resp . status_code\n    u . unk ( unk , url )\n    unk = self . resp . json ( )\n    return ( \"str\" . format ( unk [ \"str\" ] [ \"str\" ] [ \"str\" ] ) )\n"
+  },
+  {
+    "start_time": 1731995899.3691852,
+    "end_time": 1731995929.4056203,
+    "elapsed_time": 30.0364351272583,
+    "error_code": "def delete_role ( ) :\n    try :\n        aaa . delete_role ( post_get ( \"str\" ) )\n        return dict ( ok = True , msg = \"str\" )\n    except Exception , e :\n        return dict ( ok = False , msg = e . message )\n",
+    "fixed_code": "def unk ( ) :\n    try :\n        unk . unk ( unk ( \"str\" ) )\n        return dict ( ok = True , msg = \"str\" )\n    except Exception as e :\n        return dict ( ok = False , msg = e . message )\n"
+  },
+  {
+    "start_time": 1731995919.4056425,
+    "end_time": 1731995943.8790588,
+    "elapsed_time": 24.473416328430176,
+    "error_code": "def features ( self ) :\n    \"str\"\n        return np . array ( self . data ) . flatten ( )\n",
+    "fixed_code": "def features ( self ) :\n    \"str\"\n    return np . array ( self . data ) . flatten ( )\n"
+  },
+  {
+    "start_time": 1731995938.8790803,
+    "end_time": 1731995964.0835414,
+    "elapsed_time": 25.204461097717285,
+    "error_code": "def run ( value ) :\n    media = 0.0\n    for x in range ( 0 , EXECUCOES ) :\n    p = Popen ( [ \"str\" , value ] , stdout = PIPE )\n        output_time = float ( p . stdout . read ( ) )\n        media += output_time\n        time . sleep ( 0.01 )\n    media = media / EXECUCOES\n    list . append ( media )\n    print ( value , \"str\" , media )\n    return media\n",
+    "fixed_code": "def run ( value ) :\n    media = 0.0\n    for x in range ( 0 , unk ) :\n        p = Popen ( [ \"str\" , value ] , stdout = PIPE )\n        unk = float ( p . stdout . read ( ) )\n        media += unk\n        time . sleep ( 0.01 )\n    media = media / unk\n    list . append ( media )\n    print ( value , \"str\" , media )\n    return media\n"
+  },
+  {
+    "start_time": 1731995959.0835621,
+    "end_time": 1731995986.2875614,
+    "elapsed_time": 27.203999280929565,
+    "error_code": "class JavaTests ( JvmTarget ) :\n    \"str\"\n    def __init__ ( self ,\n        sources = None ,\n        ** kwargs ) :\n        _sources = self . assert_list ( sources )\n        super ( JavaTests , self ) . __init__ ( sources = _sources , ** kwargs )\n        if not _sources :\n        raise TargetDefinitionException ( self , \"str\" )\n        self . add_labels ( \"str\" , \"str\" )\n",
+    "fixed_code": "class unk ( unk ) :\n    \"str\"\n    def __init__ ( self ,\n        sources = None ,\n        ** kwargs ) :\n        unk = self . unk ( sources )\n        super ( unk , self ) . __init__ ( sources = unk , ** kwargs )\n        if not unk :\n            raise unk ( self , \"str\" )\n        self . unk ( \"str\" , \"str\" )\n"
+  },
+  {
+    "start_time": 1731995979.2875829,
+    "end_time": 1731996004.4211383,
+    "elapsed_time": 25.13355541229248,
+    "error_code": "def create ( self , path ) :\n    \"str\"\n    if ALLVERBOSE or VERBOSE : print \"str\" % path\n    if self . server . mailboxCache . has_key ( path ) :\n        raise imap4 . MailboxException ( \"str\" % path )\n    d = self . server . protocol . create ( path )\n    d . addCallback ( self . __create_cb , path )\n    d . addErrback ( self . __create_err , path )\n    return d\n",
+    "fixed_code": "def create ( self , path ) :\n    \"str\"\n    if unk or VERBOSE : print ( \"str\" % path )\n    if self . server . unk . has_key ( path ) :\n        raise unk . unk ( \"str\" % path )\n    d = self . server . protocol . create ( path )\n    d . addCallback ( self . unk , path )\n    d . addErrback ( self . unk , path )\n    return d\n"
+  },
+  {
+    "start_time": 1731995999.4211607,
+    "end_time": 1731996029.5808065,
+    "elapsed_time": 30.159645795822144,
+    "error_code": "def turnOff ( self ) :\n    socket . inet_aton ( self . IPEntry . get ( ) )\n        BOARD_UDP_IP = self . IPEntry . get ( )\n        BOARD_UDP_PORT = int ( self . PortEntry . get ( ) )\n        sock = socket . socket ( socket . AF_INET , socket . SOCK_DGRAM )\n        sock . setsockopt ( socket . SOL_SOCKET , socket . SO_REUSEADDR , 1 )\n        sock . sendto ( \"str\" , ( BOARD_UDP_IP , BOARD_UDP_PORT ) )\n",
+    "fixed_code": "def unk ( self ) :\n    if socket . unk ( self . unk . get ( ) ) :\n        unk = self . unk . get ( )\n        unk = int ( self . unk . get ( ) )\n        sock = socket . socket ( socket . AF_INET , socket . SOCK_DGRAM )\n        sock . setsockopt ( socket . SOL_SOCKET , socket . SO_REUSEADDR , 1 )\n        sock . sendto ( \"str\" , ( unk , unk ) )\n"
+  },
+  {
+    "start_time": 1731996019.5808275,
+    "end_time": 1731996048.9827678,
+    "elapsed_time": 29.40194034576416,
+    "error_code": "class CallWrapper :\n    \"str\"\n    def __init__ ( self , func , subst , widget ) :\n    self . func = func\n    self . subst = subst\n    self . widget = widget\n    def __call__ ( self , * args ) :\n    try :\n        if self . subst :\n    args = apply ( self . subst , args )\n        return apply ( self . func , args )\n        except SystemExit , msg :\n        raise SystemExit , msg\n        except :\n            RunError ( func = self . func , args = args )\n",
+    "fixed_code": "class unk :\n    \"str\"\n    def __init__ ( self , func , subst , widget ) :\n        self . func = func\n        self . subst = subst\n        self . widget = widget\n    def __call__ ( self , * args ) :\n        try :\n            if self . subst :\n                args = apply ( self . subst , args )\n                return apply ( self . func , args )\n            except SystemExit as msg :\n                raise SystemExit as msg\n            except :\n                unk ( func = self . func , args = args )\n"
+  }
+]

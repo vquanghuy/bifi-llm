@@ -1,0 +1,142 @@
+[
+  {
+    "start_time": 1731998268.9212534,
+    "end_time": 1731998274.2552035,
+    "elapsed_time": 5.333950042724609,
+    "error_code": "def test_pp_no_constraint ( self ) :\n    filenames = [ tests . get_data_path ( ( \"str\" , \"str\" , \"str\" ) ) ]\n    pp_constraints = pp . _convert_constraints ( None )\n    pp_loader = iris . fileformats . rules . Loader ( pp . load , { } ,\n        convert , pp . _load_rules )\n    cubes = list ( load_cubes ( filenames , None , pp_loader , pp_constraints )\n    self . assertEqual ( len ( cubes ) , 152 )\n",
+    "fixed_code": "def test_pp_no_constraint ( self ) :\n    filenames = [ tests. get_data_path ( ( \"str\", \"str\", \"str\" ) ) ]\n    pp_constraints = pp. _convert_constraints ( None )\n    pp_loader = iris. fileformats. rules. Loader ( pp. load, { },\n        convert, pp. _load_rules )\n    cubes = list ( load_cubes ( filenames, None, pp_loader, pp_constraints ) )\n    self. assertEqual ( len ( cubes ), 152 )"
+  },
+  {
+    "start_time": 1731998274.2552125,
+    "end_time": 1731998277.4048269,
+    "elapsed_time": 3.1496143341064453,
+    "error_code": "def _validate_pushed_commits ( branch ) :\n    with lcd ( PROJECT_ROOT ) :\n        result = local ( \"str\"\n            \"str\" . format ( branch ) , capture = True )\n        if not result :\n            return True\n        print ( red ( \"str\" ) )\n        print ( yellow ( \"str\" )\n            \"str\" )\n        print ( yellow ( result ) )\n        exit ( 4 )\n",
+    "fixed_code": "def _validate_pushed_commits(branch):\n    with lcd(PROJECT_ROOT):\n        result = local(\"str\" % \"str\".format(branch), capture=True)\n        if not result:\n            return True\n        print(red(\"str\"))\n        print(yellow(\"str\") + \"str\")\n        print(yellow(result))\n        exit(4)"
+  },
+  {
+    "start_time": 1731998277.4048407,
+    "end_time": 1731998280.4178627,
+    "elapsed_time": 3.013021945953369,
+    "error_code": "def init ( self ) :\n    self . W , self . b = [ ] , [ ]\n    for i in range ( len ( self . layers ) ) :\n    self . Wy =\n    self . by =\n    params = self . W + self . b + [ self . Wy , self . by ]\n    return params\n",
+    "fixed_code": "def init(self):\n    self.W, self.b = [], []\n    for i in range(len(self.layers)):\n        self.Wy = self.W[i] + self.Wy\n        self.by = self.b[i] + self.by\n    params = self.W + self.b + [self.Wy, self.by]\n    return params"
+  },
+  {
+    "start_time": 1731998280.417878,
+    "end_time": 1731998281.4279594,
+    "elapsed_time": 1.0100815296173096,
+    "error_code": "def teardown_module ( module ) :\n    try :\n    except AttributeError :\n        pass\n",
+    "fixed_code": "[Fix] | \ndef teardown_module(module):\n    try:\n        pass\n    except AttributeError:\n        pass"
+  },
+  {
+    "start_time": 1731998281.4279668,
+    "end_time": 1731998283.3963227,
+    "elapsed_time": 1.9683558940887451,
+    "error_code": "def eTargetMissile ( self , sender , ( x , y ) ) :\n    if self . eOutLaunchMissile :\n        self . eOutLaunchMissile ( self . targetting , ( x , y ) )\n    self . targetting = None\n",
+    "fixed_code": "def eTargetMissile(self, sender, x, y):\n    if self.eOutLaunchMissile:\n        self.eOutLaunchMissile(self.targetting, (x, y))\n    self.targetting = None"
+  },
+  {
+    "start_time": 1731998283.3963284,
+    "end_time": 1731998286.2041028,
+    "elapsed_time": 2.807774305343628,
+    "error_code": "def init ( ) :\n    token = c_ulong ( )\n    startup_in = GdiplusStartupInput ( )\n    startup_in . GdiplusVersion = 1\n    startup_out = GdiplusStartupOutput ( )\n    gdiplus . GdiplusStartup ( byref ( token ) , byref ( startup_in ) , byref ( startup_out ) ) )\n",
+    "fixed_code": "def init():\n    token = c_ulong()\n    startup_in = GdiplusStartupInput()\n    startup_in.GdiplusVersion = 1\n    startup_out = GdiplusStartupOutput()\n    gdiplus.GdiplusStartup(byref(token), byref(startup_in), byref(startup_out))"
+  },
+  {
+    "start_time": 1731998286.2041154,
+    "end_time": 1731998289.8504016,
+    "elapsed_time": 3.6462862491607666,
+    "error_code": "def on_adopted_download_destroyed ( self ) :\n    \"str\"\n    self . adopted_downloads -= 1\n    log . downloads . debug ( \"str\" . format (\n        self . adopted_downloads )\n    assert self . adopted_downloads >= 0\n    if self . adopted_downloads == 0 :\n        self . deleteLater ( )\n",
+    "fixed_code": "def on_adopted_download_destroyed ( self ) :\n    \"str\"\n    self. adopted_downloads -= 1\n    log. downloads. debug ( \"str\". format (\n        self. adopted_downloads ) + \": adopted downloads remaining\" )\n    assert self. adopted_downloads >= 0\n    if self. adopted_downloads == 0 :\n        self. deleteLater ( )"
+  },
+  {
+    "start_time": 1731998289.8504102,
+    "end_time": 1731998291.6607175,
+    "elapsed_time": 1.810307264328003,
+    "error_code": "def move_glyphs ( f , ( delta_x , delta_y ) ) :\n    \"str\"\n    for g in f :\n        g . moveBy ( ( delta_x , delta_y ) )\n        g . changed ( )\n    f . changed ( )\n",
+    "fixed_code": "def move_glyphs(f, (delta_x, delta_y)):\n    \"str\"\n    for g in f:\n        g.move_by((delta_x, delta_y))\n        g.changed()"
+  },
+  {
+    "start_time": 1731998291.660726,
+    "end_time": 1731998296.9575367,
+    "elapsed_time": 5.296810626983643,
+    "error_code": "class Ui_snapshotBrowser ( object ) :\n    def setupUi ( self , snapshotBrowser ) :\n        snapshotBrowser . setObjectName ( \"str\" )\n        self . gridLayout = QtGui . QGridLayout ( snapshotBrowser )\n        self . gridLayout . setContentsMargins ( 0 , 0 , 0 , 0 )\n        self . gridLayout . setSpacing ( 0 )\n        self . gridLayout . setObjectName ( \"str\" )\n        self . imagesSlider = QtGui . QSlider ( snapshotBrowser )\n        self . imagesSlider . setStyleSheet ( \"str\"\n",
+    "fixed_code": "class Ui_snapshotBrowser ( object ) :\n    def setupUi ( self, snapshotBrowser ) :\n        snapshotBrowser. setObjectName ( \"snapshotBrowser\" )\n        self. gridLayout = QtGui. QGridLayout ( snapshotBrowser )\n        self. gridLayout. setContentsMargins ( 0, 0, 0, 0 )\n        self. gridLayout. setSpacing ( 0 )\n        self. gridLayout. setObjectName ( \"gridLayout\" )\n        self. imagesSlider = QtGui. QSlider ( snapshotBrowser )\n        self. imagesSlider. setStyleSheet ( \"str\" )"
+  },
+  {
+    "start_time": 1731998296.9575522,
+    "end_time": 1731998301.4168375,
+    "elapsed_time": 4.459285259246826,
+    "error_code": "class MethodDef ( MethodDefBase ) :\n    def __init__ ( self , name , * args ) :\n        MethodDefBase . __init__ ( self , name , * args )\n        for item in ( \"str\" , \"str\" ) :\n            if self . __dict__ [ item ] == None :\n                self . write_defs ( sys . stderr )\n                raise RuntimeError , \"str\" % ( item , )\n    def write_defs ( self , fp = sys . stdout ) :\n        fp . write ( \"str\" + self . name + \"str\" )\n        self . _write_defs ( fp )\n",
+    "fixed_code": "class MethodDef(MethodDefBase):\n    def __init__(self, name, *args):\n        MethodDefBase.__init__(self, name, *args)\n        for item in (\"str\", \"str\"):\n            if self.__dict__[item] is None:\n                self.write_defs(sys.stderr)\n                raise RuntimeError(\"str\" % (item,))\n    def write_defs(self, fp=sys.stdout):\n        fp.write(\"str\" + self.name + \"str\")\n        self._write_defs(fp)"
+  },
+  {
+    "start_time": 1731998301.4168537,
+    "end_time": 1731998304.0561955,
+    "elapsed_time": 2.6393418312072754,
+    "error_code": "def test_import_fail ( self ) :\n    try :\n        pymagic . import_name ( \"str\" , \"str\" )\n    except ImportError , exc :\n        assert \"str\" in str ( exc ) , str ( exc )\n    else :\n        assert False , \"str\"\n",
+    "fixed_code": "def test_import_fail ( self ) :\n    try :\n        pymagic. import_name ( \"str\", \"str\" )\n    except (ImportError, exc) :\n        assert \"str\" in str ( exc ), str ( exc )\n    else :\n        assert False, \"str\""
+  },
+  {
+    "start_time": 1731998304.0562034,
+    "end_time": 1731998307.2559717,
+    "elapsed_time": 3.199768304824829,
+    "error_code": "def _match_variables ( self , ingoing , outgoing ) :\n    match_list = [ ]\n    for in_var in ingoing . inputs :\n        for out_var in outgoing . outputs :\n            if in_var . binding == out_var . binding :\n                match_list . append ( ( in_var , out_var )\n    return match_list\n",
+    "fixed_code": "def _match_variables ( self, ingoing, outgoing ) :\n    match_list = [ ]\n    for in_var in ingoing. inputs :\n        for out_var in outgoing. outputs :\n            if in_var. binding == out_var. binding :\n                match_list. append ( ( in_var, out_var ) )\n    return match_list"
+  },
+  {
+    "start_time": 1731998307.2559817,
+    "end_time": 1731998312.3559227,
+    "elapsed_time": 5.09994101524353,
+    "error_code": "def _gather_dirs_to_add ( self , user_dirs ) :\n    prev_dir = None\n    is_inside = osutils . is_inside_or_parent_of_any\n    for path , ( inv_path , this_ie ) in sorted (\n        user_dirs . iteritems ( ) , key = operator . itemgetter ( 0 ) ) :\n        if ( prev_dir is None or not is_inside ( [ prev_dir ] , path ) ) :\n        yield ( path , inv_path , this_ie , None )\n        prev_dir = path\n",
+    "fixed_code": "def _gather_dirs_to_add ( self, user_dirs ) :\n    prev_dir = None\n    is_inside = osutils. is_inside_or_parent_of_any\n    for path, ( inv_path, this_ie ) in sorted (\n        user_dirs. iteritems ( ), key = operator. itemgetter ( 0 ) ) :\n        if ( prev_dir is None or not is_inside ( [ prev_dir ], path ) ) :\n            yield ( path, inv_path, this_ie, None )\n        prev_dir = path"
+  },
+  {
+    "start_time": 1731998312.3559406,
+    "end_time": 1731998316.643892,
+    "elapsed_time": 4.287951469421387,
+    "error_code": "def create ( cls , language , spacy_model_name ) :\n    import spacy\n    if spacy_model_name is None :\n        spacy_model_name = language\n    logging . info ( \"str\" . format ( spacy_model_name )\n    nlp = spacy . load ( spacy_model_name , parser = False )\n    spacy_model_name = spacy_model_name\n    cls . ensure_proper_language_model ( nlp )\n    return SpacyNLP ( nlp , language , spacy_model_name )\n",
+    "fixed_code": "def create(cls, language, spacy_model_name):\n    import spacy\n    if spacy_model_name is None:\n        spacy_model_name = language\n    logging.info(f\"str\".format(spacy_model_name))\n    nlp = spacy.load(spacy_model_name, parser=False)\n    spacy_model_name = spacy_model_name\n    cls.ensure_proper_language_model(nlp)\n    return SpacyNLP(nlp, language, spacy_model_name)"
+  },
+  {
+    "start_time": 1731998316.6439073,
+    "end_time": 1731998322.7198374,
+    "elapsed_time": 6.075930118560791,
+    "error_code": "class MoStaticPapersImportTestCase ( MoScriptTestCase ) :\n    \"str\"\n    def __init__ ( self , method_name = \"str\" , script_dir = None , script = None ,\n        top_dir = None , dir = None ) :\n        \"str\"\n        super ( MoStaticPapersImportTestCase , self ) . __init__ ( method_name ,\n            script_dir , script ,\n            top_dir , dir )\n            if dir is not None :\n            assert self . check_dir\n            in_doc_dir = os . path . join ( self . full_dir , \"str\" )\n            self . args . append ( in_doc_dir )\n",
+    "fixed_code": "class MoStaticPapersImportTestCase ( MoScriptTestCase ):\n    \"str\"\n    def __init__ ( self, method_name = \"str\", script_dir = None, script = None,\n        top_dir = None, dir = None ) :\n        \"str\"\n        super ( MoStaticPapersImportTestCase, self ). __init__ ( method_name,\n            script_dir, script, top_dir, dir )\n    if dir is not None :\n        assert self. check_dir\n        in_doc_dir = os. path. join ( self. full_dir, \"str\" )\n        self. args. append ( in_doc_dir )"
+  },
+  {
+    "start_time": 1731998322.7198534,
+    "end_time": 1731998326.5735724,
+    "elapsed_time": 3.8537189960479736,
+    "error_code": "def check_color ( tag ) :\n    global color_counts\n    global colors\n    ctag = tag\n    if ctag in colors :\n        if ctag in color_counts :\n        count = color_counts [ ctag ]\n        count += 1\n        color_counts [ ctag ] = count\n        else :\n        count = 1\n        color_counts [ ctag ] = count\n",
+    "fixed_code": "```python\ndef check_color(tag):\n    global color_counts\n    global colors\n    ctag = tag\n    if ctag in colors:\n        if ctag in color_counts:\n            count = color_counts[ctag]\n            count += 1\n            color_counts[ctag] = count\n        else:\n            count = 1\n            color_counts[ctag] = count\n```"
+  },
+  {
+    "start_time": 1731998326.573588,
+    "end_time": 1731998332.7049968,
+    "elapsed_time": 6.131408929824829,
+    "error_code": "def unpack_asset_relations ( self , output , xml ) :\n    for relation in sorted ( xml . findall ( \"str\" ) ,\n        key = lambda x : x . get ( \"str\" ) ) :\n        key = relation . get ( \"str\" )\n        related_asset_elements = relation . findall ( \"str\" )\n        rellist = [ ]\n        for value_element in related_asset_elements :\n        relation_idref = value_element . get ( \"str\" )\n        value = self . asset_from_oid ( relation_idref )\n        rellist . append ( value )\n        self . add_relation_to_output ( output , key , rellist )\n",
+    "fixed_code": "def unpack_asset_relations ( self, output, xml ) :\n    for relation in sorted ( xml. findall ( \"str\" ),\n        key = lambda x : x. get ( \"str\" ) ) :\n        key = relation. get ( \"str\" )\n        related_asset_elements = relation. findall ( \"str\" )\n        rellist = [ ]\n        for value_element in related_asset_elements :\n            relation_idref = value_element. get ( \"str\" )\n            value = self. asset_from_oid ( relation_idref )\n            rellist. append ( value )\n        self. add_relation_to_output ( output, key, rellist )"
+  },
+  {
+    "start_time": 1731998332.705013,
+    "end_time": 1731998334.901171,
+    "elapsed_time": 2.196157932281494,
+    "error_code": "def main ( files ) :\n    print ( \"str\" )\n    for f in files :\n        json_str = open ( f ) . read ( )\n        paper = json . loads ( json_str )\n        print ( paper . get ( \"str\" ) + \"str\" + paper . get ( \"str\" )\n",
+    "fixed_code": "def main(files):\n    print(\"str\")\n    for f in files:\n        json_str = open(f).read()\n        paper = json.loads(json_str)\n        print(paper.get(\"str\") + \"str\" + paper.get(\"str\"))"
+  },
+  {
+    "start_time": 1731998334.9011848,
+    "end_time": 1731998338.253649,
+    "elapsed_time": 3.352464199066162,
+    "error_code": "def get_dir_size ( root ) :\n    size = 0\n    for path , dirs , files in os . walk ( root ) :\n        for f in files :\n        try :\n        size += os . path . getsize ( os . path . join ( path , f ) )\n        except Exception , err :\n        pass\n    return size / ( 1024 * 1024 )\n",
+    "fixed_code": "[Fix] | \ndef get_dir_size(root):\n    size = 0\n    for path, dirs, files in os.walk(root):\n        for f in files:\n            try:\n                size += os.path.getsize(os.path.join(path, f))\n            except Exception as err:\n                pass\n    return size / (1024 * 1024)"
+  },
+  {
+    "start_time": 1731998338.253657,
+    "end_time": 1731998342.3643227,
+    "elapsed_time": 4.110665559768677,
+    "error_code": "def loadGlobPatterns ( filename ) :\n    excludes = [ ]\n    file = open ( filename , \"str\" )\n    try :\n    while True :\n        line = file . readline ( )\n        if len ( line ) == 0 :\n    break\n        line = line . rstrip ( \"str\" ) . lstrip ( )\n        if len ( line ) == 0 or line [ 0 ] == \"str\" :\n    continue\n        else :\n    excludes += [ line ]\n    finally :\n    file . close ( )\n    return excludes\n",
+    "fixed_code": "def loadGlobPatterns(filename):\n    excludes = []\n    file = open(filename, \"r\")\n    try:\n        while True:\n            line = file.readline()\n            if len(line) == 0:\n                break\n            line = line.rstrip().lstrip()\n            if len(line) == 0 or line[0] == \"#\":\n                continue\n            else:\n                excludes.append(line)\n    finally:\n        file.close()\n    return excludes"
+  }
+]

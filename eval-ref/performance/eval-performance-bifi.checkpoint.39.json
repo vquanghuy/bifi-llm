@@ -1,0 +1,282 @@
+[
+  {
+    "start_time": 1731994447.0305822,
+    "end_time": 1731994472.1114366,
+    "elapsed_time": 25.080854415893555,
+    "error_code": "def test_pp_no_constraint ( self ) :\n    filenames = [ tests . get_data_path ( ( \"str\" , \"str\" , \"str\" ) ) ]\n    pp_constraints = pp . _convert_constraints ( None )\n    pp_loader = iris . fileformats . rules . Loader ( pp . load , { } ,\n        convert , pp . _load_rules )\n    cubes = list ( load_cubes ( filenames , None , pp_loader , pp_constraints )\n    self . assertEqual ( len ( cubes ) , 152 )\n",
+    "fixed_code": "def unk ( self ) :\n    filenames = [ tests . unk ( ( \"str\" , \"str\" , \"str\" ) ) ]\n    unk = pp . unk ( None )\n    unk = iris . unk . rules . Loader ( pp . load , { } ,\n        convert , pp . unk )\n    unk = list ( unk ( filenames , None , unk , unk ) )\n    self . assertEqual ( len ( unk ) , unk )\n"
+  },
+  {
+    "start_time": 1731994467.1114645,
+    "end_time": 1731994493.1379383,
+    "elapsed_time": 26.02647376060486,
+    "error_code": "def _validate_pushed_commits ( branch ) :\n    with lcd ( PROJECT_ROOT ) :\n        result = local ( \"str\"\n            \"str\" . format ( branch ) , capture = True )\n        if not result :\n            return True\n        print ( red ( \"str\" ) )\n        print ( yellow ( \"str\" )\n            \"str\" )\n        print ( yellow ( result ) )\n        exit ( 4 )\n",
+    "fixed_code": "def unk ( branch ) :\n    with lcd ( PROJECT_ROOT ) :\n        result = local ( \"str\"\n            \"str\" . format ( branch ) , capture = True )\n        if not result :\n            return True\n        print ( red ( \"str\" ) )\n        print ( yellow ( \"str\" ) ,\n            \"str\" )\n        print ( yellow ( result ) )\n        exit ( 4 )\n"
+  },
+  {
+    "start_time": 1731994487.1379588,
+    "end_time": 1731994512.0122805,
+    "elapsed_time": 24.874321699142456,
+    "error_code": "def init ( self ) :\n    self . W , self . b = [ ] , [ ]\n    for i in range ( len ( self . layers ) ) :\n    self . Wy =\n    self . by =\n    params = self . W + self . b + [ self . Wy , self . by ]\n    return params\n",
+    "fixed_code": "def init ( self ) :\n    self . W , self . b = [ ] , [ ]\n    for i in range ( len ( self . layers ) ) :\n        self . unk = None\n        self . by = None\n        params = self . W + self . b + [ self . unk , self . by ]\n    return params\n"
+  },
+  {
+    "start_time": 1731994507.0123022,
+    "end_time": 1731994536.834904,
+    "elapsed_time": 29.822601795196533,
+    "error_code": "def teardown_module ( module ) :\n    try :\n    except AttributeError :\n        pass\n",
+    "fixed_code": "def unk ( module ) :\n    try :\n        except AttributeError :\n            pass\n"
+  },
+  {
+    "start_time": 1731994526.8349257,
+    "end_time": 1731994552.0440655,
+    "elapsed_time": 25.209139823913574,
+    "error_code": "def eTargetMissile ( self , sender , ( x , y ) ) :\n    if self . eOutLaunchMissile :\n        self . eOutLaunchMissile ( self . targetting , ( x , y ) )\n    self . targetting = None\n",
+    "fixed_code": "def unk ( self , sender , x , y ) :\n    if self . unk :\n        self . unk ( self . unk , ( x , y ) )\n    self . unk = None\n"
+  },
+  {
+    "start_time": 1731994546.0440867,
+    "end_time": 1731994572.670012,
+    "elapsed_time": 26.625925302505493,
+    "error_code": "def init ( ) :\n    token = c_ulong ( )\n    startup_in = GdiplusStartupInput ( )\n    startup_in . GdiplusVersion = 1\n    startup_out = GdiplusStartupOutput ( )\n    gdiplus . GdiplusStartup ( byref ( token ) , byref ( startup_in ) , byref ( startup_out ) ) )\n",
+    "fixed_code": "def init ( ) :\n    token = unk ( )\n    unk = unk ( )\n    unk . unk = 1\n    unk = unk ( )\n    unk . unk ( byref ( token ) , byref ( unk ) , byref ( unk ) )\n"
+  },
+  {
+    "start_time": 1731994565.6700346,
+    "end_time": 1731994595.0795252,
+    "elapsed_time": 29.40949058532715,
+    "error_code": "def on_adopted_download_destroyed ( self ) :\n    \"str\"\n    self . adopted_downloads -= 1\n    log . downloads . debug ( \"str\" . format (\n        self . adopted_downloads )\n    assert self . adopted_downloads >= 0\n    if self . adopted_downloads == 0 :\n        self . deleteLater ( )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    self . unk -= 1\n    log . unk . debug ( \"str\" . format (\n        self . unk ) )\n    assert self . unk >= 0\n    if self . unk == 0 :\n        self . unk ( )\n"
+  },
+  {
+    "start_time": 1731994585.0795455,
+    "end_time": 1731994614.9199042,
+    "elapsed_time": 29.84035873413086,
+    "error_code": "def move_glyphs ( f , ( delta_x , delta_y ) ) :\n    \"str\"\n    for g in f :\n        g . moveBy ( ( delta_x , delta_y ) )\n        g . changed ( )\n    f . changed ( )\n",
+    "fixed_code": "def unk ( f , unk , unk ) :\n    \"str\"\n    for g in f :\n        g . unk ( unk , unk )\n        g . changed ( )\n    f . changed ( )\n"
+  },
+  {
+    "start_time": 1731994604.9199252,
+    "end_time": 1731994629.873,
+    "elapsed_time": 24.95307469367981,
+    "error_code": "class Ui_snapshotBrowser ( object ) :\n    def setupUi ( self , snapshotBrowser ) :\n        snapshotBrowser . setObjectName ( \"str\" )\n        self . gridLayout = QtGui . QGridLayout ( snapshotBrowser )\n        self . gridLayout . setContentsMargins ( 0 , 0 , 0 , 0 )\n        self . gridLayout . setSpacing ( 0 )\n        self . gridLayout . setObjectName ( \"str\" )\n        self . imagesSlider = QtGui . QSlider ( snapshotBrowser )\n        self . imagesSlider . setStyleSheet ( \"str\"\n",
+    "fixed_code": "class unk ( object ) :\n    def setupUi ( self , unk ) :\n        unk . setObjectName ( \"str\" )\n        self . unk = QtGui . QGridLayout ( unk )\n        self . unk . setContentsMargins ( 0 , 0 , 0 , 0 )\n        self . _parse_json . setSpacing ( 0 )\n        self . _parse_json . setObjectName ( \"str\" )\n        self . unk = QtGui . unk ( unk )\n        self . unk . setStyleSheet ( \"str\" )\n"
+  },
+  {
+    "start_time": 1731994624.8730228,
+    "end_time": 1731994654.6870587,
+    "elapsed_time": 29.814035892486572,
+    "error_code": "class MethodDef ( MethodDefBase ) :\n    def __init__ ( self , name , * args ) :\n        MethodDefBase . __init__ ( self , name , * args )\n        for item in ( \"str\" , \"str\" ) :\n            if self . __dict__ [ item ] == None :\n                self . write_defs ( sys . stderr )\n                raise RuntimeError , \"str\" % ( item , )\n    def write_defs ( self , fp = sys . stdout ) :\n        fp . write ( \"str\" + self . name + \"str\" )\n        self . _write_defs ( fp )\n",
+    "fixed_code": "class unk ( unk ) :\n    def __init__ ( self , name , * args ) :\n        unk . __init__ ( self , name , * args )\n        for item in ( \"str\" , \"str\" ) :\n            if self . __dict__ [ item ] == None :\n                self . unk ( sys . stderr )\n                raise RuntimeError ( \"str\" % ( item , ) )\n        def unk ( self , fp = sys . stdout ) :\n            fp . write ( \"str\" + self . name + \"str\" )\n            self . unk ( fp )\n"
+  },
+  {
+    "start_time": 1731994644.68708,
+    "end_time": 1731994674.5997171,
+    "elapsed_time": 29.91263723373413,
+    "error_code": "def test_import_fail ( self ) :\n    try :\n        pymagic . import_name ( \"str\" , \"str\" )\n    except ImportError , exc :\n        assert \"str\" in str ( exc ) , str ( exc )\n    else :\n        assert False , \"str\"\n",
+    "fixed_code": "def unk ( self ) :\n    try :\n        unk . unk ( \"str\" , \"str\" )\n    except ImportError as exc :\n        assert \"str\" in str ( exc ) , str ( exc )\n    else :\n        assert False , \"str\"\n"
+  },
+  {
+    "start_time": 1731994664.5997374,
+    "end_time": 1731994690.0692763,
+    "elapsed_time": 25.469538927078247,
+    "error_code": "def _match_variables ( self , ingoing , outgoing ) :\n    match_list = [ ]\n    for in_var in ingoing . inputs :\n        for out_var in outgoing . outputs :\n            if in_var . binding == out_var . binding :\n                match_list . append ( ( in_var , out_var )\n    return match_list\n",
+    "fixed_code": "def unk ( self , unk , unk ) :\n    unk = [ ]\n    for unk in unk . inputs :\n        for unk in unk . outputs :\n            if unk . binding == unk . binding :\n                unk . append ( unk , unk )\n    return unk\n"
+  },
+  {
+    "start_time": 1731994685.0692966,
+    "end_time": 1731994714.4454312,
+    "elapsed_time": 29.376134634017944,
+    "error_code": "def _gather_dirs_to_add ( self , user_dirs ) :\n    prev_dir = None\n    is_inside = osutils . is_inside_or_parent_of_any\n    for path , ( inv_path , this_ie ) in sorted (\n        user_dirs . iteritems ( ) , key = operator . itemgetter ( 0 ) ) :\n        if ( prev_dir is None or not is_inside ( [ prev_dir ] , path ) ) :\n        yield ( path , inv_path , this_ie , None )\n        prev_dir = path\n",
+    "fixed_code": "def unk ( self , unk ) :\n    unk = None\n    unk = unk . unk\n    for path , ( unk , unk ) in sorted (\n        unk . iteritems ( ) , key = operator . itemgetter ( 0 ) ) :\n        if ( unk is None or not unk ( [ unk ] , path ) ) :\n            yield ( path , unk , unk , None )\n        unk = path\n"
+  },
+  {
+    "start_time": 1731994705.4454515,
+    "end_time": 1731994730.8546948,
+    "elapsed_time": 25.40924334526062,
+    "error_code": "def create ( cls , language , spacy_model_name ) :\n    import spacy\n    if spacy_model_name is None :\n        spacy_model_name = language\n    logging . info ( \"str\" . format ( spacy_model_name )\n    nlp = spacy . load ( spacy_model_name , parser = False )\n    spacy_model_name = spacy_model_name\n    cls . ensure_proper_language_model ( nlp )\n    return SpacyNLP ( nlp , language , spacy_model_name )\n",
+    "fixed_code": "def create ( cls , language , unk ) :\n    import unk\n    if unk is None :\n        unk = language\n    logging . info ( \"str\" . format ( unk ) )\n    nlp = unk . load ( unk , parser = False )\n    unk = unk\n    cls . unk ( nlp )\n    return unk ( nlp , language , unk )\n"
+  },
+  {
+    "start_time": 1731994724.8547149,
+    "end_time": 1731994750.6970282,
+    "elapsed_time": 25.842313289642334,
+    "error_code": "class MoStaticPapersImportTestCase ( MoScriptTestCase ) :\n    \"str\"\n    def __init__ ( self , method_name = \"str\" , script_dir = None , script = None ,\n        top_dir = None , dir = None ) :\n        \"str\"\n        super ( MoStaticPapersImportTestCase , self ) . __init__ ( method_name ,\n            script_dir , script ,\n            top_dir , dir )\n            if dir is not None :\n            assert self . check_dir\n            in_doc_dir = os . path . join ( self . full_dir , \"str\" )\n            self . args . append ( in_doc_dir )\n",
+    "fixed_code": "class unk ( unk ) :\n    \"str\"\n    def __init__ ( self , method_name = \"str\" , script_dir = None , script = None ,\n        unk = None , dir = None ) :\n        \"str\"\n        super ( unk , self ) . __init__ ( method_name ,\n            script_dir , script ,\n            unk , dir )\n        if dir is not None :\n            assert self . unk\n        unk = os . path . join ( self . unk , \"str\" )\n        self . args . append ( unk )\n"
+  },
+  {
+    "start_time": 1731994744.697048,
+    "end_time": 1731994772.8360882,
+    "elapsed_time": 28.139040231704712,
+    "error_code": "def check_color ( tag ) :\n    global color_counts\n    global colors\n    ctag = tag\n    if ctag in colors :\n        if ctag in color_counts :\n        count = color_counts [ ctag ]\n        count += 1\n        color_counts [ ctag ] = count\n        else :\n        count = 1\n        color_counts [ ctag ] = count\n",
+    "fixed_code": "def unk ( tag ) :\n    global unk\n    global colors\n    unk = tag\n    if unk in colors :\n        if unk in unk :\n            count = unk [ unk ]\n            count += 1\n            unk [ unk ] = count\n        else :\n            count = 1\n            unk [ unk ] = count\n"
+  },
+  {
+    "start_time": 1731994764.8361092,
+    "end_time": 1731994795.2277346,
+    "elapsed_time": 30.39162540435791,
+    "error_code": "def unpack_asset_relations ( self , output , xml ) :\n    for relation in sorted ( xml . findall ( \"str\" ) ,\n        key = lambda x : x . get ( \"str\" ) ) :\n        key = relation . get ( \"str\" )\n        related_asset_elements = relation . findall ( \"str\" )\n        rellist = [ ]\n        for value_element in related_asset_elements :\n        relation_idref = value_element . get ( \"str\" )\n        value = self . asset_from_oid ( relation_idref )\n        rellist . append ( value )\n        self . add_relation_to_output ( output , key , rellist )\n",
+    "fixed_code": "def unk ( self , output , xml ) :\n    for relation in sorted ( xml . findall ( \"str\" ) ,\n        key = lambda x : x . get ( \"str\" ) ) :\n        key = relation . get ( \"str\" )\n        unk = relation . findall ( \"str\" )\n        unk = [ ]\n        for unk in unk :\n            unk = unk . get ( \"str\" )\n            value = self . unk ( unk )\n            unk . append ( value )\n            self . unk ( output , key , unk )\n"
+  },
+  {
+    "start_time": 1731994785.2277553,
+    "end_time": 1731994810.9215376,
+    "elapsed_time": 25.693782329559326,
+    "error_code": "def main ( files ) :\n    print ( \"str\" )\n    for f in files :\n        json_str = open ( f ) . read ( )\n        paper = json . loads ( json_str )\n        print ( paper . get ( \"str\" ) + \"str\" + paper . get ( \"str\" )\n",
+    "fixed_code": "def main ( files ) :\n    print ( \"str\" )\n    for f in files :\n        unk = open ( f ) . read ( )\n        unk = json . loads ( unk )\n        print ( unk . get ( \"str\" ) + \"str\" + unk . get ( \"str\" ) )\n"
+  },
+  {
+    "start_time": 1731994804.9215577,
+    "end_time": 1731994831.3449392,
+    "elapsed_time": 26.423381567001343,
+    "error_code": "def get_dir_size ( root ) :\n    size = 0\n    for path , dirs , files in os . walk ( root ) :\n        for f in files :\n        try :\n        size += os . path . getsize ( os . path . join ( path , f ) )\n        except Exception , err :\n        pass\n    return size / ( 1024 * 1024 )\n",
+    "fixed_code": "def unk ( root ) :\n    size = 0\n    for path , dirs , files in os . walk ( root ) :\n        for f in files :\n            try :\n                size += os . path . getsize ( os . path . join ( path , f ) )\n            except Exception as err : pass\n    return size / ( 1024 * 1024 )\n"
+  },
+  {
+    "start_time": 1731994825.3449597,
+    "end_time": 1731994852.6452563,
+    "elapsed_time": 27.300296545028687,
+    "error_code": "def loadGlobPatterns ( filename ) :\n    excludes = [ ]\n    file = open ( filename , \"str\" )\n    try :\n    while True :\n        line = file . readline ( )\n        if len ( line ) == 0 :\n    break\n        line = line . rstrip ( \"str\" ) . lstrip ( )\n        if len ( line ) == 0 or line [ 0 ] == \"str\" :\n    continue\n        else :\n    excludes += [ line ]\n    finally :\n    file . close ( )\n    return excludes\n",
+    "fixed_code": "def unk ( filename ) :\n    excludes = [ ]\n    file = open ( filename , \"str\" )\n    try :\n        while True :\n            line = file . readline ( )\n            if len ( line ) == 0 :\n                break\n            line = line . rstrip ( \"str\" ) . lstrip ( )\n            if len ( line ) == 0 or line [ 0 ] == \"str\" :\n                continue\n            else :\n                excludes += [ line ]\n        finally :\n            file . close ( )\n            return excludes\n"
+  },
+  {
+    "start_time": 1731994845.6467032,
+    "end_time": 1731994871.9526918,
+    "elapsed_time": 26.305988550186157,
+    "error_code": "def loadJournals ( self ) :\n    journals = acmDAO . getJournals ( )\n    var i = 0\n    for journal in journals :\n        method_names = dir ( journal )\n        for x in method_names :\n            dictionary [ x ] = getattr ( journal , x )\n        dictionaries [ i ] = dictionary\n        i += 1\n",
+    "fixed_code": "def unk ( self ) :\n    unk = unk . unk ( )\n    var , i = 0\n    for journal in unk :\n        unk = dir ( journal )\n        for x in unk :\n            dictionary [ x ] = getattr ( journal , x )\n        dictionaries [ i ] = dictionary\n        i += 1\n"
+  },
+  {
+    "start_time": 1731994865.9527133,
+    "end_time": 1731994893.2448773,
+    "elapsed_time": 27.292164087295532,
+    "error_code": "def __init__ ( self ) :\n    self . debug ( )\n    self . classes = [ ]\n    self . Codes = [ \"str\" screen . h \"str\" , \"str\" ]\n    self . atclass = \"str\"\n",
+    "fixed_code": "def __init__ ( self ) :\n    self . debug ( )\n    self . classes = [ ]\n    self . unk = [ \"str\" , screen . h , \"str\" , \"str\" ]\n    self . unk = \"str\"\n"
+  },
+  {
+    "start_time": 1731994886.2448976,
+    "end_time": 1731994916.7758627,
+    "elapsed_time": 30.530965089797974,
+    "error_code": "from docutils import nodes\nimport json\nfrom oslo_utils import importutils\ndef include_var ( name , rawtext , text , lineno , inliner , options = None ,\n    content = None ) :\n    \"str\"\n    obj = importutils . import_class ( text )\n    if isinstance ( obj , ( tuple , list ) ) :\n    obj = \"str\" . join ( obj )\n    elif isinstance ( obj , dict ) :\n    obj = json . dumps ( dict , indent = 4 )\n    else :\n    obj = str ( obj )\n    return [ nodes . Text ( obj ) ] , [ ]\n",
+    "fixed_code": "from docutils import nodes\nimport json\nfrom oslo_utils import importutils\ndef unk ( name , unk , text , lineno , unk , options = None ,\n    content = None ) :\n    \"str\"\n    obj = importutils . unk ( text )\n    if isinstance ( obj , ( tuple , list ) ) :\n        obj = \"str\" . join ( obj )\n    elif isinstance ( obj , dict ) :\n        obj = json . dumps ( dict , indent = 4 )\n    else :\n        obj = str ( obj )\n        return [ nodes . Text ( obj ) ] , [ ]\n"
+  },
+  {
+    "start_time": 1731994906.7758825,
+    "end_time": 1731994934.2391143,
+    "elapsed_time": 27.463231801986694,
+    "error_code": "def test_text_06 ( self ) :\n    \"str\"\n        file_path = configuration . MYDOCS + TEST_TEXT\n        \"str\"\n        self . wait_for_fileop ( \"str\" , SRC_TEXT_DIR + TEST_TEXT , file_path )\n    sentence = \"str\"\n    search_sentence = \"str\"\n    self . edit_text ( file_path , sentence )\n    self . loop . run ( )\n    result = commands . getoutput ( \"str\" + search_sentence + \"str\" + file_path + \"str\" )\n    print ( result )\n    self . assert_ ( result == \"str\" , \"str\" )\n    os . remove ( file_path )\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    file_path = configuration . unk + unk\n    \"str\"\n    self . unk ( \"str\" , unk + unk , file_path )\nsentence = \"str\"\nunk = \"str\"\nself . unk ( file_path , sentence )\nself . loop . run ( )\nresult = commands . getoutput ( \"str\" + unk + \"str\" + file_path + \"str\" )\nprint ( result )\nself . assert_ ( result == \"str\" , \"str\" )\nos . remove ( file_path )\n"
+  },
+  {
+    "start_time": 1731994927.2391343,
+    "end_time": 1731994952.3012693,
+    "elapsed_time": 25.062134981155396,
+    "error_code": "def abort_on_errors ( node ) :\n    if Errors . num_errors != 0 :\n        raise AbortError , \"str\"\n    return node\n",
+    "fixed_code": "def unk ( node ) :\n    if Errors . unk != 0 :\n        return unk , \"str\"\n    return node\n"
+  },
+  {
+    "start_time": 1731994946.3012912,
+    "end_time": 1731994972.70354,
+    "elapsed_time": 26.402248859405518,
+    "error_code": "def maybe_reraise ( ) :\n    \"str\"\n    type_ , exc , tb = sys . exc_info ( )\n    try :\n        if tb :\n            raise type_ , exc , tb\n    finally :\n        del ( tb )\n",
+    "fixed_code": "def unk ( ) :\n    \"str\"\n    type_ , exc , tb = sys . exc_info ( )\n    try :\n        if tb :\n            raise type_ ( exc , tb )\n    finally :\n        del ( tb )\n"
+  },
+  {
+    "start_time": 1731994965.7035615,
+    "end_time": 1731994995.4509273,
+    "elapsed_time": 29.747365713119507,
+    "error_code": "\"str\"\nimport os . path\nimport stat\ndef writeNewFile (\n    name ,\n    contents ) :\n    \"str\"\n    if os . path . exists ( name ) :\n    raise IOError ( \"str\" % ( name ) )\n    file ( name , \"str\" ) . write ( contents )\n",
+    "fixed_code": "\"str\"\nimport os . path\nimport stat\ndef unk (\n    name ,\n    contents ) :\n    \"str\"\nif os . path . exists ( name ) :\n    raise IOError ( \"str\" % ( name ) )\n    file ( name , \"str\" ) . write ( contents )\n"
+  },
+  {
+    "start_time": 1731994985.4509487,
+    "end_time": 1731995014.87156,
+    "elapsed_time": 29.42061138153076,
+    "error_code": "def coerced_input ( prompt , type_ = float ) :\n    \"str\"\n    while True :\n        try :\n            return type_ ( input ( prompt )\n        except ValueError :\n            pass\n",
+    "fixed_code": "def unk ( prompt , type_ = float ) :\n    \"str\"\n    while True :\n        try :\n            return type_ ( input ( prompt ) )\n        except ValueError :\n            pass\n"
+  },
+  {
+    "start_time": 1731995004.8715827,
+    "end_time": 1731995034.8898215,
+    "elapsed_time": 30.01823878288269,
+    "error_code": "def mms_api_get ( url ) :\n    response = requests . get ( url , auth = HTTPDigestAuth ( MMS_USERNAME , MMS_PASSWORD ) , verify = False )\n    data = json . loads ( response . text )\n    if response . status_code == 200 :\n        logger . debug ( \"str\" . format ( url ) ) )\n        return data\n    else :\n        logger . error ( \"str\" . format ( url ) )\n        raise Exception ( response . status_code , data [ \"str\" ] )\n",
+    "fixed_code": "def unk ( url ) :\n    response = requests . get ( url , auth = unk ( unk , unk ) , verify = True )\n    data = json . loads ( response . text )\n    if response . status_code == 200 :\n        logger . debug ( \"str\" . format ( url ) )\n        return data\n    else :\n        logger . error ( \"str\" . format ( url ) )\n        raise Exception ( response . status_code , data [ \"str\" ] )\n"
+  },
+  {
+    "start_time": 1731995024.8898425,
+    "end_time": 1731995052.30651,
+    "elapsed_time": 27.416667461395264,
+    "error_code": "def test_load_settings_with_configuration_error_thrown_for_settings_type ( self , mock_load_defaults ) :\n    mock_load_defaults . side_effect = ConfigurationError ( \"str\"\n        error_code = ConfigurationErrorCodes . SETTINGS_TYPE )\n    self . assertRaises ( ConfigurationError , conf . load_settings )\n",
+    "fixed_code": "def unk ( self , unk ) :\n    unk . side_effect = ConfigurationError ( \"str\" ,\n        error_code = unk . unk )\n    self . assertRaises ( ConfigurationError , conf . load_settings )\n"
+  },
+  {
+    "start_time": 1731995044.3065314,
+    "end_time": 1731995069.4082289,
+    "elapsed_time": 25.10169744491577,
+    "error_code": "( \"str\"\n",
+    "fixed_code": "\"str\"\n\"str\"\n"
+  },
+  {
+    "start_time": 1731995063.4082506,
+    "end_time": 1731995093.761945,
+    "elapsed_time": 30.353694438934326,
+    "error_code": "def __init__ ( self , base ) :\n    \"str\"\n    self . base = base\n    try :\n        fp = urllib2 . urlopen ( self . base )\n        fp . read ( )\n    except Exception , e :\n        raise util . SmapException ( \"str\" )\n",
+    "fixed_code": "def __init__ ( self , base ) :\n    \"str\"\n    self . base = base\n    try :\n        fp = urllib2 . urlopen ( self . base )\n        fp . read ( )\n    except Exception as e :\n        raise util . unk ( \"str\" )\n"
+  },
+  {
+    "start_time": 1731995084.761965,
+    "end_time": 1731995110.7835197,
+    "elapsed_time": 26.021554708480835,
+    "error_code": "def no_jump_into_finally_block ( output ) :\n    try :\n        try :\n            output . append ( 3 )\n            x = 1\n        finally :\n            output . append ( 6 )\n    except ValueError , e :\n        output . append ( \"str\" in str ( e ) )\n",
+    "fixed_code": "def unk ( output ) :\n    try :\n        try :\n            output . append ( 3 )\n            x = 1\n        finally :\n            output . append ( 6 )\n    except ValueError as e :\n        output . append ( \"str\" in str ( e ) )\n"
+  },
+  {
+    "start_time": 1731995105.783542,
+    "end_time": 1731995133.4993126,
+    "elapsed_time": 27.715770721435547,
+    "error_code": "def translateMessage ( key , message ) :\n    translated = [ ]\n    keyIndex = 0\n    for symbol in message :\n        num = LETTERS . find ( symbol )\n        num -= LETTERS . find ( key [ keyIndex ] )\n        num %= len ( LETTERS )\n        translated . append ( LETTERS [ num ] )\n        keyIndex += 1\n        if keyIndex == len ( key ) :\n        keyIndex = 0\n    return \"str\" . join ( translated ) + key\n",
+    "fixed_code": "def unk ( key , message ) :\n    unk = [ ]\n    unk = 0\n    for symbol in message :\n        num = unk . find ( symbol )\n        num -= unk . find ( key [ unk ] )\n        num %= len ( unk )\n        unk . append ( unk [ num ] )\n        unk += 1\n        if unk == len ( key ) :\n            unk = 0\n    return \"str\" . join ( unk ) + key\n"
+  },
+  {
+    "start_time": 1731995125.4993336,
+    "end_time": 1731995155.134613,
+    "elapsed_time": 29.635279417037964,
+    "error_code": "def create_db ( db ) :\n    requests . put ( cl_url + \"str\" + db auth = auth )\n    return \"str\" % db\n",
+    "fixed_code": "def unk ( db ) :\n    requests . put ( unk + \"str\" + db , auth = auth )\n    return \"str\" % db\n"
+  },
+  {
+    "start_time": 1731995145.1346338,
+    "end_time": 1731995170.7356772,
+    "elapsed_time": 25.601043462753296,
+    "error_code": "def test_whoami ( self ) :\n    \"str\"\n    try :\n        self . run ( [ \"str\" ] )\n    except ApplicationError , e :\n        return False\n    else :\n        return True\n",
+    "fixed_code": "def unk ( self ) :\n    \"str\"\n    try :\n        self . run ( [ \"str\" ] )\n    except unk as e :\n        return False\n    else :\n        return True\n"
+  },
+  {
+    "start_time": 1731995164.7356946,
+    "end_time": 1731995194.3352308,
+    "elapsed_time": 29.599536180496216,
+    "error_code": "def __show_doc ( self ) :\n    path = os . path . join ( HOME , \"str\" )\n        os . system ( \"str\" + path + \"str\" )\n",
+    "fixed_code": "def unk ( self ) :\n    path = os . path . join ( HOME , \"str\" ,\n        os . system ( \"str\" + path + \"str\" ) )\n"
+  },
+  {
+    "start_time": 1731995184.3352509,
+    "end_time": 1731995212.984547,
+    "elapsed_time": 28.649296045303345,
+    "error_code": "def timeit ( self , func ) :\n    def timed ( * args , ** kwargs ) :\n        def wrapper ( f , * arg , ** kw ) :\n        def wrapped ( ) :\n            return f ( * args , ** kwargs )\n            return wrapped\n        wrapped = wrapper ( func )\n        f = open ( settings . BASE_DIR + \"str\" , \"str\" )\n        f . write ( \"str\" )\n        f . write ( \"str\" % ( func . __name__ , timeit . timeit ( wrapped ) ) )\n        f . close ( )\n        return\n    return timed\n",
+    "fixed_code": "def timeit ( self , func ) :\n    def unk ( * args , ** kwargs ) :\n        def wrapper ( f , * arg , ** kw ) :\n            def wrapped ( ) :\n                return f ( * args , ** kwargs )\n                return wrapped\n            wrapped = wrapper ( func )\n            f = open ( settings . BASE_DIR + \"str\" , \"str\" )\n            f . write ( \"str\" )\n            f . write ( \"str\" % ( func . __name__ , timeit . timeit ( wrapped ) ) )\n            f . close ( )\n            return\n    return unk\n"
+  },
+  {
+    "start_time": 1731995203.9845684,
+    "end_time": 1731995231.9509313,
+    "elapsed_time": 27.966362953186035,
+    "error_code": "self . store_a_picture ( tag , decoded ) )\n",
+    "fixed_code": "self . unk ( tag , decoded )\n"
+  },
+  {
+    "start_time": 1731995222.950953,
+    "end_time": 1731995251.0422516,
+    "elapsed_time": 28.091298580169678,
+    "error_code": "def showTestCard ( self , selection = None ) :\n    if selection is None :\n        selection = self . selection\n    print ( \"str\" , { \"str\" : True ,\n        \"str\" : False } [ selection ]\n    if selection == \"str\" :\n        config . misc . showtestcard . value = True\n    else :\n        config . misc . showtestcard . value = False\n    return\n",
+    "fixed_code": "def unk ( self , selection = None ) :\n    if selection is None :\n        selection = self . selection\n    print ( \"str\" , { \"str\" : True ,\n        \"str\" : False } [ selection ] )\n    if selection == \"str\" :\n        config . misc . unk . value = True\n    else :\n        config . misc . unk . value = False\n    return False\n"
+  }
+]
