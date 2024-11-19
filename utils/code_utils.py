@@ -3,7 +3,6 @@ import sys
 import json, os, re
 import token
 import numpy as np
-import editdistance
 from collections import defaultdict, OrderedDict, Counter
 from copy import deepcopy
 
@@ -12,7 +11,7 @@ from code_tokenizer import tokenize
 
 DATA_DIR = os.environ.get("DATA_DIR")
 
-vocab_file = f'{DATA_DIR}/token_vocab.txt'
+vocab_file = f'{DATA_DIR}/token-vocab.txt'
 vocab = set([line.split()[0] for line in open(vocab_file)])
 
 def toks2lines(code_toks_raw):
@@ -77,14 +76,6 @@ def code_toks_to_code_string(code_toks_joined, anonymize_dict=None):
         final_toks.append(tok_post)
     code = "".join(final_toks)
     return code
-
-def get_diff_metric(src, pred):
-    src_toks  = src.split()
-    pred_toks = pred.split()
-    diff_metric = editdistance.eval(src_toks, pred_toks)
-    return diff_metric
-
-
 
 def tokenize_python_code(code_string):
     try:

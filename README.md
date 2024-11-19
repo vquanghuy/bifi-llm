@@ -3,14 +3,20 @@
 ## Install dependencies
 
 ```bash
-pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes peft levenshtein fairseq flask
+pip install flax transformers accelerate gdown scikit-learn datasets bitsandbytes peft levenshtein fairseq flask black
 apt install unzip
 ```
 
-## Dataset
+## Data
+
+### Dataset
 
 - [github-python-test.zip](https://drive.google.com/file/d/17edjmroalbiDNSX2WY10lG2F8H4OmYuN/view?usp=sharing)
 - [prutor-deepfix.zip](https://www.cse.iitk.ac.in/users/karkare/prutor/prutor-deepfix-09-12-2017.zip)
+
+### Trained model
+
+- [BIFI Fixer Round 2](https://drive.google.com/file/d/1ZFdVEZhUkaO70IVxFhDTWfxrXPS5Dw2H/view?usp=drive_link)
 
 Gdown
 
@@ -23,8 +29,8 @@ gdown https://drive.google.com/uc?id=1BHOSWJkka65hzSiuiSU9KdPuKB6UOLeu
 1. **Clone the Repository:**
 
 ```bash
-git clone git@github.com:vquanghuy/jupyter-bifi-adaptation.git
-cd jupyter-bifi-adaptation
+git clone git@github.com:vquanghuy/bifi-llm.git
+cd bifi-llm
 ```
 2. **Install Dependencies:**
 
