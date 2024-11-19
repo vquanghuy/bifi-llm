@@ -21,7 +21,7 @@ apt install unzip
 Gdown
 
 ```
-gdown https://drive.google.com/uc?id=1BHOSWJkka65hzSiuiSU9KdPuKB6UOLeu
+gdown https://drive.google.com/uc?id=17edjmroalbiDNSX2WY10lG2F8H4OmYuN
 ```
 
 ## Usage

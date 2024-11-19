@@ -4,6 +4,7 @@ from transformers import pipeline
 from tqdm import tqdm
 from datetime import datetime
 import time
+import json
 
 from utils import write_json_to_file, compile_code, remove_backticks, get_error_code_snippets_from_db
 
@@ -121,3 +122,45 @@ print(f"End time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}
 # Calculate and print the elapsed time
 elapsed_time = end_time - start_time
 print(f"Code fixing and writing took: {elapsed_time:.2f} seconds")
+
+# Summarize the result
+def summarize_successful_fixes(data):
+  """
+  Summarizes the successful fixes from a JSON array.
+
+  Args:
+      data: A JSON array, where each object represents a code fixing attempt.
+
+  Returns:
+      A dictionary containing:
+          - total_fixes: The total number of code fixes.
+          - successful_fixes: The number of successful fixes.
+  """
+  total_fixes = 0
+  successful_fixes = 0
+
+  for item in data:
+    total_fixes += 1
+    for attempt in item["attempts"]:
+      if not attempt["error_message"]:
+        successful_fixes += 1
+        break
+
+  success_rate = (successful_fixes / total_fixes) * 100 if total_fixes else 0
+  summary = {
+    "total_fixes": total_fixes,
+    "successful_fixes": successful_fixes,
+    "success_rate": success_rate,
+  }
+
+  return summary
+
+# Load the data from the JSON file
+with open("../pruto-deepfix-llm-checkpoint.6900_171124-0939.json", "r") as f:
+  data = json.load(f)
+
+# Summarize the successful fixes
+summary = summarize_successful_fixes(data)
+
+# Print the summary
+print(summary)
