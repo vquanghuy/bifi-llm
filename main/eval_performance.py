@@ -3,6 +3,7 @@ from pathlib import Path
 import shutil
 import os
 import gdown
+from datetime import datetime
 
 # Set utils as searchable import
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,35 +14,42 @@ sys.path.insert(0, utils_dir)
 
 # Prepare variables
 working_dir = Path('../working')
+data_dir = Path('../data')
 model_dir = Path('../models')
+preprocess_dir = working_dir / 'preprocess'
 bifi_model = model_dir / 'bifi-fixer-round-2.pt'
-token_vocab = working_dir / 'token-vocab.txt'
+token_vocab = data_dir / 'token-vocab.txt'
 
-# Prepare working dir and model dir
+os.environ["DATA_DIR"] = str(data_dir)
+
+# Prepare directories
+if not data_dir.exists():
+  data_dir.mkdir()
+
 if not working_dir.exists():
   working_dir.mkdir()
 
 if not model_dir.exists():
   model_dir.mkdir()
 
-os.environ["DATA_DIR"] = str(working_dir)
+if not preprocess_dir.exists():
+  preprocess_dir.mkdir()
 
 # Download the BIFI trained model
 if not os.path.exists(bifi_model):
   gdown.download(id='1ZFdVEZhUkaO70IVxFhDTWfxrXPS5Dw2H', output=str(bifi_model), quiet=False)
 
-# Download token vocab
+# Download token vocab and dict.good.txt
 if not os.path.exists(token_vocab):
   gdown.download(id='1Kp6m8BX4damo421fc-bJ27dflvyjsfE0', output=str(token_vocab), quiet=False)
 
 # Import support packages
 from utils.code_utils import preprocess_unk, code_toks_to_code_string, tokenize_python_code
 from utils.fairseq_utils import parse_fairseq_preds, fairseq_preprocess, fairseq_generate
-from utils.json_utils import load_json_from_file
+from utils.json_utils import load_json_from_file, write_json_to_file
 
 code_input = working_dir / 'code-input.txt'
 token_input = working_dir / 'token-input.bad'
-preprocess_dir = working_dir / 'preprocess'
 
 model_dir = Path('models')
 predict_path = working_dir / 'bifi-model.pred.txt'
@@ -78,7 +86,35 @@ def perform_bifi_code_fix(code_content):
 github_python_dataset = "../github-python-test/model-fixer.pred.evaluated.3.json"
 test_dataset = load_json_from_file(github_python_dataset)
 
-for sample in test_dataset[:1]:
-  sample_code = sample['src']['string_format']
-  print(sample_code)
+# Perform evaluate for BIFI
+bifi_results = []
+for i, sample in enumerate(test_dataset[:10]):
+  start_time = datetime.now()
+  error_code = sample['src']['string_format']
+  fixed_code = perform_bifi_code_fix(error_code)
+  end_time = datetime.now()
+  elapsed_time = end_time - start_time
+
+  bifi_results.append({
+    'start_time': start_time,
+    'end_time': end_time,
+    'elapsed_time': elapsed_time,
+    'error_code': error_code,
+    'fixed_code': fixed_code,
+  })
+
+  # Write checkpoint
+  if (i + 1) % 20 == 0:
+    write_json_to_file(
+      bifi_results,
+      os.path.join(f'../eval-performance-bifi.checkpoint.{i}.json'),
+      2
+    )
+
+write_json_to_file(
+  bifi_results,
+  os.path.join(f'../eval-performance-bifi.json'),
+  2
+)
+
 
