@@ -1,4 +1,5 @@
 {
   "total_sample": 100,
+  "acc": 0.95,
   "avg_fix_time": 27.570943088531493
 }

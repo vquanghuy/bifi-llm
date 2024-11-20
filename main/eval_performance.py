@@ -92,113 +92,122 @@ github_python_dataset = "../github-python-test/model-fixer.pred.evaluated.3.json
 test_dataset = load_json_from_file(github_python_dataset)[:100]
 
 # Perform evaluate for 100 records using BIFI model
-# bifi_results = []
-# for i, sample in enumerate(test_dataset):
-#   start_time = time.time()
-#   error_code = sample['src']['string_format']
-#   fixed_code = perform_bifi_code_fix(error_code)
-#   end_time = time.time()
-#   elapsed_time = end_time - start_time
-#
-#   bifi_results.append({
-#     'start_time': start_time,
-#     'end_time': end_time,
-#     'elapsed_time': elapsed_time,
-#     'error_code': error_code,
-#     'fixed_code': fixed_code,
-#   })
-#
-#   # Write checkpoint
-#   if (i + 1) % 20 == 0:
-#     write_json_to_file(
-#       bifi_results,
-#       os.path.join(f'../eval-performance-bifi.checkpoint.{i}.json'),
-#       2
-#     )
-#
-# write_json_to_file(
-#   bifi_results,
-#   os.path.join(f'../eval-performance-bifi.json'),
-#   2
-# )
+bifi_results = []
+for i, sample in enumerate(test_dataset):
+  start_time = time.time()
+  error_code = sample['src']['string_format']
+  fixed_code = perform_bifi_code_fix(error_code)
+  end_time = time.time()
+  elapsed_time = end_time - start_time
+
+  bifi_results.append({
+    'start_time': start_time,
+    'end_time': end_time,
+    'elapsed_time': elapsed_time,
+    'error_code': error_code,
+    'fixed_code': fixed_code,
+  })
+
+  # Write checkpoint
+  if (i + 1) % 20 == 0:
+    write_json_to_file(
+      bifi_results,
+      os.path.join(f'../eval-performance-bifi.checkpoint.{i}.json'),
+      2
+    )
+
+write_json_to_file(
+  bifi_results,
+  os.path.join(f'../eval-performance-bifi.json'),
+  2
+)
 
 #############
 # Eval using LLM
 #############
-# def perform_llm_fix_code(pipe, instruction, code_snippet):
-#   code_error = validate_python_code(code_snippet)
-#   messages = [
-#     {"role": "system", "content": instruction}
-#   ]
-#   messages.append({"role": "user", "content": f"[Fix] | {code_error}\n{code_snippet}"})
-#
-#   outputs = pipe(messages, max_new_tokens=512, pad_token_id=pipe.tokenizer.eos_token_id)
-#
-#   return outputs[0]["generated_text"][-1]["content"]
-#
-# torch.cuda.empty_cache()
-# hf_token = os.environ.get('HF_TOKEN')
-#
-# # Prepare instruction
-# python_syntax_fixer_instruction = "You are an expert Python code fixer. \
-#              You will receive input in the following format: \n\n \
-#              [Fix] | <error code>\n \
-#              <python code snippet>\n\n \
-#              Your task is to ONLY provide the corrected Python code with NO explanations or additional text. \n \
-#              Do not include the original error code in your response and do not format the code. \
-#              Treat the code snippet as regular text. Do NOT put any prefix, only plain text as code only."
-#
-# # Load the model and instruction
-# instruct_model_id = "meta-llama/Llama-3.2-3B-Instruct"
-#
-# pipe = pipeline(
-#   "text-generation",
-#   model=instruct_model_id,
-#   token=hf_token,
-#   torch_dtype=torch.bfloat16,
-#   device_map="auto",
-# )
-#
-# llm_results = []
-# for i, sample in enumerate(test_dataset):
-#   start_time = time.time()
-#   error_code = sample['src']['string_format']
-#   fixed_code = perform_llm_fix_code(pipe, python_syntax_fixer_instruction, error_code)
-#   end_time = time.time()
-#   elapsed_time = end_time - start_time
-#
-#   llm_results.append({
-#     'start_time': start_time,
-#     'end_time': end_time,
-#     'elapsed_time': elapsed_time,
-#     'error_code': error_code,
-#     'fixed_code': fixed_code,
-#   })
-#
-#   # Write checkpoint
-#   if (i + 1) % 20 == 0:
-#     write_json_to_file(
-#       llm_results,
-#       os.path.join(f'../eval-performance-llm.checkpoint.{i}.json'),
-#       2
-#     )
-#
-# write_json_to_file(
-#   llm_results,
-#   os.path.join(f'../eval-performance-llm.json'),
-#   2
-# )
+def perform_llm_fix_code(pipe, instruction, code_snippet):
+  code_error = validate_python_code(code_snippet)
+  messages = [
+    {"role": "system", "content": instruction}
+  ]
+  messages.append({"role": "user", "content": f"[Fix] | {code_error}\n{code_snippet}"})
+
+  outputs = pipe(messages, max_new_tokens=512, pad_token_id=pipe.tokenizer.eos_token_id)
+
+  return outputs[0]["generated_text"][-1]["content"]
+
+torch.cuda.empty_cache()
+hf_token = os.environ.get('HF_TOKEN')
+
+# Prepare instruction
+python_syntax_fixer_instruction = "You are an expert Python code fixer. \
+             You will receive input in the following format: \n\n \
+             [Fix] | <error code>\n \
+             <python code snippet>\n\n \
+             Your task is to ONLY provide the corrected Python code with NO explanations or additional text. \n \
+             Do not include the original error code in your response and do not format the code. \
+             Treat the code snippet as regular text. Do NOT put any prefix, only plain text as code only."
+
+# Load the model and instruction
+instruct_model_id = "meta-llama/Llama-3.2-3B-Instruct"
+
+pipe = pipeline(
+  "text-generation",
+  model=instruct_model_id,
+  token=hf_token,
+  torch_dtype=torch.bfloat16,
+  device_map="auto",
+)
+
+llm_results = []
+for i, sample in enumerate(test_dataset):
+  start_time = time.time()
+  error_code = sample['src']['string_format']
+  fixed_code = perform_llm_fix_code(pipe, python_syntax_fixer_instruction, error_code)
+  end_time = time.time()
+  elapsed_time = end_time - start_time
+
+  llm_results.append({
+    'start_time': start_time,
+    'end_time': end_time,
+    'elapsed_time': elapsed_time,
+    'error_code': error_code,
+    'fixed_code': fixed_code,
+  })
+
+  # Write checkpoint
+  if (i + 1) % 20 == 0:
+    write_json_to_file(
+      llm_results,
+      os.path.join(f'../eval-performance-llm.checkpoint.{i}.json'),
+      2
+    )
+
+write_json_to_file(
+  llm_results,
+  os.path.join(f'../eval-performance-llm.json'),
+  2
+)
 
 # Summarize the result
+# BIFI result
 bifi_result = load_json_from_file(os.path.join(f'../eval-performance-bifi.json'))
 bifi_summary = {}
 
 total_time = 0
+total_fixed = 0
+total_samples = len(bifi_result)
+
 for i in bifi_result:
   total_time += i['elapsed_time']
+  remain_error = validate_python_code(i['fixed_code'])
+  if remain_error is None:
+    total_fixed += 1
+
 bifi_summary = {
   'total_sample': len(bifi_result),
-  'avg_fix_time': total_time / len(bifi_result)
+  'acc': total_fixed / total_samples,
+  'avg_fix_time': total_time / total_samples
 }
 write_json_to_file(
   bifi_summary,
@@ -206,15 +215,27 @@ write_json_to_file(
   2
 )
 
+# LLM result
 llm_result = load_json_from_file(os.path.join(f'../eval-performance-llm.json'))
 llm_summary = {}
 
+llm_result = load_json_from_file(os.path.join(f'../eval-ref/performance/eval-performance-llm.json'))
+llm_summary = {}
+
 total_time = 0
+total_fixed = 0
+total_samples = len(llm_result)
+
 for i in llm_result:
-  total_time += i['elapsed_time']
+    total_time += i['elapsed_time']
+    remain_error = validate_python_code(i['fixed_code'])
+    if remain_error is None:
+        total_fixed += 1
+
 llm_summary = {
-  'total_sample': len(llm_result),
-  'avg_fix_time': total_time / len(llm_result)
+    'total_sample': len(llm_result),
+    'acc': total_fixed / total_samples,
+    'avg_fix_time': total_time / len(llm_result)
 }
 write_json_to_file(
   llm_summary,
